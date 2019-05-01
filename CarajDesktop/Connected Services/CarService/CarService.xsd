@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Caraj.Entities" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Caraj.Entities" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfCar">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Car" nillable="true" type="tns:Car" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCar" nillable="true" type="tns:ArrayOfCar" />
+  <xs:complexType name="Car">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AirBagCount" nillable="true" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="CarBrand" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CarID" type="xs:int" />
+      <xs:element minOccurs="0" name="CarKM" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="CarModel" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CarPhotoURL" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CarPriceForRent" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="CarSeatCount" nillable="true" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="CarTrunkVolume" nillable="true" type="xs:short" />
+      <xs:element minOccurs="0" name="Company" nillable="true" type="tns:Company" />
+      <xs:element minOccurs="0" name="CompanyID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="MaxKmPerDay" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="MinCustomerAge" nillable="true" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="MinDrivingLicenseAge" nillable="true" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="RentDetails" nillable="true" type="tns:ArrayOfRentDetail" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Car" nillable="true" type="tns:Car" />
+  <xs:complexType name="Company">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Cars" nillable="true" type="tns:ArrayOfCar" />
+      <xs:element minOccurs="0" name="CompanyAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CompanyCarCount" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="CompanyID" type="xs:int" />
+      <xs:element minOccurs="0" name="CompanyName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CompanyPassword" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CompanyVote" nillable="true" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Company" nillable="true" type="tns:Company" />
+  <xs:complexType name="ArrayOfRentDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RentDetail" nillable="true" type="tns:RentDetail" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRentDetail" nillable="true" type="tns:ArrayOfRentDetail" />
+  <xs:complexType name="RentDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Car" nillable="true" type="tns:Car" />
+      <xs:element minOccurs="0" name="CarID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Customer" nillable="true" type="tns:Customer" />
+      <xs:element minOccurs="0" name="CustomerID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="EndingKilometer" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Pricing" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="RentDetailID" type="xs:int" />
+      <xs:element minOccurs="0" name="RentEndDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="RentStartDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="StartingKilometer" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RentDetail" nillable="true" type="tns:RentDetail" />
+  <xs:complexType name="Customer">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CustomerBirthDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CustomerID" type="xs:int" />
+      <xs:element minOccurs="0" name="CustomerName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CustomerPassword" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CustomerSurname" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CustomerUserName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RentDetails" nillable="true" type="tns:ArrayOfRentDetail" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Customer" nillable="true" type="tns:Customer" />
+</xs:schema>
