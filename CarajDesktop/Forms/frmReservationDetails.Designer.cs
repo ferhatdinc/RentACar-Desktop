@@ -29,51 +29,52 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmReservationDetails));
-            this.dgwRezervasyonlar = new System.Windows.Forms.DataGridView();
-            this.btnRezervasyonDetayi = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dgwRezervasyonlar)).BeginInit();
+            this.dgwRezervtions = new System.Windows.Forms.DataGridView();
+            this.btnReservationsList = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dgwRezervtions)).BeginInit();
             this.SuspendLayout();
             // 
-            // dgwRezervasyonlar
+            // dgwRezervtions
             // 
-            this.dgwRezervasyonlar.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
-            this.dgwRezervasyonlar.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
-            this.dgwRezervasyonlar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgwRezervasyonlar.Location = new System.Drawing.Point(12, 12);
-            this.dgwRezervasyonlar.Name = "dgwRezervasyonlar";
-            this.dgwRezervasyonlar.RowTemplate.Height = 24;
-            this.dgwRezervasyonlar.Size = new System.Drawing.Size(776, 201);
-            this.dgwRezervasyonlar.TabIndex = 3;
+            this.dgwRezervtions.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dgwRezervtions.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
+            this.dgwRezervtions.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgwRezervtions.Location = new System.Drawing.Point(12, 12);
+            this.dgwRezervtions.Name = "dgwRezervtions";
+            this.dgwRezervtions.RowTemplate.Height = 24;
+            this.dgwRezervtions.Size = new System.Drawing.Size(776, 201);
+            this.dgwRezervtions.TabIndex = 3;
             // 
-            // btnRezervasyonDetayi
+            // btnReservationsList
             // 
-            this.btnRezervasyonDetayi.Location = new System.Drawing.Point(276, 219);
-            this.btnRezervasyonDetayi.Name = "btnRezervasyonDetayi";
-            this.btnRezervasyonDetayi.Size = new System.Drawing.Size(248, 92);
-            this.btnRezervasyonDetayi.TabIndex = 2;
-            this.btnRezervasyonDetayi.Text = "Rezervasyonları Listele";
-            this.btnRezervasyonDetayi.UseVisualStyleBackColor = true;
+            this.btnReservationsList.Location = new System.Drawing.Point(276, 219);
+            this.btnReservationsList.Name = "btnReservationsList";
+            this.btnReservationsList.Size = new System.Drawing.Size(248, 92);
+            this.btnReservationsList.TabIndex = 2;
+            this.btnReservationsList.Text = "Reservations List";
+            this.btnReservationsList.UseVisualStyleBackColor = true;
             // 
             // frmReservationDetails
             // 
-            this.AcceptButton = this.btnRezervasyonDetayi;
+            this.AcceptButton = this.btnReservationsList;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(800, 330);
-            this.Controls.Add(this.dgwRezervasyonlar);
-            this.Controls.Add(this.btnRezervasyonDetayi);
+            this.Controls.Add(this.dgwRezervtions);
+            this.Controls.Add(this.btnReservationsList);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmReservationDetails";
             this.Text = "Reservation Details";
-            ((System.ComponentModel.ISupportInitialize)(this.dgwRezervasyonlar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgwRezervtions)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dgwRezervasyonlar;
-        private System.Windows.Forms.Button btnRezervasyonDetayi;
+        private System.Windows.Forms.DataGridView dgwRezervtions;
+        private System.Windows.Forms.Button btnReservationsList;
     }
 }

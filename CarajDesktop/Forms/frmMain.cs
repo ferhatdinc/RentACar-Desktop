@@ -46,22 +46,29 @@ namespace CarajDesktop.Forms
             this.ActiveForms.Remove(sender.GetType());
         }
 
-        private void loginToolStripMenuItem_Click(object sender, EventArgs e)
+        private void LoginToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.ShowForm<Login>();
         }
 
-        private void rezerasyonDetaylarıToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ReservationDetailsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (isLogin == true)
+            if (isLogin)
                 this.ShowForm<frmReservationDetails>();
-            else
-                MessageBox.Show("Önce Giriş Yapmalısınız!");
+            else MessageBox.Show("Giriş Yap");
         }
 
-        private void rezervasyonYapToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ReservationRequestsToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            //this.ShowForm<>
+            MessageBox.Show("Yakında");
+        }
 
+        private void DoReservationsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (isLogin)
+                this.ShowForm<frmNewReservation>();
+            else MessageBox.Show("Giriş Yap");
         }
     }
 }
