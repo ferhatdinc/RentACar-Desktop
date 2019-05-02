@@ -21,15 +21,17 @@ namespace CarajDesktop.Forms
             InitializeComponent();
         }
 
-        private void btnDoReservations_Click(object sender, EventArgs e)
+        private void BtnDoReservations_Click(object sender, EventArgs e)
         {
-            RentDetailsRequestDto NewRent = new RentDetailsRequestDto();
-            NewRent.Pricing = decimal.Parse(txtAmount.Text);
-            NewRent.CarID = int.Parse(txtCarId.Text);
-            NewRent.CustomerID = int.Parse(txtCustomerId.Text);
-            NewRent.RentStartDate = tpDateFirst.Value;
-            NewRent.RentEndDate = tpDateLast.Value;
-            NewRent.StartingKilometer = int.Parse(txtFirsrKM.Text); 
+            RentDetailsRequestDto NewRent = new RentDetailsRequestDto
+            {
+                Pricing = decimal.Parse(txtAmount.Text),
+                CarID = int.Parse(txtCarId.Text),
+                CustomerID = int.Parse(txtCustomerId.Text),
+                RentStartDate = tpDateFirst.Value,
+                RentEndDate = tpDateLast.Value,
+                StartingKilometer = int.Parse(txtFirsrKM.Text)
+            };
             using (var companyService = new CompanyServiceSoapClient())
             {
                 companyService.CreateRent(NewRent);
@@ -37,7 +39,7 @@ namespace CarajDesktop.Forms
             }
         }
 
-        private void frmNewReservation_Load(object sender, EventArgs e)
+        private void FrmNewReservation_Load(object sender, EventArgs e)
         {
             using (var CarService = new CarServiceSoapClient())
             {
@@ -48,7 +50,7 @@ namespace CarajDesktop.Forms
             }
         }
 
-        private void btnSelectCar_Click(object sender, EventArgs e)
+        private void BtnSelectCar_Click(object sender, EventArgs e)
         {
             /*txtCarId.Text = dgwCars.SelectedRows[0].Cells[0].Value.ToString();
             txtAirbagCount.Text = dgwCars.SelectedRows[0].Cells[10].Value.ToString();
@@ -73,7 +75,7 @@ namespace CarajDesktop.Forms
 
         }
 
-        private void tpDateLast_ValueChanged(object sender, EventArgs e)
+        private void TpDateLast_ValueChanged(object sender, EventArgs e)
         {
             using (var CarService = new CarServiceSoapClient())
             {
@@ -82,6 +84,11 @@ namespace CarajDesktop.Forms
                 CarService.Close();
                 
             }
+            
+        }
+
+        private void BtnReservationRequest_Click(object sender, EventArgs e)
+        {
             
         }
     }

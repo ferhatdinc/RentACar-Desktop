@@ -29,7 +29,7 @@ namespace CarajDesktop.Forms
 
         }
 
-        private void btnAracSec_Click(object sender, EventArgs e)
+        private void BtnAracSec_Click(object sender, EventArgs e)
         {
             txtCarId.Text = dgwCars.SelectedRows[0].Cells[0].Value.ToString();
             txtAirbagCount.Text = dgwCars.SelectedRows[0].Cells[10].Value.ToString();

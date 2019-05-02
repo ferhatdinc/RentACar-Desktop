@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddCar));
-            this.btnAddCar = new System.Windows.Forms.Button();
+            this.BtnAddCar = new System.Windows.Forms.Button();
             this.txtCompanyID = new System.Windows.Forms.TextBox();
             this.txtBrand = new System.Windows.Forms.TextBox();
             this.txtModel = new System.Windows.Forms.TextBox();
@@ -56,15 +56,15 @@
             this.txtMinLicenceAge = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // btnAddCar
+            // BtnAddCar
             // 
-            this.btnAddCar.Location = new System.Drawing.Point(181, 241);
-            this.btnAddCar.Name = "btnAddCar";
-            this.btnAddCar.Size = new System.Drawing.Size(184, 28);
-            this.btnAddCar.TabIndex = 0;
-            this.btnAddCar.Text = "Add Car";
-            this.btnAddCar.UseVisualStyleBackColor = true;
-            this.btnAddCar.Click += new System.EventHandler(this.btnAddCar_Click);
+            this.BtnAddCar.Location = new System.Drawing.Point(181, 241);
+            this.BtnAddCar.Name = "BtnAddCar";
+            this.BtnAddCar.Size = new System.Drawing.Size(184, 28);
+            this.BtnAddCar.TabIndex = 0;
+            this.BtnAddCar.Text = "Add Car";
+            this.BtnAddCar.UseVisualStyleBackColor = true;
+            this.BtnAddCar.Click += new System.EventHandler(this.BtnAddCar_Click);
             // 
             // txtCompanyID
             // 
@@ -287,7 +287,7 @@
             this.Controls.Add(this.txtModel);
             this.Controls.Add(this.txtBrand);
             this.Controls.Add(this.txtCompanyID);
-            this.Controls.Add(this.btnAddCar);
+            this.Controls.Add(this.BtnAddCar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AddCar";
             this.Text = "AddCar";
@@ -299,7 +299,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnAddCar;
+        private System.Windows.Forms.Button BtnAddCar;
         private System.Windows.Forms.TextBox txtCompanyID;
         private System.Windows.Forms.TextBox txtBrand;
         private System.Windows.Forms.TextBox txtModel;

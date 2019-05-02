@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNewReservation));
-            this.btnDoReservations = new System.Windows.Forms.Button();
+            this.BtnDoReservations = new System.Windows.Forms.Button();
             this.txtAmount = new System.Windows.Forms.TextBox();
             this.tpDateLast = new System.Windows.Forms.DateTimePicker();
             this.tpDateFirst = new System.Windows.Forms.DateTimePicker();
@@ -46,18 +46,19 @@
             this.txtCustomerId = new System.Windows.Forms.TextBox();
             this.txtCarId = new System.Windows.Forms.TextBox();
             this.btnSelectCar = new System.Windows.Forms.Button();
+            this.BtnReservationRequest = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgwCarList)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnDoReservations
+            // BtnDoReservations
             // 
-            this.btnDoReservations.Location = new System.Drawing.Point(15, 206);
-            this.btnDoReservations.Name = "btnDoReservations";
-            this.btnDoReservations.Size = new System.Drawing.Size(289, 40);
-            this.btnDoReservations.TabIndex = 21;
-            this.btnDoReservations.Text = "Do Reservations";
-            this.btnDoReservations.UseVisualStyleBackColor = true;
-            this.btnDoReservations.Click += new System.EventHandler(this.btnDoReservations_Click);
+            this.BtnDoReservations.Location = new System.Drawing.Point(15, 206);
+            this.BtnDoReservations.Name = "BtnDoReservations";
+            this.BtnDoReservations.Size = new System.Drawing.Size(289, 40);
+            this.BtnDoReservations.TabIndex = 21;
+            this.BtnDoReservations.Text = "Do Reservations";
+            this.BtnDoReservations.UseVisualStyleBackColor = true;
+            this.BtnDoReservations.Click += new System.EventHandler(this.BtnDoReservations_Click);
             // 
             // txtAmount
             // 
@@ -72,7 +73,7 @@
             this.tpDateLast.Name = "tpDateLast";
             this.tpDateLast.Size = new System.Drawing.Size(214, 22);
             this.tpDateLast.TabIndex = 31;
-            this.tpDateLast.ValueChanged += new System.EventHandler(this.tpDateLast_ValueChanged);
+            this.tpDateLast.ValueChanged += new System.EventHandler(this.TpDateLast_ValueChanged);
             // 
             // tpDateFirst
             // 
@@ -193,11 +194,21 @@
             // 
             this.btnSelectCar.Location = new System.Drawing.Point(310, 206);
             this.btnSelectCar.Name = "btnSelectCar";
-            this.btnSelectCar.Size = new System.Drawing.Size(317, 40);
+            this.btnSelectCar.Size = new System.Drawing.Size(162, 40);
             this.btnSelectCar.TabIndex = 36;
             this.btnSelectCar.Text = "Araç Seç";
             this.btnSelectCar.UseVisualStyleBackColor = true;
-            this.btnSelectCar.Click += new System.EventHandler(this.btnSelectCar_Click);
+            this.btnSelectCar.Click += new System.EventHandler(this.BtnSelectCar_Click);
+            // 
+            // BtnReservationRequest
+            // 
+            this.BtnReservationRequest.Location = new System.Drawing.Point(478, 206);
+            this.BtnReservationRequest.Name = "BtnReservationRequest";
+            this.BtnReservationRequest.Size = new System.Drawing.Size(149, 40);
+            this.BtnReservationRequest.TabIndex = 37;
+            this.BtnReservationRequest.Text = "İstekleri Görüntüle";
+            this.BtnReservationRequest.UseVisualStyleBackColor = true;
+            this.BtnReservationRequest.Click += new System.EventHandler(this.BtnReservationRequest_Click);
             // 
             // frmNewReservation
             // 
@@ -205,11 +216,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(639, 266);
+            this.Controls.Add(this.BtnReservationRequest);
             this.Controls.Add(this.btnSelectCar);
             this.Controls.Add(this.txtCarId);
             this.Controls.Add(this.txtCustomerId);
             this.Controls.Add(this.dgwCarList);
-            this.Controls.Add(this.btnDoReservations);
+            this.Controls.Add(this.BtnDoReservations);
             this.Controls.Add(this.txtAmount);
             this.Controls.Add(this.tpDateLast);
             this.Controls.Add(this.tpDateFirst);
@@ -226,7 +238,7 @@
             this.Name = "frmNewReservation";
             this.Tag = "";
             this.Text = "New Reservation";
-            this.Load += new System.EventHandler(this.frmNewReservation_Load);
+            this.Load += new System.EventHandler(this.FrmNewReservation_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgwCarList)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -235,7 +247,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnDoReservations;
+        private System.Windows.Forms.Button BtnDoReservations;
         private System.Windows.Forms.TextBox txtAmount;
         private System.Windows.Forms.DateTimePicker tpDateLast;
         private System.Windows.Forms.DateTimePicker tpDateFirst;
@@ -252,5 +264,6 @@
         private System.Windows.Forms.TextBox txtCustomerId;
         private System.Windows.Forms.TextBox txtCarId;
         private System.Windows.Forms.Button btnSelectCar;
+        private System.Windows.Forms.Button BtnReservationRequest;
     }
 }

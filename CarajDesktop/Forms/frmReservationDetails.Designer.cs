@@ -68,6 +68,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmReservationDetails";
             this.Text = "Reservation Details";
+            this.Load += new System.EventHandler(this.frmReservationDetails_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgwRezervtions)).EndInit();
             this.ResumeLayout(false);
 

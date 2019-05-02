@@ -76,7 +76,7 @@
             this.btnAracSec.TabIndex = 1;
             this.btnAracSec.Text = "SELECT CAR";
             this.btnAracSec.UseVisualStyleBackColor = true;
-            this.btnAracSec.Click += new System.EventHandler(this.btnAracSec_Click);
+            this.btnAracSec.Click += new System.EventHandler(this.BtnAracSec_Click);
             // 
             // txtMinLicenceAge
             // 

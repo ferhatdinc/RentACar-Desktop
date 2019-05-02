@@ -23,7 +23,7 @@ namespace CarajDesktop.Forms
 
         }
 
-        private void btnAddCar_Click(object sender, EventArgs e)
+        private void BtnAddCar_Click(object sender, EventArgs e)
         {
             CarRequestDto car = new CarRequestDto();
             car.CarBrand = txtBrand.Text;
