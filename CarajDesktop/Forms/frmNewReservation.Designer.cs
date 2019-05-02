@@ -33,8 +33,6 @@
             this.txtAmount = new System.Windows.Forms.TextBox();
             this.tpDateLast = new System.Windows.Forms.DateTimePicker();
             this.tpDateFirst = new System.Windows.Forms.DateTimePicker();
-            this.cbCarID = new System.Windows.Forms.ComboBox();
-            this.cbCustomerID = new System.Windows.Forms.ComboBox();
             this.txtLastKM = new System.Windows.Forms.TextBox();
             this.txtFirsrKM = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -44,66 +42,57 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.dgwCarList = new System.Windows.Forms.DataGridView();
+            this.txtCustomerId = new System.Windows.Forms.TextBox();
+            this.txtCarId = new System.Windows.Forms.TextBox();
+            this.btnSelectCar = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dgwCarList)).BeginInit();
             this.SuspendLayout();
             // 
             // btnDoReservations
             // 
             this.btnDoReservations.Location = new System.Drawing.Point(15, 206);
             this.btnDoReservations.Name = "btnDoReservations";
-            this.btnDoReservations.Size = new System.Drawing.Size(348, 40);
+            this.btnDoReservations.Size = new System.Drawing.Size(289, 40);
             this.btnDoReservations.TabIndex = 21;
             this.btnDoReservations.Text = "Do Reservations";
             this.btnDoReservations.UseVisualStyleBackColor = true;
+            this.btnDoReservations.Click += new System.EventHandler(this.btnDoReservations_Click);
             // 
             // txtAmount
             // 
             this.txtAmount.Location = new System.Drawing.Point(89, 178);
             this.txtAmount.Name = "txtAmount";
-            this.txtAmount.Size = new System.Drawing.Size(273, 22);
+            this.txtAmount.Size = new System.Drawing.Size(214, 22);
             this.txtAmount.TabIndex = 32;
             // 
             // tpDateLast
             // 
             this.tpDateLast.Location = new System.Drawing.Point(90, 94);
             this.tpDateLast.Name = "tpDateLast";
-            this.tpDateLast.Size = new System.Drawing.Size(273, 22);
+            this.tpDateLast.Size = new System.Drawing.Size(214, 22);
             this.tpDateLast.TabIndex = 31;
+            this.tpDateLast.ValueChanged += new System.EventHandler(this.tpDateLast_ValueChanged);
             // 
             // tpDateFirst
             // 
             this.tpDateFirst.Location = new System.Drawing.Point(89, 66);
             this.tpDateFirst.Name = "tpDateFirst";
-            this.tpDateFirst.Size = new System.Drawing.Size(273, 22);
+            this.tpDateFirst.Size = new System.Drawing.Size(214, 22);
             this.tpDateFirst.TabIndex = 30;
-            // 
-            // cbCarID
-            // 
-            this.cbCarID.FormattingEnabled = true;
-            this.cbCarID.Location = new System.Drawing.Point(89, 36);
-            this.cbCarID.Name = "cbCarID";
-            this.cbCarID.Size = new System.Drawing.Size(273, 24);
-            this.cbCarID.TabIndex = 29;
-            // 
-            // cbCustomerID
-            // 
-            this.cbCustomerID.FormattingEnabled = true;
-            this.cbCustomerID.Location = new System.Drawing.Point(89, 6);
-            this.cbCustomerID.Name = "cbCustomerID";
-            this.cbCustomerID.Size = new System.Drawing.Size(273, 24);
-            this.cbCustomerID.TabIndex = 28;
             // 
             // txtLastKM
             // 
             this.txtLastKM.Location = new System.Drawing.Point(89, 150);
             this.txtLastKM.Name = "txtLastKM";
-            this.txtLastKM.Size = new System.Drawing.Size(273, 22);
+            this.txtLastKM.Size = new System.Drawing.Size(214, 22);
             this.txtLastKM.TabIndex = 27;
             // 
             // txtFirsrKM
             // 
             this.txtFirsrKM.Location = new System.Drawing.Point(90, 122);
             this.txtFirsrKM.Name = "txtFirsrKM";
-            this.txtFirsrKM.Size = new System.Drawing.Size(273, 22);
+            this.txtFirsrKM.Size = new System.Drawing.Size(214, 22);
             this.txtFirsrKM.TabIndex = 26;
             // 
             // label9
@@ -156,7 +145,6 @@
             this.label5.Size = new System.Drawing.Size(69, 17);
             this.label5.TabIndex = 20;
             this.label5.Text = "First Date";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label4
             // 
@@ -178,18 +166,53 @@
             this.label1.TabIndex = 18;
             this.label1.Text = "Customer ID";
             // 
+            // dgwCarList
+            // 
+            this.dgwCarList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgwCarList.Location = new System.Drawing.Point(310, 6);
+            this.dgwCarList.Name = "dgwCarList";
+            this.dgwCarList.RowTemplate.Height = 24;
+            this.dgwCarList.Size = new System.Drawing.Size(317, 192);
+            this.dgwCarList.TabIndex = 33;
+            // 
+            // txtCustomerId
+            // 
+            this.txtCustomerId.Location = new System.Drawing.Point(89, 6);
+            this.txtCustomerId.Name = "txtCustomerId";
+            this.txtCustomerId.Size = new System.Drawing.Size(214, 22);
+            this.txtCustomerId.TabIndex = 34;
+            // 
+            // txtCarId
+            // 
+            this.txtCarId.Location = new System.Drawing.Point(89, 36);
+            this.txtCarId.Name = "txtCarId";
+            this.txtCarId.Size = new System.Drawing.Size(214, 22);
+            this.txtCarId.TabIndex = 35;
+            // 
+            // btnSelectCar
+            // 
+            this.btnSelectCar.Location = new System.Drawing.Point(310, 206);
+            this.btnSelectCar.Name = "btnSelectCar";
+            this.btnSelectCar.Size = new System.Drawing.Size(317, 40);
+            this.btnSelectCar.TabIndex = 36;
+            this.btnSelectCar.Text = "Araç Seç";
+            this.btnSelectCar.UseVisualStyleBackColor = true;
+            this.btnSelectCar.Click += new System.EventHandler(this.btnSelectCar_Click);
+            // 
             // frmNewReservation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(383, 266);
+            this.ClientSize = new System.Drawing.Size(639, 266);
+            this.Controls.Add(this.btnSelectCar);
+            this.Controls.Add(this.txtCarId);
+            this.Controls.Add(this.txtCustomerId);
+            this.Controls.Add(this.dgwCarList);
             this.Controls.Add(this.btnDoReservations);
             this.Controls.Add(this.txtAmount);
             this.Controls.Add(this.tpDateLast);
             this.Controls.Add(this.tpDateFirst);
-            this.Controls.Add(this.cbCarID);
-            this.Controls.Add(this.cbCustomerID);
             this.Controls.Add(this.txtLastKM);
             this.Controls.Add(this.txtFirsrKM);
             this.Controls.Add(this.label9);
@@ -203,6 +226,8 @@
             this.Name = "frmNewReservation";
             this.Tag = "";
             this.Text = "New Reservation";
+            this.Load += new System.EventHandler(this.frmNewReservation_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgwCarList)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -214,8 +239,6 @@
         private System.Windows.Forms.TextBox txtAmount;
         private System.Windows.Forms.DateTimePicker tpDateLast;
         private System.Windows.Forms.DateTimePicker tpDateFirst;
-        private System.Windows.Forms.ComboBox cbCarID;
-        private System.Windows.Forms.ComboBox cbCustomerID;
         private System.Windows.Forms.TextBox txtLastKM;
         private System.Windows.Forms.TextBox txtFirsrKM;
         private System.Windows.Forms.Label label9;
@@ -225,5 +248,9 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView dgwCarList;
+        private System.Windows.Forms.TextBox txtCustomerId;
+        private System.Windows.Forms.TextBox txtCarId;
+        private System.Windows.Forms.Button btnSelectCar;
     }
 }

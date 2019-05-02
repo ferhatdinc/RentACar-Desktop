@@ -22,7 +22,7 @@ namespace CarajDesktop.Forms
         {
             using(var CarService = new CarServiceSoapClient())
             {
-                var cars = CarService.GetCars(2);//login olan şirketin id si
+                var cars = CarService.GetCars(frmMain.Company.CompanyID);//login olan şirketin id si
                 dgwCars.DataSource = cars;
                 CarService.Close();
             }

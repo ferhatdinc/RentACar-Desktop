@@ -31,7 +31,7 @@ namespace CarajDesktop.Forms
         {
             using (var carClient = new CarServiceSoapClient())
             {
-                var cars = carClient.GetCars(2);
+                var cars = carClient.GetCars(frmMain.Company.CompanyID);
                 dgwCarList.DataSource = cars;
                 carClient.Close();
             }
