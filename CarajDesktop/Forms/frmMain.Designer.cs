@@ -113,21 +113,21 @@
             this.ekleToolStripMenuItem.Name = "ekleToolStripMenuItem";
             this.ekleToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.ekleToolStripMenuItem.Text = "Add";
-            this.ekleToolStripMenuItem.Click += new System.EventHandler(this.ekleToolStripMenuItem_Click);
+            this.ekleToolStripMenuItem.Click += new System.EventHandler(this.EkleToolStripMenuItem_Click);
             // 
             // silToolStripMenuItem
             // 
             this.silToolStripMenuItem.Name = "silToolStripMenuItem";
             this.silToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.silToolStripMenuItem.Text = "Delete";
-            this.silToolStripMenuItem.Click += new System.EventHandler(this.silToolStripMenuItem_Click);
+            this.silToolStripMenuItem.Click += new System.EventHandler(this.SilToolStripMenuItem_Click);
             // 
             // güncelleToolStripMenuItem
             // 
             this.güncelleToolStripMenuItem.Name = "güncelleToolStripMenuItem";
             this.güncelleToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.güncelleToolStripMenuItem.Text = "Update";
-            this.güncelleToolStripMenuItem.Click += new System.EventHandler(this.güncelleToolStripMenuItem_Click);
+            this.güncelleToolStripMenuItem.Click += new System.EventHandler(this.GüncelleToolStripMenuItem_Click);
             // 
             // statusStrip
             // 

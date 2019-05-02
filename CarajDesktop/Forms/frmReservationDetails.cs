@@ -12,24 +12,26 @@ using System.Windows.Forms;
 
 namespace CarajDesktop.Forms
 {
-    public partial class frmReservationDetails : Form
+    public partial class FrmReservationDetails : Form
     {
-        public frmReservationDetails()
+        public FrmReservationDetails()
         {
             InitializeComponent();
         }
 
-        private void btnReservationsList_Click(object sender, EventArgs e)
+        private void BtnReservationsList_Click(object sender, EventArgs e)
         {
               
         }
 
-        private void frmReservationDetails_Load(object sender, EventArgs e)
+        private void FrmReservationDetails_Load(object sender, EventArgs e)
         {
-            /*using (var Car = new CompanyServiceSoapClient())
+            using (var CompanyService = new CompanyServiceSoapClient())
             {
-                CompanyService.
-            }*/
+                var response = CompanyService.GetRentDetails(frmMain.Company.CompanyID);
+                dgwRezervtions.DataSource = response;
+                CompanyService.Close();
+            }
         }
     }
 }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
-  <contractRef ref="http://servertemplate-1e7ae441.westeurope.cloudapp.azure.com/companyservice.asmx?wsdl" docRef="http://servertemplate-1e7ae441.westeurope.cloudapp.azure.com/companyservice.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
-  <soap address="http://servertemplate-1e7ae441.westeurope.cloudapp.azure.com/companyservice.asmx" xmlns:q1="http://tempuri.org" binding="q1:CompanyServiceSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
-  <soap address="http://servertemplate-1e7ae441.westeurope.cloudapp.azure.com/companyservice.asmx" xmlns:q2="http://tempuri.org" binding="q2:CompanyServiceSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <contractRef ref="http://localhost:51655/CompanyService.asmx?wsdl" docRef="http://localhost:51655/CompanyService.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="http://localhost:51655/CompanyService.asmx" xmlns:q1="http://tempuri.org" binding="q1:CompanyServiceSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="http://localhost:51655/CompanyService.asmx" xmlns:q2="http://tempuri.org" binding="q2:CompanyServiceSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
 </discovery>

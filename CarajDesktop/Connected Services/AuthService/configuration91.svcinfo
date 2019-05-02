@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="HBFIxMaSm6MFtIX0HDrqXb2dwqM=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="SxRHMXuiZaEwIJswjqVjQ5wblps=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="AuthServiceSoap">
       <properties>
@@ -112,10 +112,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="AuthServiceSoap" contract="AuthService.AuthServiceSoap" bindingType="basicHttpBinding" address="http://servertemplate-1e7ae441.westeurope.cloudapp.azure.com/AuthService.asmx" bindingConfiguration="AuthServiceSoap">
+    <endpoint name="AuthServiceSoap" contract="AuthService.AuthServiceSoap" bindingType="basicHttpBinding" address="http://localhost:51655/authservice.asmx" bindingConfiguration="AuthServiceSoap">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://servertemplate-1e7ae441.westeurope.cloudapp.azure.com/AuthService.asmx</serializedValue>
+          <serializedValue>http://localhost:51655/authservice.asmx</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="d49f91f2-11fd-4e8a-9411-5356c7785bf3" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="69ff014c-2826-4c43-b8b9-03ec65348758" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://servertemplate-1e7ae441.westeurope.cloudapp.azure.com/CustomerService.asmx" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:51655/customerservice.asmx" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="CustomerService.disco" MetadataType="Disco" ID="480f4190-05e3-4d89-8b57-56de69ec6221" SourceId="1" SourceUrl="http://servertemplate-1e7ae441.westeurope.cloudapp.azure.com/CustomerService.asmx?disco" />
-    <MetadataFile FileName="CustomerService.wsdl" MetadataType="Wsdl" ID="d99c8633-3563-4f31-9752-af803bb8a174" SourceId="1" SourceUrl="http://servertemplate-1e7ae441.westeurope.cloudapp.azure.com/CustomerService.asmx?wsdl" />
+    <MetadataFile FileName="customerservice.wsdl" MetadataType="Wsdl" ID="6b7f8c3a-e7fb-4c6f-b61f-c270b09b6a9e" SourceId="1" SourceUrl="http://localhost:51655/customerservice.asmx?wsdl" />
+    <MetadataFile FileName="customerservice.disco" MetadataType="Disco" ID="3240c632-9c14-4db3-b2cc-983d8c55aa82" SourceId="1" SourceUrl="http://localhost:51655/customerservice.asmx?disco" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

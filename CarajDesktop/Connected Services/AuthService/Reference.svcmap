@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="64abe833-c04c-40f1-a508-2c9cd44a749e" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="b8ed6b93-5b3e-4113-8d08-d3cc9a8213d0" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://servertemplate-1e7ae441.westeurope.cloudapp.azure.com/AuthService.asmx" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:51655/authservice.asmx" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="AuthService.wsdl" MetadataType="Wsdl" ID="4634e6ff-4767-4cfc-98af-cc263d0282aa" SourceId="1" SourceUrl="http://servertemplate-1e7ae441.westeurope.cloudapp.azure.com/AuthService.asmx?wsdl" />
-    <MetadataFile FileName="AuthService.disco" MetadataType="Disco" ID="5705ecdd-31bf-4e2c-ad6b-9957a8b7a724" SourceId="1" SourceUrl="http://servertemplate-1e7ae441.westeurope.cloudapp.azure.com/AuthService.asmx?disco" />
+    <MetadataFile FileName="authservice.wsdl" MetadataType="Wsdl" ID="a4a409af-6ad9-4185-93e6-8fda0d746567" SourceId="1" SourceUrl="http://localhost:51655/authservice.asmx?wsdl" />
+    <MetadataFile FileName="authservice.disco" MetadataType="Disco" ID="94aa37c8-7cb7-410d-91fb-3f297c44fff1" SourceId="1" SourceUrl="http://localhost:51655/authservice.asmx?disco" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

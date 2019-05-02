@@ -480,6 +480,13 @@ namespace CarajDesktop.CarService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetAvailableCar", ReplyAction="*")]
         System.Threading.Tasks.Task<CarajDesktop.CarService.GetAvailableCarResponse> GetAvailableCarAsync(CarajDesktop.CarService.GetAvailableCarRequest request);
         
+        // CODEGEN: Generating message contract since element name GetAvailableCarByCompanyIDResult from namespace http://tempuri.org is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetAvailableCarByCompanyID", ReplyAction="*")]
+        CarajDesktop.CarService.GetAvailableCarByCompanyIDResponse GetAvailableCarByCompanyID(CarajDesktop.CarService.GetAvailableCarByCompanyIDRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetAvailableCarByCompanyID", ReplyAction="*")]
+        System.Threading.Tasks.Task<CarajDesktop.CarService.GetAvailableCarByCompanyIDResponse> GetAvailableCarByCompanyIDAsync(CarajDesktop.CarService.GetAvailableCarByCompanyIDRequest request);
+        
         // CODEGEN: Generating message contract since element name GetCarsResult from namespace http://tempuri.org is not marked nillable
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetCars", ReplyAction="*")]
         CarajDesktop.CarService.GetCarsResponse GetCars(CarajDesktop.CarService.GetCarsRequest request);
@@ -591,6 +598,82 @@ namespace CarajDesktop.CarService {
         
         public GetAvailableCarResponseBody(CarajDesktop.CarService.CarReturnDto[] GetAvailableCarResult) {
             this.GetAvailableCarResult = GetAvailableCarResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetAvailableCarByCompanyIDRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetAvailableCarByCompanyID", Namespace="http://tempuri.org", Order=0)]
+        public CarajDesktop.CarService.GetAvailableCarByCompanyIDRequestBody Body;
+        
+        public GetAvailableCarByCompanyIDRequest() {
+        }
+        
+        public GetAvailableCarByCompanyIDRequest(CarajDesktop.CarService.GetAvailableCarByCompanyIDRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org")]
+    public partial class GetAvailableCarByCompanyIDRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public System.DateTime first;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=1)]
+        public System.DateTime last;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=2)]
+        public int CompanyID;
+        
+        public GetAvailableCarByCompanyIDRequestBody() {
+        }
+        
+        public GetAvailableCarByCompanyIDRequestBody(System.DateTime first, System.DateTime last, int CompanyID) {
+            this.first = first;
+            this.last = last;
+            this.CompanyID = CompanyID;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetAvailableCarByCompanyIDResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetAvailableCarByCompanyIDResponse", Namespace="http://tempuri.org", Order=0)]
+        public CarajDesktop.CarService.GetAvailableCarByCompanyIDResponseBody Body;
+        
+        public GetAvailableCarByCompanyIDResponse() {
+        }
+        
+        public GetAvailableCarByCompanyIDResponse(CarajDesktop.CarService.GetAvailableCarByCompanyIDResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org")]
+    public partial class GetAvailableCarByCompanyIDResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public CarajDesktop.CarService.CarReturnDto[] GetAvailableCarByCompanyIDResult;
+        
+        public GetAvailableCarByCompanyIDResponseBody() {
+        }
+        
+        public GetAvailableCarByCompanyIDResponseBody(CarajDesktop.CarService.CarReturnDto[] GetAvailableCarByCompanyIDResult) {
+            this.GetAvailableCarByCompanyIDResult = GetAvailableCarByCompanyIDResult;
         }
     }
     
@@ -882,11 +965,15 @@ namespace CarajDesktop.CarService {
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
         public CarajDesktop.CarService.CarRequestDto model;
         
+        [System.Runtime.Serialization.DataMemberAttribute(Order=1)]
+        public int CarID;
+        
         public UpdateCarRequestBody() {
         }
         
-        public UpdateCarRequestBody(CarajDesktop.CarService.CarRequestDto model) {
+        public UpdateCarRequestBody(CarajDesktop.CarService.CarRequestDto model, int CarID) {
             this.model = model;
+            this.CarID = CarID;
         }
     }
     
@@ -969,6 +1056,35 @@ namespace CarajDesktop.CarService {
             inValue.Body.first = first;
             inValue.Body.last = last;
             return ((CarajDesktop.CarService.CarServiceSoap)(this)).GetAvailableCarAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        CarajDesktop.CarService.GetAvailableCarByCompanyIDResponse CarajDesktop.CarService.CarServiceSoap.GetAvailableCarByCompanyID(CarajDesktop.CarService.GetAvailableCarByCompanyIDRequest request) {
+            return base.Channel.GetAvailableCarByCompanyID(request);
+        }
+        
+        public CarajDesktop.CarService.CarReturnDto[] GetAvailableCarByCompanyID(System.DateTime first, System.DateTime last, int CompanyID) {
+            CarajDesktop.CarService.GetAvailableCarByCompanyIDRequest inValue = new CarajDesktop.CarService.GetAvailableCarByCompanyIDRequest();
+            inValue.Body = new CarajDesktop.CarService.GetAvailableCarByCompanyIDRequestBody();
+            inValue.Body.first = first;
+            inValue.Body.last = last;
+            inValue.Body.CompanyID = CompanyID;
+            CarajDesktop.CarService.GetAvailableCarByCompanyIDResponse retVal = ((CarajDesktop.CarService.CarServiceSoap)(this)).GetAvailableCarByCompanyID(inValue);
+            return retVal.Body.GetAvailableCarByCompanyIDResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<CarajDesktop.CarService.GetAvailableCarByCompanyIDResponse> CarajDesktop.CarService.CarServiceSoap.GetAvailableCarByCompanyIDAsync(CarajDesktop.CarService.GetAvailableCarByCompanyIDRequest request) {
+            return base.Channel.GetAvailableCarByCompanyIDAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<CarajDesktop.CarService.GetAvailableCarByCompanyIDResponse> GetAvailableCarByCompanyIDAsync(System.DateTime first, System.DateTime last, int CompanyID) {
+            CarajDesktop.CarService.GetAvailableCarByCompanyIDRequest inValue = new CarajDesktop.CarService.GetAvailableCarByCompanyIDRequest();
+            inValue.Body = new CarajDesktop.CarService.GetAvailableCarByCompanyIDRequestBody();
+            inValue.Body.first = first;
+            inValue.Body.last = last;
+            inValue.Body.CompanyID = CompanyID;
+            return ((CarajDesktop.CarService.CarServiceSoap)(this)).GetAvailableCarByCompanyIDAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -1075,10 +1191,11 @@ namespace CarajDesktop.CarService {
             return base.Channel.UpdateCar(request);
         }
         
-        public void UpdateCar(CarajDesktop.CarService.CarRequestDto model) {
+        public void UpdateCar(CarajDesktop.CarService.CarRequestDto model, int CarID) {
             CarajDesktop.CarService.UpdateCarRequest inValue = new CarajDesktop.CarService.UpdateCarRequest();
             inValue.Body = new CarajDesktop.CarService.UpdateCarRequestBody();
             inValue.Body.model = model;
+            inValue.Body.CarID = CarID;
             CarajDesktop.CarService.UpdateCarResponse retVal = ((CarajDesktop.CarService.CarServiceSoap)(this)).UpdateCar(inValue);
         }
         
@@ -1087,10 +1204,11 @@ namespace CarajDesktop.CarService {
             return base.Channel.UpdateCarAsync(request);
         }
         
-        public System.Threading.Tasks.Task<CarajDesktop.CarService.UpdateCarResponse> UpdateCarAsync(CarajDesktop.CarService.CarRequestDto model) {
+        public System.Threading.Tasks.Task<CarajDesktop.CarService.UpdateCarResponse> UpdateCarAsync(CarajDesktop.CarService.CarRequestDto model, int CarID) {
             CarajDesktop.CarService.UpdateCarRequest inValue = new CarajDesktop.CarService.UpdateCarRequest();
             inValue.Body = new CarajDesktop.CarService.UpdateCarRequestBody();
             inValue.Body.model = model;
+            inValue.Body.CarID = CarID;
             return ((CarajDesktop.CarService.CarServiceSoap)(this)).UpdateCarAsync(inValue);
         }
         

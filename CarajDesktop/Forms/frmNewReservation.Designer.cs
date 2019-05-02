@@ -47,6 +47,7 @@
             this.txtCarId = new System.Windows.Forms.TextBox();
             this.btnSelectCar = new System.Windows.Forms.Button();
             this.BtnReservationRequest = new System.Windows.Forms.Button();
+            this.btnIstekSec = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgwCarList)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,7 +55,7 @@
             // 
             this.BtnDoReservations.Location = new System.Drawing.Point(15, 206);
             this.BtnDoReservations.Name = "BtnDoReservations";
-            this.BtnDoReservations.Size = new System.Drawing.Size(289, 40);
+            this.BtnDoReservations.Size = new System.Drawing.Size(289, 48);
             this.BtnDoReservations.TabIndex = 21;
             this.BtnDoReservations.Text = "Do Reservations";
             this.BtnDoReservations.UseVisualStyleBackColor = true;
@@ -194,7 +195,7 @@
             // 
             this.btnSelectCar.Location = new System.Drawing.Point(310, 206);
             this.btnSelectCar.Name = "btnSelectCar";
-            this.btnSelectCar.Size = new System.Drawing.Size(162, 40);
+            this.btnSelectCar.Size = new System.Drawing.Size(104, 48);
             this.btnSelectCar.TabIndex = 36;
             this.btnSelectCar.Text = "Araç Seç";
             this.btnSelectCar.UseVisualStyleBackColor = true;
@@ -202,13 +203,22 @@
             // 
             // BtnReservationRequest
             // 
-            this.BtnReservationRequest.Location = new System.Drawing.Point(478, 206);
+            this.BtnReservationRequest.Location = new System.Drawing.Point(420, 206);
             this.BtnReservationRequest.Name = "BtnReservationRequest";
-            this.BtnReservationRequest.Size = new System.Drawing.Size(149, 40);
+            this.BtnReservationRequest.Size = new System.Drawing.Size(95, 48);
             this.BtnReservationRequest.TabIndex = 37;
             this.BtnReservationRequest.Text = "İstekleri Görüntüle";
             this.BtnReservationRequest.UseVisualStyleBackColor = true;
             this.BtnReservationRequest.Click += new System.EventHandler(this.BtnReservationRequest_Click);
+            // 
+            // btnIstekSec
+            // 
+            this.btnIstekSec.Location = new System.Drawing.Point(521, 206);
+            this.btnIstekSec.Name = "btnIstekSec";
+            this.btnIstekSec.Size = new System.Drawing.Size(106, 48);
+            this.btnIstekSec.TabIndex = 38;
+            this.btnIstekSec.Text = "İsteği Seç";
+            this.btnIstekSec.UseVisualStyleBackColor = true;
             // 
             // frmNewReservation
             // 
@@ -216,6 +226,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(639, 266);
+            this.Controls.Add(this.btnIstekSec);
             this.Controls.Add(this.BtnReservationRequest);
             this.Controls.Add(this.btnSelectCar);
             this.Controls.Add(this.txtCarId);
@@ -265,5 +276,6 @@
         private System.Windows.Forms.TextBox txtCarId;
         private System.Windows.Forms.Button btnSelectCar;
         private System.Windows.Forms.Button BtnReservationRequest;
+        private System.Windows.Forms.Button btnIstekSec;
     }
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
   <wsdl:types>
     <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org">
       <s:element name="GetRentalRequests">
@@ -33,6 +33,36 @@
           <s:element minOccurs="0" maxOccurs="1" name="CarModel" type="s:string" />
         </s:sequence>
       </s:complexType>
+      <s:element name="GetRentDetails">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CompanyID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRentDetailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetRentDetailsResult" type="tns:ArrayOfRentDetailsResponseDto" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfRentDetailsResponseDto">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="RentDetailsResponseDto" nillable="true" type="tns:RentDetailsResponseDto" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="RentDetailsResponseDto">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="CustomerID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="CarID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="RentStartDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="RentEndDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="StartingKilometer" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="EndingKilometer" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Pricing" type="s:decimal" />
+        </s:sequence>
+      </s:complexType>
       <s:element name="CreateRent">
         <s:complexType>
           <s:sequence>
@@ -58,6 +88,30 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="GetAllCompanies">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetAllCompaniesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAllCompaniesResult" type="tns:ArrayOfCompanyResponseDto" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCompanyResponseDto">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CompanyResponseDto" nillable="true" type="tns:CompanyResponseDto" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CompanyResponseDto">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="CompanyID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="CompanyName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CompanyAddress" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CompanyCarCount" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="CompanyVote" type="s:double" />
+        </s:sequence>
+      </s:complexType>
     </s:schema>
   </wsdl:types>
   <wsdl:message name="GetRentalRequestsSoapIn">
@@ -66,20 +120,40 @@
   <wsdl:message name="GetRentalRequestsSoapOut">
     <wsdl:part name="parameters" element="tns:GetRentalRequestsResponse" />
   </wsdl:message>
+  <wsdl:message name="GetRentDetailsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetRentDetails" />
+  </wsdl:message>
+  <wsdl:message name="GetRentDetailsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetRentDetailsResponse" />
+  </wsdl:message>
   <wsdl:message name="CreateRentSoapIn">
     <wsdl:part name="parameters" element="tns:CreateRent" />
   </wsdl:message>
   <wsdl:message name="CreateRentSoapOut">
     <wsdl:part name="parameters" element="tns:CreateRentResponse" />
   </wsdl:message>
+  <wsdl:message name="GetAllCompaniesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllCompanies" />
+  </wsdl:message>
+  <wsdl:message name="GetAllCompaniesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllCompaniesResponse" />
+  </wsdl:message>
   <wsdl:portType name="CompanyServiceSoap">
     <wsdl:operation name="GetRentalRequests">
       <wsdl:input message="tns:GetRentalRequestsSoapIn" />
       <wsdl:output message="tns:GetRentalRequestsSoapOut" />
     </wsdl:operation>
+    <wsdl:operation name="GetRentDetails">
+      <wsdl:input message="tns:GetRentDetailsSoapIn" />
+      <wsdl:output message="tns:GetRentDetailsSoapOut" />
+    </wsdl:operation>
     <wsdl:operation name="CreateRent">
       <wsdl:input message="tns:CreateRentSoapIn" />
       <wsdl:output message="tns:CreateRentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCompanies">
+      <wsdl:input message="tns:GetAllCompaniesSoapIn" />
+      <wsdl:output message="tns:GetAllCompaniesSoapOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="CompanyServiceSoap" type="tns:CompanyServiceSoap">
@@ -93,8 +167,26 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="GetRentDetails">
+      <soap:operation soapAction="http://tempuri.org/GetRentDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="CreateRent">
       <soap:operation soapAction="http://tempuri.org/CreateRent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCompanies">
+      <soap:operation soapAction="http://tempuri.org/GetAllCompanies" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -114,8 +206,26 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="GetRentDetails">
+      <soap12:operation soapAction="http://tempuri.org/GetRentDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="CreateRent">
       <soap12:operation soapAction="http://tempuri.org/CreateRent" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCompanies">
+      <soap12:operation soapAction="http://tempuri.org/GetAllCompanies" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -126,10 +236,10 @@
   </wsdl:binding>
   <wsdl:service name="CompanyService">
     <wsdl:port name="CompanyServiceSoap" binding="tns:CompanyServiceSoap">
-      <soap:address location="http://servertemplate-1e7ae441.westeurope.cloudapp.azure.com/companyservice.asmx" />
+      <soap:address location="http://localhost:51655/CompanyService.asmx" />
     </wsdl:port>
     <wsdl:port name="CompanyServiceSoap12" binding="tns:CompanyServiceSoap12">
-      <soap12:address location="http://servertemplate-1e7ae441.westeurope.cloudapp.azure.com/companyservice.asmx" />
+      <soap12:address location="http://localhost:51655/CompanyService.asmx" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>

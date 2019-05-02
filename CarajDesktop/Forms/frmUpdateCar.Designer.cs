@@ -278,7 +278,7 @@
             this.btnUpdateCar.TabIndex = 50;
             this.btnUpdateCar.Text = "UPDATE CAR";
             this.btnUpdateCar.UseVisualStyleBackColor = true;
-            this.btnUpdateCar.Click += new System.EventHandler(this.btnUpdateCar_Click);
+            this.btnUpdateCar.Click += new System.EventHandler(this.BtnUpdateCar_Click);
             // 
             // frmUpdateCar
             // 
@@ -315,7 +315,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmUpdateCar";
             this.Text = "Update Car";
-            this.Load += new System.EventHandler(this.frmUpdateCar_Load);
+            this.Load += new System.EventHandler(this.FrmUpdateCar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgwCars)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

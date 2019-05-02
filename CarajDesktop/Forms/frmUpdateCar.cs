@@ -18,7 +18,7 @@ namespace CarajDesktop.Forms
             InitializeComponent();
         }
 
-        private void frmUpdateCar_Load(object sender, EventArgs e)
+        private void FrmUpdateCar_Load(object sender, EventArgs e)
         {
             using(var CarService = new CarServiceSoapClient())
             {
@@ -48,24 +48,25 @@ namespace CarajDesktop.Forms
 
         }
 
-        private void btnUpdateCar_Click(object sender, EventArgs e)
+        private void BtnUpdateCar_Click(object sender, EventArgs e)
         {
-            CarRequestDto UpdatedCar = new CarRequestDto();
-            //car ID gelecek 
-            UpdatedCar.CarBrand = txtBrand.Text;
-            UpdatedCar.CarKM = int.Parse(txtCarKm.Text);
-            UpdatedCar.AirBagCount = byte.Parse(txtAirbagCount.Text);
-            UpdatedCar.CarModel = txtModel.Text;
-            UpdatedCar.CarPhotoURL = txtPhotoUrl.Text;
-            UpdatedCar.CarPriceForRent = decimal.Parse(txtRentPrice.Text);
-            UpdatedCar.CarSeatCount = byte.Parse(txtSeatCount.Text);
-            UpdatedCar.MinCustomerAge = byte.Parse(txtMinCustomerAge.Text);
-            UpdatedCar.MinDrivingLicenseAge = byte.Parse(txtMinLicenceAge.Text);
-            UpdatedCar.MaxKmPerDay = int.Parse(txtMaxKm.Text);
-            UpdatedCar.CarTrunkVolume = short.Parse(txtTrunkVolume.Text);
+            CarRequestDto UpdatedCar = new CarRequestDto
+            { 
+                CarBrand = txtBrand.Text,
+                CarKM = int.Parse(txtCarKm.Text),
+                AirBagCount = byte.Parse(txtAirbagCount.Text),
+                CarModel = txtModel.Text,
+                CarPhotoURL = txtPhotoUrl.Text,
+                CarPriceForRent = decimal.Parse(txtRentPrice.Text),
+                CarSeatCount = byte.Parse(txtSeatCount.Text),
+                MinCustomerAge = byte.Parse(txtMinCustomerAge.Text),
+                MinDrivingLicenseAge = byte.Parse(txtMinLicenceAge.Text),
+                MaxKmPerDay = int.Parse(txtMaxKm.Text),
+                CarTrunkVolume = short.Parse(txtTrunkVolume.Text)
+            };
             using (var CarService = new CarServiceSoapClient())
             {
-                CarService.UpdateCar(UpdatedCar);
+                CarService.UpdateCar(UpdatedCar,int.Parse(txtCarId.Text));
                 CarService.Close();
             }
         }

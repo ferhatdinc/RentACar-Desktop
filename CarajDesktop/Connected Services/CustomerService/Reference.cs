@@ -20,6 +20,12 @@ namespace CarajDesktop.CustomerService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CreateRentalRequest", ReplyAction="*")]
         System.Threading.Tasks.Task CreateRentalRequestAsync(int CarID, int CustomerID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DeleteRentalRequest", ReplyAction="*")]
+        void DeleteRentalRequest(int RentalRequestID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DeleteRentalRequest", ReplyAction="*")]
+        System.Threading.Tasks.Task DeleteRentalRequestAsync(int RentalRequestID);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -55,6 +61,14 @@ namespace CarajDesktop.CustomerService {
         
         public System.Threading.Tasks.Task CreateRentalRequestAsync(int CarID, int CustomerID) {
             return base.Channel.CreateRentalRequestAsync(CarID, CustomerID);
+        }
+        
+        public void DeleteRentalRequest(int RentalRequestID) {
+            base.Channel.DeleteRentalRequest(RentalRequestID);
+        }
+        
+        public System.Threading.Tasks.Task DeleteRentalRequestAsync(int RentalRequestID) {
+            return base.Channel.DeleteRentalRequestAsync(RentalRequestID);
         }
     }
 }

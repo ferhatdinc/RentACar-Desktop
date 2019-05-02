@@ -142,7 +142,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="Connected Services\AuthService\AuthService.wsdl" />
+    <None Include="Connected Services\AuthService\authservice.wsdl" />
     <None Include="Connected Services\AuthService\CarajDesktop.AuthService.CompanyLoginResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -170,6 +170,9 @@
     <None Include="Connected Services\CarService\CarajDesktop.CarService.GetAllCarsResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\CarService\CarajDesktop.CarService.GetAvailableCarByCompanyIDResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\CarService\CarajDesktop.CarService.GetAvailableCarResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -182,18 +185,30 @@
     <None Include="Connected Services\CarService\CarajDesktop.CarService.UpdateCarResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\CarService\CarService.wsdl" />
+    <None Include="Connected Services\CarService\carservice.wsdl" />
+    <None Include="Connected Services\CompanyService\CarajDesktop.CompanyService.CompanyResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\CompanyService\CarajDesktop.CompanyService.CreateRentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CompanyService\CarajDesktop.CompanyService.GetAllCompaniesResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\CompanyService\CarajDesktop.CompanyService.GetRentalRequestsResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\CompanyService\CarajDesktop.CompanyService.GetRentDetailsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\CompanyService\CarajDesktop.CompanyService.RentalRequestResponseDTO.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\CompanyService\companyservice.wsdl" />
-    <None Include="Connected Services\CustomerService\CustomerService.wsdl" />
+    <None Include="Connected Services\CompanyService\CarajDesktop.CompanyService.RentDetailsResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CompanyService\CompanyService.wsdl" />
+    <None Include="Connected Services\CustomerService\customerservice.wsdl" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -217,7 +232,7 @@
     <WCFMetadataStorage Include="Connected Services\CustomerService\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\CarService\CarService.disco" />
+    <None Include="Connected Services\CarService\carservice.disco" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Connected Services\CarService\configuration91.svcinfo" />
@@ -232,7 +247,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\CustomerService\CustomerService.disco" />
+    <None Include="Connected Services\CustomerService\customerservice.disco" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Connected Services\CustomerService\configuration91.svcinfo" />
@@ -247,7 +262,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\CompanyService\companyservice.disco" />
+    <None Include="Connected Services\CompanyService\CompanyService.disco" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Connected Services\CompanyService\configuration91.svcinfo" />
@@ -262,7 +277,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\AuthService\AuthService.disco" />
+    <None Include="Connected Services\AuthService\authservice.disco" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Connected Services\AuthService\configuration91.svcinfo" />

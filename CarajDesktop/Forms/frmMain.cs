@@ -52,14 +52,14 @@ namespace CarajDesktop.Forms
         {
             if (Company == null)
                 this.ShowForm<Login>();
-            else MessageBox.Show("Already Login " + Company.CompanyName);
+            else MessageBox.Show("Already Login ");
 
         }
 
         private void ReservationDetailsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (Company != null)
-                this.ShowForm<frmReservationDetails>();
+                this.ShowForm<FrmReservationDetails>();
             else MessageBox.Show("Giriş Yap");
         }
 
@@ -76,21 +76,21 @@ namespace CarajDesktop.Forms
             else MessageBox.Show("Giriş Yap");
         }
 
-        private void ekleToolStripMenuItem_Click(object sender, EventArgs e)
+        private void EkleToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (Company != null)
                 this.ShowForm<AddCar>();
             else MessageBox.Show("Giriş Yap");
         }
 
-        private void silToolStripMenuItem_Click(object sender, EventArgs e)
+        private void SilToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (Company != null)
                 this.ShowForm<frmDeleteCar>();
             else MessageBox.Show("Giriş Yap");
         }
 
-        private void güncelleToolStripMenuItem_Click(object sender, EventArgs e)
+        private void GüncelleToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (Company!=null)
                 this.ShowForm<frmUpdateCar>();

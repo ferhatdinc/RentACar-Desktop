@@ -1,6 +1,6 @@
 ﻿namespace CarajDesktop.Forms
 {
-    partial class frmReservationDetails
+    partial class FrmReservationDetails
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmReservationDetails));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmReservationDetails));
             this.dgwRezervtions = new System.Windows.Forms.DataGridView();
             this.btnReservationsList = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgwRezervtions)).BeginInit();
@@ -53,7 +53,7 @@
             this.btnReservationsList.TabIndex = 2;
             this.btnReservationsList.Text = "Reservations List";
             this.btnReservationsList.UseVisualStyleBackColor = true;
-            this.btnReservationsList.Click += new System.EventHandler(this.btnReservationsList_Click);
+            this.btnReservationsList.Click += new System.EventHandler(this.BtnReservationsList_Click);
             // 
             // frmReservationDetails
             // 
@@ -68,7 +68,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmReservationDetails";
             this.Text = "Reservation Details";
-            this.Load += new System.EventHandler(this.frmReservationDetails_Load);
+            this.Load += new System.EventHandler(this.FrmReservationDetails_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgwRezervtions)).EndInit();
             this.ResumeLayout(false);
 

@@ -25,19 +25,21 @@ namespace CarajDesktop.Forms
 
         private void BtnAddCar_Click(object sender, EventArgs e)
         {
-            CarRequestDto car = new CarRequestDto();
-            car.CarBrand = txtBrand.Text;
-            car.CarKM = int.Parse(txtCarKm.Text);
-            car.AirBagCount = byte.Parse(txtAirbagCount.Text);
-            car.CarModel = txtModel.Text;
-            car.CarPhotoURL = txtPhotoUrl.Text;
-            car.CarPriceForRent = decimal.Parse(txtRentPrice.Text);
-            car.CarSeatCount = byte.Parse(txtSeatCount.Text);
-            car.MinCustomerAge = byte.Parse(txtMinCustomerAge.Text);
-            car.MinDrivingLicenseAge = byte.Parse(txtMinLicenceAge.Text);
-            car.MaxKmPerDay = int.Parse(txtMaxKm.Text);
-            car.CarTrunkVolume = short.Parse(txtTrunkVolume.Text);
-            
+            CarRequestDto car = new CarRequestDto
+            {
+                CarBrand = txtBrand.Text,
+                CarKM = int.Parse(txtCarKm.Text),
+                AirBagCount = byte.Parse(txtAirbagCount.Text),
+                CarModel = txtModel.Text,
+                CarPhotoURL = txtPhotoUrl.Text,
+                CarPriceForRent = decimal.Parse(txtRentPrice.Text),
+                CarSeatCount = byte.Parse(txtSeatCount.Text),
+                MinCustomerAge = byte.Parse(txtMinCustomerAge.Text),
+                MinDrivingLicenseAge = byte.Parse(txtMinLicenceAge.Text),
+                MaxKmPerDay = int.Parse(txtMaxKm.Text),
+                CarTrunkVolume = short.Parse(txtTrunkVolume.Text)
+            };
+
             using (var CarService = new CarServiceSoapClient())
             {
                 CarService.AddCar(car,frmMain.Company.CompanyID);

@@ -20,7 +20,7 @@ namespace CarajDesktop.Forms
         {
             InitializeComponent();
         }
-
+        private int CompanyID = frmMain.Company.CompanyID;
         private void BtnDoReservations_Click(object sender, EventArgs e)
         {
             RentDetailsRequestDto NewRent = new RentDetailsRequestDto
@@ -79,7 +79,7 @@ namespace CarajDesktop.Forms
         {
             using (var CarService = new CarServiceSoapClient())
             {
-                var cars = CarService.GetAvailableCar(tpDateFirst.Value, tpDateLast.Value);
+                var cars = CarService.GetAvailableCarByCompanyID(tpDateFirst.Value, tpDateLast.Value, CompanyID);
                 dgwCarList.DataSource = cars;  
                 CarService.Close();
                 
@@ -89,7 +89,13 @@ namespace CarajDesktop.Forms
 
         private void BtnReservationRequest_Click(object sender, EventArgs e)
         {
-            
+            using (var CompanyService = new CompanyServiceSoapClient())
+            {
+                var cars = CompanyService.GetRentalRequests(CompanyID);
+                dgwCarList.DataSource = cars;
+                CompanyService.Close();
+
+            }
         }
     }
 }

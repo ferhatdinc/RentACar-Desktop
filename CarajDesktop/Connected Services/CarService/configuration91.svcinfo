@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="cZCed8NuR+hK1hCWqeuVTQME0n4=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="1xINOjE3acsXynkRYQzVt2lbL4I=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="CarServiceSoap">
       <properties>
@@ -112,10 +112,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="CarServiceSoap" contract="CarService.CarServiceSoap" bindingType="basicHttpBinding" address="http://servertemplate-1e7ae441.westeurope.cloudapp.azure.com/CarService.asmx" bindingConfiguration="CarServiceSoap">
+    <endpoint name="CarServiceSoap" contract="CarService.CarServiceSoap" bindingType="basicHttpBinding" address="http://localhost:51655/carservice.asmx" bindingConfiguration="CarServiceSoap">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://servertemplate-1e7ae441.westeurope.cloudapp.azure.com/CarService.asmx</serializedValue>
+          <serializedValue>http://localhost:51655/carservice.asmx</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
