@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CarajDesktop.CarService;
+using CarajDesktop.CompanyService;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,5 +18,15 @@ namespace CarajDesktop.Forms
         {
             InitializeComponent();
         }
+
+        private void btnReservationsList_Click(object sender, EventArgs e)
+        {
+            var carClient = new CarServiceSoapClient(); 
+            var companyClient = new CompanyServiceSoapClient();
+            var response = carClient.GetCars(1);
+            dgwRezervtions.DataSource = response;
+            companyClient.Close();
+        }     
+       
     }
 }

@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.menuStrip = new System.Windows.Forms.MenuStrip();
+            this.LoginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.yöneticiİşlemleriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ReservationDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ReservationRequestsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -39,7 +40,6 @@
             this.ekleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.silToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.güncelleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.LoginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.menuStrip.SuspendLayout();
@@ -57,6 +57,14 @@
             this.menuStrip.Size = new System.Drawing.Size(1382, 28);
             this.menuStrip.TabIndex = 0;
             this.menuStrip.Text = "MenuStrip";
+            // 
+            // LoginToolStripMenuItem
+            // 
+            this.LoginToolStripMenuItem.AutoSize = false;
+            this.LoginToolStripMenuItem.Name = "LoginToolStripMenuItem";
+            this.LoginToolStripMenuItem.Size = new System.Drawing.Size(58, 24);
+            this.LoginToolStripMenuItem.Text = "Login";
+            this.LoginToolStripMenuItem.Click += new System.EventHandler(this.LoginToolStripMenuItem_Click);
             // 
             // yöneticiİşlemleriToolStripMenuItem
             // 
@@ -103,28 +111,23 @@
             // ekleToolStripMenuItem
             // 
             this.ekleToolStripMenuItem.Name = "ekleToolStripMenuItem";
-            this.ekleToolStripMenuItem.Size = new System.Drawing.Size(133, 26);
+            this.ekleToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.ekleToolStripMenuItem.Text = "Add";
+            this.ekleToolStripMenuItem.Click += new System.EventHandler(this.ekleToolStripMenuItem_Click);
             // 
             // silToolStripMenuItem
             // 
             this.silToolStripMenuItem.Name = "silToolStripMenuItem";
-            this.silToolStripMenuItem.Size = new System.Drawing.Size(133, 26);
+            this.silToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.silToolStripMenuItem.Text = "Delete";
+            this.silToolStripMenuItem.Click += new System.EventHandler(this.silToolStripMenuItem_Click);
             // 
             // güncelleToolStripMenuItem
             // 
             this.güncelleToolStripMenuItem.Name = "güncelleToolStripMenuItem";
-            this.güncelleToolStripMenuItem.Size = new System.Drawing.Size(133, 26);
+            this.güncelleToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.güncelleToolStripMenuItem.Text = "Update";
-            // 
-            // LoginToolStripMenuItem
-            // 
-            this.LoginToolStripMenuItem.AutoSize = false;
-            this.LoginToolStripMenuItem.Name = "LoginToolStripMenuItem";
-            this.LoginToolStripMenuItem.Size = new System.Drawing.Size(58, 24);
-            this.LoginToolStripMenuItem.Text = "Login";
-            this.LoginToolStripMenuItem.Click += new System.EventHandler(this.LoginToolStripMenuItem_Click);
+            this.güncelleToolStripMenuItem.Click += new System.EventHandler(this.güncelleToolStripMenuItem_Click);
             // 
             // statusStrip
             // 

@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.txtCompanyName = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
-            this.btnGiris = new System.Windows.Forms.Button();
+            this.btnLogin = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -50,15 +50,15 @@
             this.txtPassword.Size = new System.Drawing.Size(152, 22);
             this.txtPassword.TabIndex = 1;
             // 
-            // btnGiris
+            // btnLogin
             // 
-            this.btnGiris.Location = new System.Drawing.Point(129, 111);
-            this.btnGiris.Name = "btnGiris";
-            this.btnGiris.Size = new System.Drawing.Size(152, 32);
-            this.btnGiris.TabIndex = 2;
-            this.btnGiris.Text = "Login";
-            this.btnGiris.UseVisualStyleBackColor = true;
-            this.btnGiris.Click += new System.EventHandler(this.btnGiris_Click);
+            this.btnLogin.Location = new System.Drawing.Point(129, 111);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(152, 32);
+            this.btnLogin.TabIndex = 2;
+            this.btnLogin.Text = "Login";
+            this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnGiris_Click);
             // 
             // label1
             // 
@@ -89,7 +89,7 @@
             this.ClientSize = new System.Drawing.Size(351, 249);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnGiris);
+            this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtCompanyName);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -104,7 +104,7 @@
 
         private System.Windows.Forms.TextBox txtCompanyName;
         private System.Windows.Forms.TextBox txtPassword;
-        private System.Windows.Forms.Button btnGiris;
+        private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
     }

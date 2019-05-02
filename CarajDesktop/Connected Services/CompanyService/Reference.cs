@@ -9,52 +9,527 @@
 //------------------------------------------------------------------------------
 
 namespace CarajDesktop.CompanyService {
+    using System.Runtime.Serialization;
+    using System;
     
     
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="CompanyService.ICompanyService")]
-    public interface ICompanyService {
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="RentalRequestResponseDTO", Namespace="http://tempuri.org")]
+    [System.SerializableAttribute()]
+    public partial class RentalRequestResponseDTO : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICompanyService/DoWork", ReplyAction="http://tempuri.org/ICompanyService/DoWorkResponse")]
-        void DoWork();
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICompanyService/DoWork", ReplyAction="http://tempuri.org/ICompanyService/DoWorkResponse")]
-        System.Threading.Tasks.Task DoWorkAsync();
+        private int RentalRequestIDField;
+        
+        private int CustomerIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CustomerNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CustomerSurnameField;
+        
+        private System.DateTime CustomerBirthDateField;
+        
+        private int CarIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CarBrandField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CarModelField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public int RentalRequestID {
+            get {
+                return this.RentalRequestIDField;
+            }
+            set {
+                if ((this.RentalRequestIDField.Equals(value) != true)) {
+                    this.RentalRequestIDField = value;
+                    this.RaisePropertyChanged("RentalRequestID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=1)]
+        public int CustomerID {
+            get {
+                return this.CustomerIDField;
+            }
+            set {
+                if ((this.CustomerIDField.Equals(value) != true)) {
+                    this.CustomerIDField = value;
+                    this.RaisePropertyChanged("CustomerID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
+        public string CustomerName {
+            get {
+                return this.CustomerNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CustomerNameField, value) != true)) {
+                    this.CustomerNameField = value;
+                    this.RaisePropertyChanged("CustomerName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
+        public string CustomerSurname {
+            get {
+                return this.CustomerSurnameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CustomerSurnameField, value) != true)) {
+                    this.CustomerSurnameField = value;
+                    this.RaisePropertyChanged("CustomerSurname");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=4)]
+        public System.DateTime CustomerBirthDate {
+            get {
+                return this.CustomerBirthDateField;
+            }
+            set {
+                if ((this.CustomerBirthDateField.Equals(value) != true)) {
+                    this.CustomerBirthDateField = value;
+                    this.RaisePropertyChanged("CustomerBirthDate");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=5)]
+        public int CarID {
+            get {
+                return this.CarIDField;
+            }
+            set {
+                if ((this.CarIDField.Equals(value) != true)) {
+                    this.CarIDField = value;
+                    this.RaisePropertyChanged("CarID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=6)]
+        public string CarBrand {
+            get {
+                return this.CarBrandField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CarBrandField, value) != true)) {
+                    this.CarBrandField = value;
+                    this.RaisePropertyChanged("CarBrand");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=7)]
+        public string CarModel {
+            get {
+                return this.CarModelField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CarModelField, value) != true)) {
+                    this.CarModelField = value;
+                    this.RaisePropertyChanged("CarModel");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="RentDetailsRequestDto", Namespace="http://tempuri.org")]
+    [System.SerializableAttribute()]
+    public partial class RentDetailsRequestDto : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        private int CustomerIDField;
+        
+        private int CarIDField;
+        
+        private System.DateTime RentStartDateField;
+        
+        private System.DateTime RentEndDateField;
+        
+        private int StartingKilometerField;
+        
+        private int EndingKilometerField;
+        
+        private decimal PricingField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public int CustomerID {
+            get {
+                return this.CustomerIDField;
+            }
+            set {
+                if ((this.CustomerIDField.Equals(value) != true)) {
+                    this.CustomerIDField = value;
+                    this.RaisePropertyChanged("CustomerID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=1)]
+        public int CarID {
+            get {
+                return this.CarIDField;
+            }
+            set {
+                if ((this.CarIDField.Equals(value) != true)) {
+                    this.CarIDField = value;
+                    this.RaisePropertyChanged("CarID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=2)]
+        public System.DateTime RentStartDate {
+            get {
+                return this.RentStartDateField;
+            }
+            set {
+                if ((this.RentStartDateField.Equals(value) != true)) {
+                    this.RentStartDateField = value;
+                    this.RaisePropertyChanged("RentStartDate");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=3)]
+        public System.DateTime RentEndDate {
+            get {
+                return this.RentEndDateField;
+            }
+            set {
+                if ((this.RentEndDateField.Equals(value) != true)) {
+                    this.RentEndDateField = value;
+                    this.RaisePropertyChanged("RentEndDate");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=4)]
+        public int StartingKilometer {
+            get {
+                return this.StartingKilometerField;
+            }
+            set {
+                if ((this.StartingKilometerField.Equals(value) != true)) {
+                    this.StartingKilometerField = value;
+                    this.RaisePropertyChanged("StartingKilometer");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=5)]
+        public int EndingKilometer {
+            get {
+                return this.EndingKilometerField;
+            }
+            set {
+                if ((this.EndingKilometerField.Equals(value) != true)) {
+                    this.EndingKilometerField = value;
+                    this.RaisePropertyChanged("EndingKilometer");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=6)]
+        public decimal Pricing {
+            get {
+                return this.PricingField;
+            }
+            set {
+                if ((this.PricingField.Equals(value) != true)) {
+                    this.PricingField = value;
+                    this.RaisePropertyChanged("Pricing");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface ICompanyServiceChannel : CarajDesktop.CompanyService.ICompanyService, System.ServiceModel.IClientChannel {
+    [System.ServiceModel.ServiceContractAttribute(Namespace="http://tempuri.org", ConfigurationName="CompanyService.CompanyServiceSoap")]
+    public interface CompanyServiceSoap {
+        
+        // CODEGEN: Generating message contract since element name GetRentalRequestsResult from namespace http://tempuri.org is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetRentalRequests", ReplyAction="*")]
+        CarajDesktop.CompanyService.GetRentalRequestsResponse GetRentalRequests(CarajDesktop.CompanyService.GetRentalRequestsRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetRentalRequests", ReplyAction="*")]
+        System.Threading.Tasks.Task<CarajDesktop.CompanyService.GetRentalRequestsResponse> GetRentalRequestsAsync(CarajDesktop.CompanyService.GetRentalRequestsRequest request);
+        
+        // CODEGEN: Generating message contract since element name dto from namespace http://tempuri.org is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CreateRent", ReplyAction="*")]
+        CarajDesktop.CompanyService.CreateRentResponse CreateRent(CarajDesktop.CompanyService.CreateRentRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CreateRent", ReplyAction="*")]
+        System.Threading.Tasks.Task<CarajDesktop.CompanyService.CreateRentResponse> CreateRentAsync(CarajDesktop.CompanyService.CreateRentRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class CompanyServiceClient : System.ServiceModel.ClientBase<CarajDesktop.CompanyService.ICompanyService>, CarajDesktop.CompanyService.ICompanyService {
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetRentalRequestsRequest {
         
-        public CompanyServiceClient() {
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetRentalRequests", Namespace="http://tempuri.org", Order=0)]
+        public CarajDesktop.CompanyService.GetRentalRequestsRequestBody Body;
+        
+        public GetRentalRequestsRequest() {
         }
         
-        public CompanyServiceClient(string endpointConfigurationName) : 
+        public GetRentalRequestsRequest(CarajDesktop.CompanyService.GetRentalRequestsRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org")]
+    public partial class GetRentalRequestsRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public int CompanyID;
+        
+        public GetRentalRequestsRequestBody() {
+        }
+        
+        public GetRentalRequestsRequestBody(int CompanyID) {
+            this.CompanyID = CompanyID;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetRentalRequestsResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetRentalRequestsResponse", Namespace="http://tempuri.org", Order=0)]
+        public CarajDesktop.CompanyService.GetRentalRequestsResponseBody Body;
+        
+        public GetRentalRequestsResponse() {
+        }
+        
+        public GetRentalRequestsResponse(CarajDesktop.CompanyService.GetRentalRequestsResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org")]
+    public partial class GetRentalRequestsResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public CarajDesktop.CompanyService.RentalRequestResponseDTO[] GetRentalRequestsResult;
+        
+        public GetRentalRequestsResponseBody() {
+        }
+        
+        public GetRentalRequestsResponseBody(CarajDesktop.CompanyService.RentalRequestResponseDTO[] GetRentalRequestsResult) {
+            this.GetRentalRequestsResult = GetRentalRequestsResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class CreateRentRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="CreateRent", Namespace="http://tempuri.org", Order=0)]
+        public CarajDesktop.CompanyService.CreateRentRequestBody Body;
+        
+        public CreateRentRequest() {
+        }
+        
+        public CreateRentRequest(CarajDesktop.CompanyService.CreateRentRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org")]
+    public partial class CreateRentRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public CarajDesktop.CompanyService.RentDetailsRequestDto dto;
+        
+        public CreateRentRequestBody() {
+        }
+        
+        public CreateRentRequestBody(CarajDesktop.CompanyService.RentDetailsRequestDto dto) {
+            this.dto = dto;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class CreateRentResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="CreateRentResponse", Namespace="http://tempuri.org", Order=0)]
+        public CarajDesktop.CompanyService.CreateRentResponseBody Body;
+        
+        public CreateRentResponse() {
+        }
+        
+        public CreateRentResponse(CarajDesktop.CompanyService.CreateRentResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org")]
+    public partial class CreateRentResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public bool CreateRentResult;
+        
+        public CreateRentResponseBody() {
+        }
+        
+        public CreateRentResponseBody(bool CreateRentResult) {
+            this.CreateRentResult = CreateRentResult;
+        }
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public interface CompanyServiceSoapChannel : CarajDesktop.CompanyService.CompanyServiceSoap, System.ServiceModel.IClientChannel {
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class CompanyServiceSoapClient : System.ServiceModel.ClientBase<CarajDesktop.CompanyService.CompanyServiceSoap>, CarajDesktop.CompanyService.CompanyServiceSoap {
+        
+        public CompanyServiceSoapClient() {
+        }
+        
+        public CompanyServiceSoapClient(string endpointConfigurationName) : 
                 base(endpointConfigurationName) {
         }
         
-        public CompanyServiceClient(string endpointConfigurationName, string remoteAddress) : 
+        public CompanyServiceSoapClient(string endpointConfigurationName, string remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public CompanyServiceClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public CompanyServiceSoapClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public CompanyServiceClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public CompanyServiceSoapClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
         }
         
-        public void DoWork() {
-            base.Channel.DoWork();
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        CarajDesktop.CompanyService.GetRentalRequestsResponse CarajDesktop.CompanyService.CompanyServiceSoap.GetRentalRequests(CarajDesktop.CompanyService.GetRentalRequestsRequest request) {
+            return base.Channel.GetRentalRequests(request);
         }
         
-        public System.Threading.Tasks.Task DoWorkAsync() {
-            return base.Channel.DoWorkAsync();
+        public CarajDesktop.CompanyService.RentalRequestResponseDTO[] GetRentalRequests(int CompanyID) {
+            CarajDesktop.CompanyService.GetRentalRequestsRequest inValue = new CarajDesktop.CompanyService.GetRentalRequestsRequest();
+            inValue.Body = new CarajDesktop.CompanyService.GetRentalRequestsRequestBody();
+            inValue.Body.CompanyID = CompanyID;
+            CarajDesktop.CompanyService.GetRentalRequestsResponse retVal = ((CarajDesktop.CompanyService.CompanyServiceSoap)(this)).GetRentalRequests(inValue);
+            return retVal.Body.GetRentalRequestsResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<CarajDesktop.CompanyService.GetRentalRequestsResponse> CarajDesktop.CompanyService.CompanyServiceSoap.GetRentalRequestsAsync(CarajDesktop.CompanyService.GetRentalRequestsRequest request) {
+            return base.Channel.GetRentalRequestsAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<CarajDesktop.CompanyService.GetRentalRequestsResponse> GetRentalRequestsAsync(int CompanyID) {
+            CarajDesktop.CompanyService.GetRentalRequestsRequest inValue = new CarajDesktop.CompanyService.GetRentalRequestsRequest();
+            inValue.Body = new CarajDesktop.CompanyService.GetRentalRequestsRequestBody();
+            inValue.Body.CompanyID = CompanyID;
+            return ((CarajDesktop.CompanyService.CompanyServiceSoap)(this)).GetRentalRequestsAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        CarajDesktop.CompanyService.CreateRentResponse CarajDesktop.CompanyService.CompanyServiceSoap.CreateRent(CarajDesktop.CompanyService.CreateRentRequest request) {
+            return base.Channel.CreateRent(request);
+        }
+        
+        public bool CreateRent(CarajDesktop.CompanyService.RentDetailsRequestDto dto) {
+            CarajDesktop.CompanyService.CreateRentRequest inValue = new CarajDesktop.CompanyService.CreateRentRequest();
+            inValue.Body = new CarajDesktop.CompanyService.CreateRentRequestBody();
+            inValue.Body.dto = dto;
+            CarajDesktop.CompanyService.CreateRentResponse retVal = ((CarajDesktop.CompanyService.CompanyServiceSoap)(this)).CreateRent(inValue);
+            return retVal.Body.CreateRentResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<CarajDesktop.CompanyService.CreateRentResponse> CarajDesktop.CompanyService.CompanyServiceSoap.CreateRentAsync(CarajDesktop.CompanyService.CreateRentRequest request) {
+            return base.Channel.CreateRentAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<CarajDesktop.CompanyService.CreateRentResponse> CreateRentAsync(CarajDesktop.CompanyService.RentDetailsRequestDto dto) {
+            CarajDesktop.CompanyService.CreateRentRequest inValue = new CarajDesktop.CompanyService.CreateRentRequest();
+            inValue.Body = new CarajDesktop.CompanyService.CreateRentRequestBody();
+            inValue.Body.dto = dto;
+            return ((CarajDesktop.CompanyService.CompanyServiceSoap)(this)).CreateRentAsync(inValue);
         }
     }
 }

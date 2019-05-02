@@ -12,49 +12,49 @@ namespace CarajDesktop.CustomerService {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="CustomerService.ICustomerService")]
-    public interface ICustomerService {
+    [System.ServiceModel.ServiceContractAttribute(Namespace="http://tempuri.org", ConfigurationName="CustomerService.CustomerServiceSoap")]
+    public interface CustomerServiceSoap {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICustomerService/DoWork", ReplyAction="http://tempuri.org/ICustomerService/DoWorkResponse")]
-        void DoWork();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CreateRentalRequest", ReplyAction="*")]
+        void CreateRentalRequest(int CarID, int CustomerID);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICustomerService/DoWork", ReplyAction="http://tempuri.org/ICustomerService/DoWorkResponse")]
-        System.Threading.Tasks.Task DoWorkAsync();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CreateRentalRequest", ReplyAction="*")]
+        System.Threading.Tasks.Task CreateRentalRequestAsync(int CarID, int CustomerID);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface ICustomerServiceChannel : CarajDesktop.CustomerService.ICustomerService, System.ServiceModel.IClientChannel {
+    public interface CustomerServiceSoapChannel : CarajDesktop.CustomerService.CustomerServiceSoap, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class CustomerServiceClient : System.ServiceModel.ClientBase<CarajDesktop.CustomerService.ICustomerService>, CarajDesktop.CustomerService.ICustomerService {
+    public partial class CustomerServiceSoapClient : System.ServiceModel.ClientBase<CarajDesktop.CustomerService.CustomerServiceSoap>, CarajDesktop.CustomerService.CustomerServiceSoap {
         
-        public CustomerServiceClient() {
+        public CustomerServiceSoapClient() {
         }
         
-        public CustomerServiceClient(string endpointConfigurationName) : 
+        public CustomerServiceSoapClient(string endpointConfigurationName) : 
                 base(endpointConfigurationName) {
         }
         
-        public CustomerServiceClient(string endpointConfigurationName, string remoteAddress) : 
+        public CustomerServiceSoapClient(string endpointConfigurationName, string remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public CustomerServiceClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public CustomerServiceSoapClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public CustomerServiceClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public CustomerServiceSoapClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
         }
         
-        public void DoWork() {
-            base.Channel.DoWork();
+        public void CreateRentalRequest(int CarID, int CustomerID) {
+            base.Channel.CreateRentalRequest(CarID, CustomerID);
         }
         
-        public System.Threading.Tasks.Task DoWorkAsync() {
-            return base.Channel.DoWorkAsync();
+        public System.Threading.Tasks.Task CreateRentalRequestAsync(int CarID, int CustomerID) {
+            return base.Channel.CreateRentalRequestAsync(CarID, CustomerID);
         }
     }
 }

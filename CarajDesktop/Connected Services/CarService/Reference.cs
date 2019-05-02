@@ -15,57 +15,47 @@ namespace CarajDesktop.CarService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Car", Namespace="http://schemas.datacontract.org/2004/07/Caraj.Entities")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="CarReturnDto", Namespace="http://tempuri.org")]
     [System.SerializableAttribute()]
-    public partial class Car : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+    public partial class CarReturnDto : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
+        private int CarIDField;
+        
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<byte> AirBagCountField;
+        private string CompanyNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CompanyAddressField;
+        
+        private double CompanyVoteField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string CarBrandField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int CarIDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<int> CarKMField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string CarModelField;
+        
+        private byte MinDrivingLicenseAgeField;
+        
+        private byte MinCustomerAgeField;
+        
+        private int MaxKmPerDayField;
+        
+        private int CarKMField;
+        
+        private byte AirBagCountField;
+        
+        private short CarTrunkVolumeField;
+        
+        private byte CarSeatCountField;
+        
+        private decimal CarPriceForRentField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string CarPhotoURLField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<decimal> CarPriceForRentField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<byte> CarSeatCountField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<short> CarTrunkVolumeField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private CarajDesktop.CarService.Company CompanyField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<int> CompanyIDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<int> MaxKmPerDayField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<byte> MinCustomerAgeField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<byte> MinDrivingLicenseAgeField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private CarajDesktop.CarService.RentDetail[] RentDetailsField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -77,33 +67,7 @@ namespace CarajDesktop.CarService {
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<byte> AirBagCount {
-            get {
-                return this.AirBagCountField;
-            }
-            set {
-                if ((this.AirBagCountField.Equals(value) != true)) {
-                    this.AirBagCountField = value;
-                    this.RaisePropertyChanged("AirBagCount");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string CarBrand {
-            get {
-                return this.CarBrandField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.CarBrandField, value) != true)) {
-                    this.CarBrandField = value;
-                    this.RaisePropertyChanged("CarBrand");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
         public int CarID {
             get {
                 return this.CarIDField;
@@ -116,265 +80,7 @@ namespace CarajDesktop.CarService {
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> CarKM {
-            get {
-                return this.CarKMField;
-            }
-            set {
-                if ((this.CarKMField.Equals(value) != true)) {
-                    this.CarKMField = value;
-                    this.RaisePropertyChanged("CarKM");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string CarModel {
-            get {
-                return this.CarModelField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.CarModelField, value) != true)) {
-                    this.CarModelField = value;
-                    this.RaisePropertyChanged("CarModel");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string CarPhotoURL {
-            get {
-                return this.CarPhotoURLField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.CarPhotoURLField, value) != true)) {
-                    this.CarPhotoURLField = value;
-                    this.RaisePropertyChanged("CarPhotoURL");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<decimal> CarPriceForRent {
-            get {
-                return this.CarPriceForRentField;
-            }
-            set {
-                if ((this.CarPriceForRentField.Equals(value) != true)) {
-                    this.CarPriceForRentField = value;
-                    this.RaisePropertyChanged("CarPriceForRent");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<byte> CarSeatCount {
-            get {
-                return this.CarSeatCountField;
-            }
-            set {
-                if ((this.CarSeatCountField.Equals(value) != true)) {
-                    this.CarSeatCountField = value;
-                    this.RaisePropertyChanged("CarSeatCount");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<short> CarTrunkVolume {
-            get {
-                return this.CarTrunkVolumeField;
-            }
-            set {
-                if ((this.CarTrunkVolumeField.Equals(value) != true)) {
-                    this.CarTrunkVolumeField = value;
-                    this.RaisePropertyChanged("CarTrunkVolume");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public CarajDesktop.CarService.Company Company {
-            get {
-                return this.CompanyField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.CompanyField, value) != true)) {
-                    this.CompanyField = value;
-                    this.RaisePropertyChanged("Company");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> CompanyID {
-            get {
-                return this.CompanyIDField;
-            }
-            set {
-                if ((this.CompanyIDField.Equals(value) != true)) {
-                    this.CompanyIDField = value;
-                    this.RaisePropertyChanged("CompanyID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> MaxKmPerDay {
-            get {
-                return this.MaxKmPerDayField;
-            }
-            set {
-                if ((this.MaxKmPerDayField.Equals(value) != true)) {
-                    this.MaxKmPerDayField = value;
-                    this.RaisePropertyChanged("MaxKmPerDay");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<byte> MinCustomerAge {
-            get {
-                return this.MinCustomerAgeField;
-            }
-            set {
-                if ((this.MinCustomerAgeField.Equals(value) != true)) {
-                    this.MinCustomerAgeField = value;
-                    this.RaisePropertyChanged("MinCustomerAge");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<byte> MinDrivingLicenseAge {
-            get {
-                return this.MinDrivingLicenseAgeField;
-            }
-            set {
-                if ((this.MinDrivingLicenseAgeField.Equals(value) != true)) {
-                    this.MinDrivingLicenseAgeField = value;
-                    this.RaisePropertyChanged("MinDrivingLicenseAge");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public CarajDesktop.CarService.RentDetail[] RentDetails {
-            get {
-                return this.RentDetailsField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.RentDetailsField, value) != true)) {
-                    this.RentDetailsField = value;
-                    this.RaisePropertyChanged("RentDetails");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Company", Namespace="http://schemas.datacontract.org/2004/07/Caraj.Entities")]
-    [System.SerializableAttribute()]
-    public partial class Company : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private CarajDesktop.CarService.Car[] CarsField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string CompanyAddressField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<int> CompanyCarCountField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int CompanyIDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string CompanyNameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string CompanyPasswordField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<double> CompanyVoteField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public CarajDesktop.CarService.Car[] Cars {
-            get {
-                return this.CarsField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.CarsField, value) != true)) {
-                    this.CarsField = value;
-                    this.RaisePropertyChanged("Cars");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string CompanyAddress {
-            get {
-                return this.CompanyAddressField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.CompanyAddressField, value) != true)) {
-                    this.CompanyAddressField = value;
-                    this.RaisePropertyChanged("CompanyAddress");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> CompanyCarCount {
-            get {
-                return this.CompanyCarCountField;
-            }
-            set {
-                if ((this.CompanyCarCountField.Equals(value) != true)) {
-                    this.CompanyCarCountField = value;
-                    this.RaisePropertyChanged("CompanyCarCount");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int CompanyID {
-            get {
-                return this.CompanyIDField;
-            }
-            set {
-                if ((this.CompanyIDField.Equals(value) != true)) {
-                    this.CompanyIDField = value;
-                    this.RaisePropertyChanged("CompanyID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
         public string CompanyName {
             get {
                 return this.CompanyNameField;
@@ -387,21 +93,21 @@ namespace CarajDesktop.CarService {
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string CompanyPassword {
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
+        public string CompanyAddress {
             get {
-                return this.CompanyPasswordField;
+                return this.CompanyAddressField;
             }
             set {
-                if ((object.ReferenceEquals(this.CompanyPasswordField, value) != true)) {
-                    this.CompanyPasswordField = value;
-                    this.RaisePropertyChanged("CompanyPassword");
+                if ((object.ReferenceEquals(this.CompanyAddressField, value) != true)) {
+                    this.CompanyAddressField = value;
+                    this.RaisePropertyChanged("CompanyAddress");
                 }
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<double> CompanyVote {
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=3)]
+        public double CompanyVote {
             get {
                 return this.CompanyVoteField;
             }
@@ -413,191 +119,145 @@ namespace CarajDesktop.CarService {
             }
         }
         
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="RentDetail", Namespace="http://schemas.datacontract.org/2004/07/Caraj.Entities")]
-    [System.SerializableAttribute()]
-    public partial class RentDetail : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private CarajDesktop.CarService.Car CarField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<int> CarIDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private CarajDesktop.CarService.Customer CustomerField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<int> CustomerIDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<int> EndingKilometerField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<decimal> PricingField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int RentDetailIDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<System.DateTime> RentEndDateField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<System.DateTime> RentStartDateField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<int> StartingKilometerField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=4)]
+        public string CarBrand {
             get {
-                return this.extensionDataField;
+                return this.CarBrandField;
             }
             set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public CarajDesktop.CarService.Car Car {
-            get {
-                return this.CarField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.CarField, value) != true)) {
-                    this.CarField = value;
-                    this.RaisePropertyChanged("Car");
+                if ((object.ReferenceEquals(this.CarBrandField, value) != true)) {
+                    this.CarBrandField = value;
+                    this.RaisePropertyChanged("CarBrand");
                 }
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> CarID {
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=5)]
+        public string CarModel {
             get {
-                return this.CarIDField;
+                return this.CarModelField;
             }
             set {
-                if ((this.CarIDField.Equals(value) != true)) {
-                    this.CarIDField = value;
-                    this.RaisePropertyChanged("CarID");
+                if ((object.ReferenceEquals(this.CarModelField, value) != true)) {
+                    this.CarModelField = value;
+                    this.RaisePropertyChanged("CarModel");
                 }
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public CarajDesktop.CarService.Customer Customer {
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=6)]
+        public byte MinDrivingLicenseAge {
             get {
-                return this.CustomerField;
+                return this.MinDrivingLicenseAgeField;
             }
             set {
-                if ((object.ReferenceEquals(this.CustomerField, value) != true)) {
-                    this.CustomerField = value;
-                    this.RaisePropertyChanged("Customer");
+                if ((this.MinDrivingLicenseAgeField.Equals(value) != true)) {
+                    this.MinDrivingLicenseAgeField = value;
+                    this.RaisePropertyChanged("MinDrivingLicenseAge");
                 }
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> CustomerID {
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=7)]
+        public byte MinCustomerAge {
             get {
-                return this.CustomerIDField;
+                return this.MinCustomerAgeField;
             }
             set {
-                if ((this.CustomerIDField.Equals(value) != true)) {
-                    this.CustomerIDField = value;
-                    this.RaisePropertyChanged("CustomerID");
+                if ((this.MinCustomerAgeField.Equals(value) != true)) {
+                    this.MinCustomerAgeField = value;
+                    this.RaisePropertyChanged("MinCustomerAge");
                 }
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> EndingKilometer {
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=8)]
+        public int MaxKmPerDay {
             get {
-                return this.EndingKilometerField;
+                return this.MaxKmPerDayField;
             }
             set {
-                if ((this.EndingKilometerField.Equals(value) != true)) {
-                    this.EndingKilometerField = value;
-                    this.RaisePropertyChanged("EndingKilometer");
+                if ((this.MaxKmPerDayField.Equals(value) != true)) {
+                    this.MaxKmPerDayField = value;
+                    this.RaisePropertyChanged("MaxKmPerDay");
                 }
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<decimal> Pricing {
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=9)]
+        public int CarKM {
             get {
-                return this.PricingField;
+                return this.CarKMField;
             }
             set {
-                if ((this.PricingField.Equals(value) != true)) {
-                    this.PricingField = value;
-                    this.RaisePropertyChanged("Pricing");
+                if ((this.CarKMField.Equals(value) != true)) {
+                    this.CarKMField = value;
+                    this.RaisePropertyChanged("CarKM");
                 }
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int RentDetailID {
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=10)]
+        public byte AirBagCount {
             get {
-                return this.RentDetailIDField;
+                return this.AirBagCountField;
             }
             set {
-                if ((this.RentDetailIDField.Equals(value) != true)) {
-                    this.RentDetailIDField = value;
-                    this.RaisePropertyChanged("RentDetailID");
+                if ((this.AirBagCountField.Equals(value) != true)) {
+                    this.AirBagCountField = value;
+                    this.RaisePropertyChanged("AirBagCount");
                 }
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.DateTime> RentEndDate {
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=11)]
+        public short CarTrunkVolume {
             get {
-                return this.RentEndDateField;
+                return this.CarTrunkVolumeField;
             }
             set {
-                if ((this.RentEndDateField.Equals(value) != true)) {
-                    this.RentEndDateField = value;
-                    this.RaisePropertyChanged("RentEndDate");
+                if ((this.CarTrunkVolumeField.Equals(value) != true)) {
+                    this.CarTrunkVolumeField = value;
+                    this.RaisePropertyChanged("CarTrunkVolume");
                 }
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.DateTime> RentStartDate {
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=12)]
+        public byte CarSeatCount {
             get {
-                return this.RentStartDateField;
+                return this.CarSeatCountField;
             }
             set {
-                if ((this.RentStartDateField.Equals(value) != true)) {
-                    this.RentStartDateField = value;
-                    this.RaisePropertyChanged("RentStartDate");
+                if ((this.CarSeatCountField.Equals(value) != true)) {
+                    this.CarSeatCountField = value;
+                    this.RaisePropertyChanged("CarSeatCount");
                 }
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> StartingKilometer {
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=13)]
+        public decimal CarPriceForRent {
             get {
-                return this.StartingKilometerField;
+                return this.CarPriceForRentField;
             }
             set {
-                if ((this.StartingKilometerField.Equals(value) != true)) {
-                    this.StartingKilometerField = value;
-                    this.RaisePropertyChanged("StartingKilometer");
+                if ((this.CarPriceForRentField.Equals(value) != true)) {
+                    this.CarPriceForRentField = value;
+                    this.RaisePropertyChanged("CarPriceForRent");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=14)]
+        public string CarPhotoURL {
+            get {
+                return this.CarPhotoURLField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CarPhotoURLField, value) != true)) {
+                    this.CarPhotoURLField = value;
+                    this.RaisePropertyChanged("CarPhotoURL");
                 }
             }
         }
@@ -614,33 +274,37 @@ namespace CarajDesktop.CarService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Customer", Namespace="http://schemas.datacontract.org/2004/07/Caraj.Entities")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="CarRequestDto", Namespace="http://tempuri.org")]
     [System.SerializableAttribute()]
-    public partial class Customer : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+    public partial class CarRequestDto : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<System.DateTime> CustomerBirthDateField;
+        private string CarBrandField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int CustomerIDField;
+        private string CarModelField;
+        
+        private byte MinDrivingLicenseAgeField;
+        
+        private byte MinCustomerAgeField;
+        
+        private int MaxKmPerDayField;
+        
+        private int CarKMField;
+        
+        private byte AirBagCountField;
+        
+        private short CarTrunkVolumeField;
+        
+        private byte CarSeatCountField;
+        
+        private decimal CarPriceForRentField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string CustomerNameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string CustomerPasswordField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string CustomerSurnameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string CustomerUserNameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private CarajDesktop.CarService.RentDetail[] RentDetailsField;
+        private string CarPhotoURLField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -652,93 +316,145 @@ namespace CarajDesktop.CarService {
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.DateTime> CustomerBirthDate {
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public string CarBrand {
             get {
-                return this.CustomerBirthDateField;
+                return this.CarBrandField;
             }
             set {
-                if ((this.CustomerBirthDateField.Equals(value) != true)) {
-                    this.CustomerBirthDateField = value;
-                    this.RaisePropertyChanged("CustomerBirthDate");
+                if ((object.ReferenceEquals(this.CarBrandField, value) != true)) {
+                    this.CarBrandField = value;
+                    this.RaisePropertyChanged("CarBrand");
                 }
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int CustomerID {
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public string CarModel {
             get {
-                return this.CustomerIDField;
+                return this.CarModelField;
             }
             set {
-                if ((this.CustomerIDField.Equals(value) != true)) {
-                    this.CustomerIDField = value;
-                    this.RaisePropertyChanged("CustomerID");
+                if ((object.ReferenceEquals(this.CarModelField, value) != true)) {
+                    this.CarModelField = value;
+                    this.RaisePropertyChanged("CarModel");
                 }
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string CustomerName {
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public byte MinDrivingLicenseAge {
             get {
-                return this.CustomerNameField;
+                return this.MinDrivingLicenseAgeField;
             }
             set {
-                if ((object.ReferenceEquals(this.CustomerNameField, value) != true)) {
-                    this.CustomerNameField = value;
-                    this.RaisePropertyChanged("CustomerName");
+                if ((this.MinDrivingLicenseAgeField.Equals(value) != true)) {
+                    this.MinDrivingLicenseAgeField = value;
+                    this.RaisePropertyChanged("MinDrivingLicenseAge");
                 }
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string CustomerPassword {
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=3)]
+        public byte MinCustomerAge {
             get {
-                return this.CustomerPasswordField;
+                return this.MinCustomerAgeField;
             }
             set {
-                if ((object.ReferenceEquals(this.CustomerPasswordField, value) != true)) {
-                    this.CustomerPasswordField = value;
-                    this.RaisePropertyChanged("CustomerPassword");
+                if ((this.MinCustomerAgeField.Equals(value) != true)) {
+                    this.MinCustomerAgeField = value;
+                    this.RaisePropertyChanged("MinCustomerAge");
                 }
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string CustomerSurname {
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=4)]
+        public int MaxKmPerDay {
             get {
-                return this.CustomerSurnameField;
+                return this.MaxKmPerDayField;
             }
             set {
-                if ((object.ReferenceEquals(this.CustomerSurnameField, value) != true)) {
-                    this.CustomerSurnameField = value;
-                    this.RaisePropertyChanged("CustomerSurname");
+                if ((this.MaxKmPerDayField.Equals(value) != true)) {
+                    this.MaxKmPerDayField = value;
+                    this.RaisePropertyChanged("MaxKmPerDay");
                 }
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string CustomerUserName {
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=5)]
+        public int CarKM {
             get {
-                return this.CustomerUserNameField;
+                return this.CarKMField;
             }
             set {
-                if ((object.ReferenceEquals(this.CustomerUserNameField, value) != true)) {
-                    this.CustomerUserNameField = value;
-                    this.RaisePropertyChanged("CustomerUserName");
+                if ((this.CarKMField.Equals(value) != true)) {
+                    this.CarKMField = value;
+                    this.RaisePropertyChanged("CarKM");
                 }
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public CarajDesktop.CarService.RentDetail[] RentDetails {
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=6)]
+        public byte AirBagCount {
             get {
-                return this.RentDetailsField;
+                return this.AirBagCountField;
             }
             set {
-                if ((object.ReferenceEquals(this.RentDetailsField, value) != true)) {
-                    this.RentDetailsField = value;
-                    this.RaisePropertyChanged("RentDetails");
+                if ((this.AirBagCountField.Equals(value) != true)) {
+                    this.AirBagCountField = value;
+                    this.RaisePropertyChanged("AirBagCount");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=7)]
+        public short CarTrunkVolume {
+            get {
+                return this.CarTrunkVolumeField;
+            }
+            set {
+                if ((this.CarTrunkVolumeField.Equals(value) != true)) {
+                    this.CarTrunkVolumeField = value;
+                    this.RaisePropertyChanged("CarTrunkVolume");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=8)]
+        public byte CarSeatCount {
+            get {
+                return this.CarSeatCountField;
+            }
+            set {
+                if ((this.CarSeatCountField.Equals(value) != true)) {
+                    this.CarSeatCountField = value;
+                    this.RaisePropertyChanged("CarSeatCount");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=9)]
+        public decimal CarPriceForRent {
+            get {
+                return this.CarPriceForRentField;
+            }
+            set {
+                if ((this.CarPriceForRentField.Equals(value) != true)) {
+                    this.CarPriceForRentField = value;
+                    this.RaisePropertyChanged("CarPriceForRent");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=10)]
+        public string CarPhotoURL {
+            get {
+                return this.CarPhotoURLField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CarPhotoURLField, value) != true)) {
+                    this.CarPhotoURLField = value;
+                    this.RaisePropertyChanged("CarPhotoURL");
                 }
             }
         }
@@ -754,63 +470,636 @@ namespace CarajDesktop.CarService {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="CarService.ICarService")]
-    public interface ICarService {
+    [System.ServiceModel.ServiceContractAttribute(Namespace="http://tempuri.org", ConfigurationName="CarService.CarServiceSoap")]
+    public interface CarServiceSoap {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICarService/GetAvailableCar", ReplyAction="http://tempuri.org/ICarService/GetAvailableCarResponse")]
-        CarajDesktop.CarService.Car[] GetAvailableCar(System.DateTime first, System.DateTime last);
+        // CODEGEN: Generating message contract since element name GetAvailableCarResult from namespace http://tempuri.org is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetAvailableCar", ReplyAction="*")]
+        CarajDesktop.CarService.GetAvailableCarResponse GetAvailableCar(CarajDesktop.CarService.GetAvailableCarRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICarService/GetAvailableCar", ReplyAction="http://tempuri.org/ICarService/GetAvailableCarResponse")]
-        System.Threading.Tasks.Task<CarajDesktop.CarService.Car[]> GetAvailableCarAsync(System.DateTime first, System.DateTime last);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetAvailableCar", ReplyAction="*")]
+        System.Threading.Tasks.Task<CarajDesktop.CarService.GetAvailableCarResponse> GetAvailableCarAsync(CarajDesktop.CarService.GetAvailableCarRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICarService/Sayi", ReplyAction="http://tempuri.org/ICarService/SayiResponse")]
-        int Sayi();
+        // CODEGEN: Generating message contract since element name GetCarsResult from namespace http://tempuri.org is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetCars", ReplyAction="*")]
+        CarajDesktop.CarService.GetCarsResponse GetCars(CarajDesktop.CarService.GetCarsRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICarService/Sayi", ReplyAction="http://tempuri.org/ICarService/SayiResponse")]
-        System.Threading.Tasks.Task<int> SayiAsync();
-    }
-    
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface ICarServiceChannel : CarajDesktop.CarService.ICarService, System.ServiceModel.IClientChannel {
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetCars", ReplyAction="*")]
+        System.Threading.Tasks.Task<CarajDesktop.CarService.GetCarsResponse> GetCarsAsync(CarajDesktop.CarService.GetCarsRequest request);
+        
+        // CODEGEN: Generating message contract since element name GetAllCarsResult from namespace http://tempuri.org is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetAllCars", ReplyAction="*")]
+        CarajDesktop.CarService.GetAllCarsResponse GetAllCars(CarajDesktop.CarService.GetAllCarsRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetAllCars", ReplyAction="*")]
+        System.Threading.Tasks.Task<CarajDesktop.CarService.GetAllCarsResponse> GetAllCarsAsync(CarajDesktop.CarService.GetAllCarsRequest request);
+        
+        // CODEGEN: Generating message contract since element name GetCarResult from namespace http://tempuri.org is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetCar", ReplyAction="*")]
+        CarajDesktop.CarService.GetCarResponse GetCar(CarajDesktop.CarService.GetCarRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetCar", ReplyAction="*")]
+        System.Threading.Tasks.Task<CarajDesktop.CarService.GetCarResponse> GetCarAsync(CarajDesktop.CarService.GetCarRequest request);
+        
+        // CODEGEN: Generating message contract since element name model from namespace http://tempuri.org is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AddCar", ReplyAction="*")]
+        CarajDesktop.CarService.AddCarResponse AddCar(CarajDesktop.CarService.AddCarRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AddCar", ReplyAction="*")]
+        System.Threading.Tasks.Task<CarajDesktop.CarService.AddCarResponse> AddCarAsync(CarajDesktop.CarService.AddCarRequest request);
+        
+        // CODEGEN: Generating message contract since element name model from namespace http://tempuri.org is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateCar", ReplyAction="*")]
+        CarajDesktop.CarService.UpdateCarResponse UpdateCar(CarajDesktop.CarService.UpdateCarRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateCar", ReplyAction="*")]
+        System.Threading.Tasks.Task<CarajDesktop.CarService.UpdateCarResponse> UpdateCarAsync(CarajDesktop.CarService.UpdateCarRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DeleteCar", ReplyAction="*")]
+        void DeleteCar(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DeleteCar", ReplyAction="*")]
+        System.Threading.Tasks.Task DeleteCarAsync(int id);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class CarServiceClient : System.ServiceModel.ClientBase<CarajDesktop.CarService.ICarService>, CarajDesktop.CarService.ICarService {
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetAvailableCarRequest {
         
-        public CarServiceClient() {
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetAvailableCar", Namespace="http://tempuri.org", Order=0)]
+        public CarajDesktop.CarService.GetAvailableCarRequestBody Body;
+        
+        public GetAvailableCarRequest() {
         }
         
-        public CarServiceClient(string endpointConfigurationName) : 
+        public GetAvailableCarRequest(CarajDesktop.CarService.GetAvailableCarRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org")]
+    public partial class GetAvailableCarRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public System.DateTime first;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=1)]
+        public System.DateTime last;
+        
+        public GetAvailableCarRequestBody() {
+        }
+        
+        public GetAvailableCarRequestBody(System.DateTime first, System.DateTime last) {
+            this.first = first;
+            this.last = last;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetAvailableCarResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetAvailableCarResponse", Namespace="http://tempuri.org", Order=0)]
+        public CarajDesktop.CarService.GetAvailableCarResponseBody Body;
+        
+        public GetAvailableCarResponse() {
+        }
+        
+        public GetAvailableCarResponse(CarajDesktop.CarService.GetAvailableCarResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org")]
+    public partial class GetAvailableCarResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public CarajDesktop.CarService.CarReturnDto[] GetAvailableCarResult;
+        
+        public GetAvailableCarResponseBody() {
+        }
+        
+        public GetAvailableCarResponseBody(CarajDesktop.CarService.CarReturnDto[] GetAvailableCarResult) {
+            this.GetAvailableCarResult = GetAvailableCarResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetCarsRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetCars", Namespace="http://tempuri.org", Order=0)]
+        public CarajDesktop.CarService.GetCarsRequestBody Body;
+        
+        public GetCarsRequest() {
+        }
+        
+        public GetCarsRequest(CarajDesktop.CarService.GetCarsRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org")]
+    public partial class GetCarsRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public int id;
+        
+        public GetCarsRequestBody() {
+        }
+        
+        public GetCarsRequestBody(int id) {
+            this.id = id;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetCarsResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetCarsResponse", Namespace="http://tempuri.org", Order=0)]
+        public CarajDesktop.CarService.GetCarsResponseBody Body;
+        
+        public GetCarsResponse() {
+        }
+        
+        public GetCarsResponse(CarajDesktop.CarService.GetCarsResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org")]
+    public partial class GetCarsResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public CarajDesktop.CarService.CarReturnDto[] GetCarsResult;
+        
+        public GetCarsResponseBody() {
+        }
+        
+        public GetCarsResponseBody(CarajDesktop.CarService.CarReturnDto[] GetCarsResult) {
+            this.GetCarsResult = GetCarsResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetAllCarsRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetAllCars", Namespace="http://tempuri.org", Order=0)]
+        public CarajDesktop.CarService.GetAllCarsRequestBody Body;
+        
+        public GetAllCarsRequest() {
+        }
+        
+        public GetAllCarsRequest(CarajDesktop.CarService.GetAllCarsRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class GetAllCarsRequestBody {
+        
+        public GetAllCarsRequestBody() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetAllCarsResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetAllCarsResponse", Namespace="http://tempuri.org", Order=0)]
+        public CarajDesktop.CarService.GetAllCarsResponseBody Body;
+        
+        public GetAllCarsResponse() {
+        }
+        
+        public GetAllCarsResponse(CarajDesktop.CarService.GetAllCarsResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org")]
+    public partial class GetAllCarsResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public CarajDesktop.CarService.CarReturnDto[] GetAllCarsResult;
+        
+        public GetAllCarsResponseBody() {
+        }
+        
+        public GetAllCarsResponseBody(CarajDesktop.CarService.CarReturnDto[] GetAllCarsResult) {
+            this.GetAllCarsResult = GetAllCarsResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetCarRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetCar", Namespace="http://tempuri.org", Order=0)]
+        public CarajDesktop.CarService.GetCarRequestBody Body;
+        
+        public GetCarRequest() {
+        }
+        
+        public GetCarRequest(CarajDesktop.CarService.GetCarRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org")]
+    public partial class GetCarRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public int id;
+        
+        public GetCarRequestBody() {
+        }
+        
+        public GetCarRequestBody(int id) {
+            this.id = id;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetCarResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetCarResponse", Namespace="http://tempuri.org", Order=0)]
+        public CarajDesktop.CarService.GetCarResponseBody Body;
+        
+        public GetCarResponse() {
+        }
+        
+        public GetCarResponse(CarajDesktop.CarService.GetCarResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org")]
+    public partial class GetCarResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public CarajDesktop.CarService.CarReturnDto GetCarResult;
+        
+        public GetCarResponseBody() {
+        }
+        
+        public GetCarResponseBody(CarajDesktop.CarService.CarReturnDto GetCarResult) {
+            this.GetCarResult = GetCarResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class AddCarRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="AddCar", Namespace="http://tempuri.org", Order=0)]
+        public CarajDesktop.CarService.AddCarRequestBody Body;
+        
+        public AddCarRequest() {
+        }
+        
+        public AddCarRequest(CarajDesktop.CarService.AddCarRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org")]
+    public partial class AddCarRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public CarajDesktop.CarService.CarRequestDto model;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=1)]
+        public int CompanyID;
+        
+        public AddCarRequestBody() {
+        }
+        
+        public AddCarRequestBody(CarajDesktop.CarService.CarRequestDto model, int CompanyID) {
+            this.model = model;
+            this.CompanyID = CompanyID;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class AddCarResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="AddCarResponse", Namespace="http://tempuri.org", Order=0)]
+        public CarajDesktop.CarService.AddCarResponseBody Body;
+        
+        public AddCarResponse() {
+        }
+        
+        public AddCarResponse(CarajDesktop.CarService.AddCarResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class AddCarResponseBody {
+        
+        public AddCarResponseBody() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class UpdateCarRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="UpdateCar", Namespace="http://tempuri.org", Order=0)]
+        public CarajDesktop.CarService.UpdateCarRequestBody Body;
+        
+        public UpdateCarRequest() {
+        }
+        
+        public UpdateCarRequest(CarajDesktop.CarService.UpdateCarRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org")]
+    public partial class UpdateCarRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public CarajDesktop.CarService.CarRequestDto model;
+        
+        public UpdateCarRequestBody() {
+        }
+        
+        public UpdateCarRequestBody(CarajDesktop.CarService.CarRequestDto model) {
+            this.model = model;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class UpdateCarResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="UpdateCarResponse", Namespace="http://tempuri.org", Order=0)]
+        public CarajDesktop.CarService.UpdateCarResponseBody Body;
+        
+        public UpdateCarResponse() {
+        }
+        
+        public UpdateCarResponse(CarajDesktop.CarService.UpdateCarResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class UpdateCarResponseBody {
+        
+        public UpdateCarResponseBody() {
+        }
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public interface CarServiceSoapChannel : CarajDesktop.CarService.CarServiceSoap, System.ServiceModel.IClientChannel {
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class CarServiceSoapClient : System.ServiceModel.ClientBase<CarajDesktop.CarService.CarServiceSoap>, CarajDesktop.CarService.CarServiceSoap {
+        
+        public CarServiceSoapClient() {
+        }
+        
+        public CarServiceSoapClient(string endpointConfigurationName) : 
                 base(endpointConfigurationName) {
         }
         
-        public CarServiceClient(string endpointConfigurationName, string remoteAddress) : 
+        public CarServiceSoapClient(string endpointConfigurationName, string remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public CarServiceClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public CarServiceSoapClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public CarServiceClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public CarServiceSoapClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
         }
         
-        public CarajDesktop.CarService.Car[] GetAvailableCar(System.DateTime first, System.DateTime last) {
-            return base.Channel.GetAvailableCar(first, last);
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        CarajDesktop.CarService.GetAvailableCarResponse CarajDesktop.CarService.CarServiceSoap.GetAvailableCar(CarajDesktop.CarService.GetAvailableCarRequest request) {
+            return base.Channel.GetAvailableCar(request);
         }
         
-        public System.Threading.Tasks.Task<CarajDesktop.CarService.Car[]> GetAvailableCarAsync(System.DateTime first, System.DateTime last) {
-            return base.Channel.GetAvailableCarAsync(first, last);
+        public CarajDesktop.CarService.CarReturnDto[] GetAvailableCar(System.DateTime first, System.DateTime last) {
+            CarajDesktop.CarService.GetAvailableCarRequest inValue = new CarajDesktop.CarService.GetAvailableCarRequest();
+            inValue.Body = new CarajDesktop.CarService.GetAvailableCarRequestBody();
+            inValue.Body.first = first;
+            inValue.Body.last = last;
+            CarajDesktop.CarService.GetAvailableCarResponse retVal = ((CarajDesktop.CarService.CarServiceSoap)(this)).GetAvailableCar(inValue);
+            return retVal.Body.GetAvailableCarResult;
         }
         
-        public int Sayi() {
-            return base.Channel.Sayi();
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<CarajDesktop.CarService.GetAvailableCarResponse> CarajDesktop.CarService.CarServiceSoap.GetAvailableCarAsync(CarajDesktop.CarService.GetAvailableCarRequest request) {
+            return base.Channel.GetAvailableCarAsync(request);
         }
         
-        public System.Threading.Tasks.Task<int> SayiAsync() {
-            return base.Channel.SayiAsync();
+        public System.Threading.Tasks.Task<CarajDesktop.CarService.GetAvailableCarResponse> GetAvailableCarAsync(System.DateTime first, System.DateTime last) {
+            CarajDesktop.CarService.GetAvailableCarRequest inValue = new CarajDesktop.CarService.GetAvailableCarRequest();
+            inValue.Body = new CarajDesktop.CarService.GetAvailableCarRequestBody();
+            inValue.Body.first = first;
+            inValue.Body.last = last;
+            return ((CarajDesktop.CarService.CarServiceSoap)(this)).GetAvailableCarAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        CarajDesktop.CarService.GetCarsResponse CarajDesktop.CarService.CarServiceSoap.GetCars(CarajDesktop.CarService.GetCarsRequest request) {
+            return base.Channel.GetCars(request);
+        }
+        
+        public CarajDesktop.CarService.CarReturnDto[] GetCars(int id) {
+            CarajDesktop.CarService.GetCarsRequest inValue = new CarajDesktop.CarService.GetCarsRequest();
+            inValue.Body = new CarajDesktop.CarService.GetCarsRequestBody();
+            inValue.Body.id = id;
+            CarajDesktop.CarService.GetCarsResponse retVal = ((CarajDesktop.CarService.CarServiceSoap)(this)).GetCars(inValue);
+            return retVal.Body.GetCarsResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<CarajDesktop.CarService.GetCarsResponse> CarajDesktop.CarService.CarServiceSoap.GetCarsAsync(CarajDesktop.CarService.GetCarsRequest request) {
+            return base.Channel.GetCarsAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<CarajDesktop.CarService.GetCarsResponse> GetCarsAsync(int id) {
+            CarajDesktop.CarService.GetCarsRequest inValue = new CarajDesktop.CarService.GetCarsRequest();
+            inValue.Body = new CarajDesktop.CarService.GetCarsRequestBody();
+            inValue.Body.id = id;
+            return ((CarajDesktop.CarService.CarServiceSoap)(this)).GetCarsAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        CarajDesktop.CarService.GetAllCarsResponse CarajDesktop.CarService.CarServiceSoap.GetAllCars(CarajDesktop.CarService.GetAllCarsRequest request) {
+            return base.Channel.GetAllCars(request);
+        }
+        
+        public CarajDesktop.CarService.CarReturnDto[] GetAllCars() {
+            CarajDesktop.CarService.GetAllCarsRequest inValue = new CarajDesktop.CarService.GetAllCarsRequest();
+            inValue.Body = new CarajDesktop.CarService.GetAllCarsRequestBody();
+            CarajDesktop.CarService.GetAllCarsResponse retVal = ((CarajDesktop.CarService.CarServiceSoap)(this)).GetAllCars(inValue);
+            return retVal.Body.GetAllCarsResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<CarajDesktop.CarService.GetAllCarsResponse> CarajDesktop.CarService.CarServiceSoap.GetAllCarsAsync(CarajDesktop.CarService.GetAllCarsRequest request) {
+            return base.Channel.GetAllCarsAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<CarajDesktop.CarService.GetAllCarsResponse> GetAllCarsAsync() {
+            CarajDesktop.CarService.GetAllCarsRequest inValue = new CarajDesktop.CarService.GetAllCarsRequest();
+            inValue.Body = new CarajDesktop.CarService.GetAllCarsRequestBody();
+            return ((CarajDesktop.CarService.CarServiceSoap)(this)).GetAllCarsAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        CarajDesktop.CarService.GetCarResponse CarajDesktop.CarService.CarServiceSoap.GetCar(CarajDesktop.CarService.GetCarRequest request) {
+            return base.Channel.GetCar(request);
+        }
+        
+        public CarajDesktop.CarService.CarReturnDto GetCar(int id) {
+            CarajDesktop.CarService.GetCarRequest inValue = new CarajDesktop.CarService.GetCarRequest();
+            inValue.Body = new CarajDesktop.CarService.GetCarRequestBody();
+            inValue.Body.id = id;
+            CarajDesktop.CarService.GetCarResponse retVal = ((CarajDesktop.CarService.CarServiceSoap)(this)).GetCar(inValue);
+            return retVal.Body.GetCarResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<CarajDesktop.CarService.GetCarResponse> CarajDesktop.CarService.CarServiceSoap.GetCarAsync(CarajDesktop.CarService.GetCarRequest request) {
+            return base.Channel.GetCarAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<CarajDesktop.CarService.GetCarResponse> GetCarAsync(int id) {
+            CarajDesktop.CarService.GetCarRequest inValue = new CarajDesktop.CarService.GetCarRequest();
+            inValue.Body = new CarajDesktop.CarService.GetCarRequestBody();
+            inValue.Body.id = id;
+            return ((CarajDesktop.CarService.CarServiceSoap)(this)).GetCarAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        CarajDesktop.CarService.AddCarResponse CarajDesktop.CarService.CarServiceSoap.AddCar(CarajDesktop.CarService.AddCarRequest request) {
+            return base.Channel.AddCar(request);
+        }
+        
+        public void AddCar(CarajDesktop.CarService.CarRequestDto model, int CompanyID) {
+            CarajDesktop.CarService.AddCarRequest inValue = new CarajDesktop.CarService.AddCarRequest();
+            inValue.Body = new CarajDesktop.CarService.AddCarRequestBody();
+            inValue.Body.model = model;
+            inValue.Body.CompanyID = CompanyID;
+            CarajDesktop.CarService.AddCarResponse retVal = ((CarajDesktop.CarService.CarServiceSoap)(this)).AddCar(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<CarajDesktop.CarService.AddCarResponse> CarajDesktop.CarService.CarServiceSoap.AddCarAsync(CarajDesktop.CarService.AddCarRequest request) {
+            return base.Channel.AddCarAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<CarajDesktop.CarService.AddCarResponse> AddCarAsync(CarajDesktop.CarService.CarRequestDto model, int CompanyID) {
+            CarajDesktop.CarService.AddCarRequest inValue = new CarajDesktop.CarService.AddCarRequest();
+            inValue.Body = new CarajDesktop.CarService.AddCarRequestBody();
+            inValue.Body.model = model;
+            inValue.Body.CompanyID = CompanyID;
+            return ((CarajDesktop.CarService.CarServiceSoap)(this)).AddCarAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        CarajDesktop.CarService.UpdateCarResponse CarajDesktop.CarService.CarServiceSoap.UpdateCar(CarajDesktop.CarService.UpdateCarRequest request) {
+            return base.Channel.UpdateCar(request);
+        }
+        
+        public void UpdateCar(CarajDesktop.CarService.CarRequestDto model) {
+            CarajDesktop.CarService.UpdateCarRequest inValue = new CarajDesktop.CarService.UpdateCarRequest();
+            inValue.Body = new CarajDesktop.CarService.UpdateCarRequestBody();
+            inValue.Body.model = model;
+            CarajDesktop.CarService.UpdateCarResponse retVal = ((CarajDesktop.CarService.CarServiceSoap)(this)).UpdateCar(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<CarajDesktop.CarService.UpdateCarResponse> CarajDesktop.CarService.CarServiceSoap.UpdateCarAsync(CarajDesktop.CarService.UpdateCarRequest request) {
+            return base.Channel.UpdateCarAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<CarajDesktop.CarService.UpdateCarResponse> UpdateCarAsync(CarajDesktop.CarService.CarRequestDto model) {
+            CarajDesktop.CarService.UpdateCarRequest inValue = new CarajDesktop.CarService.UpdateCarRequest();
+            inValue.Body = new CarajDesktop.CarService.UpdateCarRequestBody();
+            inValue.Body.model = model;
+            return ((CarajDesktop.CarService.CarServiceSoap)(this)).UpdateCarAsync(inValue);
+        }
+        
+        public void DeleteCar(int id) {
+            base.Channel.DeleteCar(id);
+        }
+        
+        public System.Threading.Tasks.Task DeleteCarAsync(int id) {
+            return base.Channel.DeleteCarAsync(id);
         }
     }
 }

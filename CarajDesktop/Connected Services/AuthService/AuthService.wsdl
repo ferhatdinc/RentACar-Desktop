@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="CustomerLogin">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CustomerLoginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CustomerLoginResult" type="tns:CustomerLoginResponseDto" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="CustomerLoginResponseDto">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="CustomerID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerSurname" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CompanyLogin">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="companyname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CompanyLoginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CompanyLoginResult" type="tns:CompanyLoginResponseDto" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="CompanyLoginResponseDto">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="CompanyID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="CompanyName" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CustomerRegister">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerdto" type="tns:CustomerRequestDto" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="CustomerRequestDto">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LastName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="BirthDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CustomerRegisterResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="CompanyRegister">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="companyDto" type="tns:CompanyRequestDto" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="CompanyRequestDto">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CompanyName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CompanyAdress" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CompanyPassword" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CompanyRegisterResponse">
+        <s:complexType />
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="CustomerLoginSoapIn">
+    <wsdl:part name="parameters" element="tns:CustomerLogin" />
+  </wsdl:message>
+  <wsdl:message name="CustomerLoginSoapOut">
+    <wsdl:part name="parameters" element="tns:CustomerLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="CompanyLoginSoapIn">
+    <wsdl:part name="parameters" element="tns:CompanyLogin" />
+  </wsdl:message>
+  <wsdl:message name="CompanyLoginSoapOut">
+    <wsdl:part name="parameters" element="tns:CompanyLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="CustomerRegisterSoapIn">
+    <wsdl:part name="parameters" element="tns:CustomerRegister" />
+  </wsdl:message>
+  <wsdl:message name="CustomerRegisterSoapOut">
+    <wsdl:part name="parameters" element="tns:CustomerRegisterResponse" />
+  </wsdl:message>
+  <wsdl:message name="CompanyRegisterSoapIn">
+    <wsdl:part name="parameters" element="tns:CompanyRegister" />
+  </wsdl:message>
+  <wsdl:message name="CompanyRegisterSoapOut">
+    <wsdl:part name="parameters" element="tns:CompanyRegisterResponse" />
+  </wsdl:message>
+  <wsdl:portType name="AuthServiceSoap">
+    <wsdl:operation name="CustomerLogin">
+      <wsdl:input message="tns:CustomerLoginSoapIn" />
+      <wsdl:output message="tns:CustomerLoginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CompanyLogin">
+      <wsdl:input message="tns:CompanyLoginSoapIn" />
+      <wsdl:output message="tns:CompanyLoginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CustomerRegister">
+      <wsdl:input message="tns:CustomerRegisterSoapIn" />
+      <wsdl:output message="tns:CustomerRegisterSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CompanyRegister">
+      <wsdl:input message="tns:CompanyRegisterSoapIn" />
+      <wsdl:output message="tns:CompanyRegisterSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="AuthServiceSoap" type="tns:AuthServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CustomerLogin">
+      <soap:operation soapAction="http://tempuri.org/CustomerLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CompanyLogin">
+      <soap:operation soapAction="http://tempuri.org/CompanyLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CustomerRegister">
+      <soap:operation soapAction="http://tempuri.org/CustomerRegister" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CompanyRegister">
+      <soap:operation soapAction="http://tempuri.org/CompanyRegister" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="AuthServiceSoap12" type="tns:AuthServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CustomerLogin">
+      <soap12:operation soapAction="http://tempuri.org/CustomerLogin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CompanyLogin">
+      <soap12:operation soapAction="http://tempuri.org/CompanyLogin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CustomerRegister">
+      <soap12:operation soapAction="http://tempuri.org/CustomerRegister" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CompanyRegister">
+      <soap12:operation soapAction="http://tempuri.org/CompanyRegister" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AuthService">
+    <wsdl:port name="AuthServiceSoap" binding="tns:AuthServiceSoap">
+      <soap:address location="http://servertemplate-1e7ae441.westeurope.cloudapp.azure.com/AuthService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="AuthServiceSoap12" binding="tns:AuthServiceSoap12">
+      <soap12:address location="http://servertemplate-1e7ae441.westeurope.cloudapp.azure.com/AuthService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

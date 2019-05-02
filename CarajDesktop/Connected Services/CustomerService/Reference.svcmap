@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="5b9f6faf-324f-4152-bd6d-a1ac3f8afb1f" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="d49f91f2-11fd-4e8a-9411-5356c7785bf3" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -19,12 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://servertemplate-1e7ae441.westeurope.cloudapp.azure.com/CustomerService.svc" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://servertemplate-1e7ae441.westeurope.cloudapp.azure.com/CustomerService.asmx" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="CustomerService.wsdl" MetadataType="Wsdl" ID="142bb691-0f32-4359-8b0b-ffed3f03e6ed" SourceId="1" SourceUrl="http://servertemplate-1e7ae441.westeurope.cloudapp.azure.com/CustomerService.svc?wsdl" />
-    <MetadataFile FileName="CustomerService.xsd" MetadataType="Schema" ID="dee2a5a3-0743-4b77-a551-a3e38f22b46c" SourceId="1" SourceUrl="http://servertemplate-1e7ae441.westeurope.cloudapp.azure.com/CustomerService.svc?xsd=xsd0" />
-    <MetadataFile FileName="CustomerService.disco" MetadataType="Disco" ID="2e0907e5-509c-4a9c-b67c-6de80c6abd3f" SourceId="1" SourceUrl="http://servertemplate-1e7ae441.westeurope.cloudapp.azure.com/CustomerService.svc?disco" />
+    <MetadataFile FileName="CustomerService.disco" MetadataType="Disco" ID="480f4190-05e3-4d89-8b57-56de69ec6221" SourceId="1" SourceUrl="http://servertemplate-1e7ae441.westeurope.cloudapp.azure.com/CustomerService.asmx?disco" />
+    <MetadataFile FileName="CustomerService.wsdl" MetadataType="Wsdl" ID="d99c8633-3563-4f31-9752-af803bb8a174" SourceId="1" SourceUrl="http://servertemplate-1e7ae441.westeurope.cloudapp.azure.com/CustomerService.asmx?wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

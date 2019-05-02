@@ -53,6 +53,7 @@
             this.btnReservationsList.TabIndex = 2;
             this.btnReservationsList.Text = "Reservations List";
             this.btnReservationsList.UseVisualStyleBackColor = true;
+            this.btnReservationsList.Click += new System.EventHandler(this.btnReservationsList_Click);
             // 
             // frmReservationDetails
             // 

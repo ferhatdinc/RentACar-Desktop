@@ -48,6 +48,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Connected Services\AuthService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Connected Services\CarService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -63,11 +68,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmAddCar.cs">
+    <Compile Include="Forms\AddCar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmAddCar.Designer.cs">
-      <DependentUpon>frmAddCar.cs</DependentUpon>
+    <Compile Include="Forms\AddCar.Designer.cs">
+      <DependentUpon>AddCar.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmDeleteCar.cs">
       <SubType>Form</SubType>
@@ -107,6 +112,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\AddCar.resx">
+      <DependentUpon>AddCar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmDeleteCar.resx">
+      <DependentUpon>frmDeleteCar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -115,6 +126,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmReservationDetails.resx">
       <DependentUpon>frmReservationDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmUpdateCar.resx">
+      <DependentUpon>frmUpdateCar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -128,27 +142,58 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="Connected Services\CarService\CarajDesktop.CarService.Car.datasource">
+    <None Include="Connected Services\AuthService\AuthService.wsdl" />
+    <None Include="Connected Services\AuthService\CarajDesktop.AuthService.CompanyLoginResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AuthService\CarajDesktop.AuthService.CompanyLoginResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AuthService\CarajDesktop.AuthService.CompanyRegisterResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AuthService\CarajDesktop.AuthService.CustomerLoginResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AuthService\CarajDesktop.AuthService.CustomerLoginResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AuthService\CarajDesktop.AuthService.CustomerRegisterResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CarService\CarajDesktop.CarService.AddCarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CarService\CarajDesktop.CarService.CarReturnDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CarService\CarajDesktop.CarService.GetAllCarsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CarService\CarajDesktop.CarService.GetAvailableCarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CarService\CarajDesktop.CarService.GetCarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CarService\CarajDesktop.CarService.GetCarsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CarService\CarajDesktop.CarService.UpdateCarResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\CarService\CarService.wsdl" />
-    <None Include="Connected Services\CarService\CarService.xsd">
-      <SubType>Designer</SubType>
+    <None Include="Connected Services\CompanyService\CarajDesktop.CompanyService.CreateRentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\CarService\CarService1.xsd">
-      <SubType>Designer</SubType>
+    <None Include="Connected Services\CompanyService\CarajDesktop.CompanyService.GetRentalRequestsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\CarService\CarService2.xsd">
-      <SubType>Designer</SubType>
+    <None Include="Connected Services\CompanyService\CarajDesktop.CompanyService.RentalRequestResponseDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\CompanyService\CompanyService.wsdl" />
-    <None Include="Connected Services\CompanyService\CompanyService.xsd">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="Connected Services\CompanyService\companyservice.wsdl" />
     <None Include="Connected Services\CustomerService\CustomerService.wsdl" />
-    <None Include="Connected Services\CustomerService\CustomerService.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -166,6 +211,7 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\AuthService\" />
     <WCFMetadataStorage Include="Connected Services\CarService\" />
     <WCFMetadataStorage Include="Connected Services\CompanyService\" />
     <WCFMetadataStorage Include="Connected Services\CustomerService\" />
@@ -186,7 +232,22 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\CompanyService\CompanyService.disco" />
+    <None Include="Connected Services\CustomerService\CustomerService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\CustomerService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\CustomerService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\CustomerService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\CompanyService\companyservice.disco" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Connected Services\CompanyService\configuration91.svcinfo" />
@@ -201,16 +262,16 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\CustomerService\CustomerService.disco" />
+    <None Include="Connected Services\AuthService\AuthService.disco" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\CustomerService\configuration91.svcinfo" />
+    <None Include="Connected Services\AuthService\configuration91.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\CustomerService\configuration.svcinfo" />
+    <None Include="Connected Services\AuthService\configuration.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\CustomerService\Reference.svcmap">
+    <None Include="Connected Services\AuthService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

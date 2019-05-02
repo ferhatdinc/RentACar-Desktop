@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CarajDesktop.AuthService;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,16 +15,17 @@ namespace CarajDesktop.Forms
     { 
         private Dictionary<Type, Form> ActiveForms;
         public static Boolean isLogin = false;
-        
-       
+        public static CompanyLoginResponseDto Company;
+
         public frmMain()
         {
+           
             InitializeComponent(); 
             this.ActiveForms = new Dictionary<Type, Form>();
             this.ShowForm<Login>();
         }
         private void ShowForm<TSource>() where TSource : Form
-        {
+        { 
             Form form = null;
             if (this.ActiveForms.ContainsKey(typeof(TSource)))
             {
@@ -48,12 +50,15 @@ namespace CarajDesktop.Forms
 
         private void LoginToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.ShowForm<Login>();
+            if (Company == null)
+                this.ShowForm<Login>();
+            else MessageBox.Show("Already Login " + Company.CompanyName);
+
         }
 
         private void ReservationDetailsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (isLogin)
+            if (Company != null)
                 this.ShowForm<frmReservationDetails>();
             else MessageBox.Show("Giriş Yap");
         }
@@ -66,8 +71,29 @@ namespace CarajDesktop.Forms
 
         private void DoReservationsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (isLogin)
+            if (Company != null)
                 this.ShowForm<frmNewReservation>();
+            else MessageBox.Show("Giriş Yap");
+        }
+
+        private void ekleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (Company != null)
+                this.ShowForm<AddCar>();
+            else MessageBox.Show("Giriş Yap");
+        }
+
+        private void silToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (Company != null)
+                this.ShowForm<frmDeleteCar>();
+            else MessageBox.Show("Giriş Yap");
+        }
+
+        private void güncelleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (Company!=null)
+                this.ShowForm<frmUpdateCar>();
             else MessageBox.Show("Giriş Yap");
         }
     }

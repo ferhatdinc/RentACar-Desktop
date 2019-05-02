@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CarajDesktop.AuthService;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,11 +17,24 @@ namespace CarajDesktop.Forms
         {
             InitializeComponent();
         }
-
+        
         private void btnGiris_Click(object sender, EventArgs e)
         {
-            frmMain.isLogin = true;
-            MessageBox.Show("Giriş Yapıldı");
+            using(var AuthService = new AuthServiceSoapClient())
+            {
+                try
+                {
+                    CompanyLoginResponseDto response = AuthService.CompanyLogin(txtCompanyName.Text, txtPassword.Text);
+                    frmMain.Company = response;
+                    AuthService.Close();
+                }
+                catch (Exception)
+                {
+
+                    MessageBox.Show("Hatalı Bilgi");
+                }
+                
+            }
         }
     }
 }

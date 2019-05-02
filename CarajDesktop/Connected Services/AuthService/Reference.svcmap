@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="53628fa7-9f9f-4260-b9fa-f8ed95a7d728" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="64abe833-c04c-40f1-a508-2c9cd44a749e" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://servertemplate-1e7ae441.westeurope.cloudapp.azure.com/companyservice.asmx" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://servertemplate-1e7ae441.westeurope.cloudapp.azure.com/AuthService.asmx" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="companyservice.disco" MetadataType="Disco" ID="8885bf11-f0a1-497f-b568-f0b06784985d" SourceId="1" SourceUrl="http://servertemplate-1e7ae441.westeurope.cloudapp.azure.com/companyservice.asmx?disco" />
-    <MetadataFile FileName="companyservice.wsdl" MetadataType="Wsdl" ID="f736d37d-15b3-4071-89c2-2561762c50d9" SourceId="1" SourceUrl="http://servertemplate-1e7ae441.westeurope.cloudapp.azure.com/companyservice.asmx?wsdl" />
+    <MetadataFile FileName="AuthService.wsdl" MetadataType="Wsdl" ID="4634e6ff-4767-4cfc-98af-cc263d0282aa" SourceId="1" SourceUrl="http://servertemplate-1e7ae441.westeurope.cloudapp.azure.com/AuthService.asmx?wsdl" />
+    <MetadataFile FileName="AuthService.disco" MetadataType="Disco" ID="5705ecdd-31bf-4e2c-ad6b-9957a8b7a724" SourceId="1" SourceUrl="http://servertemplate-1e7ae441.westeurope.cloudapp.azure.com/AuthService.asmx?disco" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

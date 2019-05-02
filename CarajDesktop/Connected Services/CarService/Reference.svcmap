@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="3258b0dc-60b5-4c09-b849-c14bd4784ee5" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="d207e967-0dc5-40cf-a32e-1ab2d0c0e20d" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -19,14 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://servertemplate-1e7ae441.westeurope.cloudapp.azure.com/CarService.svc" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://servertemplate-1e7ae441.westeurope.cloudapp.azure.com/CarService.asmx" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="CarService.wsdl" MetadataType="Wsdl" ID="d7cad480-27dd-450b-bdf6-7e9972d98faf" SourceId="1" SourceUrl="http://servertemplate-1e7ae441.westeurope.cloudapp.azure.com/CarService.svc?wsdl" />
-    <MetadataFile FileName="CarService.xsd" MetadataType="Schema" ID="5b02deb3-441d-4798-afc0-b6f705684396" SourceId="1" SourceUrl="http://servertemplate-1e7ae441.westeurope.cloudapp.azure.com/CarService.svc?xsd=xsd2" />
-    <MetadataFile FileName="CarService1.xsd" MetadataType="Schema" ID="25f475f1-9e8b-4530-ad96-e4c38891bc00" SourceId="1" SourceUrl="http://servertemplate-1e7ae441.westeurope.cloudapp.azure.com/CarService.svc?xsd=xsd1" />
-    <MetadataFile FileName="CarService2.xsd" MetadataType="Schema" ID="f75e8e53-d9ba-40ea-91b3-47e540b8a6bf" SourceId="1" SourceUrl="http://servertemplate-1e7ae441.westeurope.cloudapp.azure.com/CarService.svc?xsd=xsd0" />
-    <MetadataFile FileName="CarService.disco" MetadataType="Disco" ID="400c4e0f-39c7-4df2-ac33-2bd19c49c04d" SourceId="1" SourceUrl="http://servertemplate-1e7ae441.westeurope.cloudapp.azure.com/CarService.svc?disco" />
+    <MetadataFile FileName="CarService.wsdl" MetadataType="Wsdl" ID="994a82a6-4862-4731-a427-575776768c66" SourceId="1" SourceUrl="http://servertemplate-1e7ae441.westeurope.cloudapp.azure.com/CarService.asmx?wsdl" />
+    <MetadataFile FileName="CarService.disco" MetadataType="Disco" ID="2251b298-32e9-4e98-9fc4-1e7943720bdd" SourceId="1" SourceUrl="http://servertemplate-1e7ae441.westeurope.cloudapp.azure.com/CarService.asmx?disco" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
