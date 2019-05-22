@@ -1,5 +1,6 @@
 ﻿using CarajDesktop.CarService;
 using CarajDesktop.CompanyService;
+using CarajDesktop.CustomerService;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -34,7 +35,29 @@ namespace CarajDesktop.Forms
             };
             using (var companyService = new CompanyServiceSoapClient())
             {
-                companyService.CreateRent(NewRent);
+                double NetAge=0;
+                int minAge=1;
+                using (var CarService = new CarServiceSoapClient())
+                {
+                    using (var CustomerService = new CustomerServiceSoapClient())
+                    {
+                        foreach (var item in CustomerService.GetAllCustomer())
+                        {
+                            if (int.Parse(txtCustomerId.Text)==item.CustomerId)
+                            {
+                                TimeSpan CustomerAge = System.DateTime.Now - item.CustomerBirthdate;
+                                NetAge = Math.Ceiling(CustomerAge.TotalDays/365);
+                                minAge= CarService.GetCar(int.Parse(txtCarId.Text)).MinCustomerAge;
+                            }
+                        }
+                    }
+                }
+                if (minAge <= NetAge)
+                {
+                    companyService.CreateRent(NewRent);
+                }
+                else MessageBox.Show("Yaşınız Bu Aracı Kiralamaya Uygun Değil");
+                
                 companyService.Close();
             }
         }
@@ -52,20 +75,7 @@ namespace CarajDesktop.Forms
 
         private void BtnSelectCar_Click(object sender, EventArgs e)
         {
-            /*txtCarId.Text = dgwCars.SelectedRows[0].Cells[0].Value.ToString();
-            txtAirbagCount.Text = dgwCars.SelectedRows[0].Cells[10].Value.ToString();
-            txtBrand.Text = dgwCars.SelectedRows[0].Cells[4].Value.ToString();
-            txtCarKm.Text = dgwCars.SelectedRows[0].Cells[9].Value.ToString();
-            txtCarId.Text = "2"; //buraya loginden alınan id gelecek
-            txtMaxKm.Text = dgwCars.SelectedRows[0].Cells[8].Value.ToString();
-            txtMinCustomerAge.Text = dgwCars.SelectedRows[0].Cells[7].Value.ToString();
-            txtMinLicenceAge.Text = dgwCars.SelectedRows[0].Cells[6].Value.ToString();
-            txtModel.Text = dgwCars.SelectedRows[0].Cells[5].Value.ToString();
-            txtPhotoUrl.Text = dgwCars.SelectedRows[0].Cells[14].Value.ToString();
-            txtRentPrice.Text = dgwCars.SelectedRows[0].Cells[13].Value.ToString();
-            txtSeatCount.Text = dgwCars.SelectedRows[0].Cells[12].Value.ToString();
-            txtTrunkVolume.Text = dgwCars.SelectedRows[0].Cells[11].Value.ToString(); */
-
+            //dgw den alınan bilgiler txt lere dolduruluyor
             txtCarId.Text = dgwCarList.SelectedRows[0].Cells[0].Value.ToString();
             txtFirsrKM.Text = dgwCarList.SelectedRows[0].Cells[9].Value.ToString();
             TimeSpan kalangun = tpDateLast.Value - tpDateFirst.Value;
@@ -97,5 +107,7 @@ namespace CarajDesktop.Forms
 
             }
         }
+
+      
     }
 }

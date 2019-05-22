@@ -168,6 +168,13 @@ namespace CarajDesktop.CompanyService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.CollectionDataContractAttribute(Name="ArrayOfString", Namespace="http://tempuri.org", ItemName="string")]
+    [System.SerializableAttribute()]
+    public class ArrayOfString : System.Collections.Generic.List<string> {
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="RentDetailsResponseDto", Namespace="http://tempuri.org")]
     [System.SerializableAttribute()]
     public partial class RentDetailsResponseDto : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
@@ -551,6 +558,13 @@ namespace CarajDesktop.CompanyService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetRentalRequests", ReplyAction="*")]
         System.Threading.Tasks.Task<CarajDesktop.CompanyService.GetRentalRequestsResponse> GetRentalRequestsAsync(CarajDesktop.CompanyService.GetRentalRequestsRequest request);
         
+        // CODEGEN: Generating message contract since element name GetCompanyLocationsResult from namespace http://tempuri.org is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetCompanyLocations", ReplyAction="*")]
+        CarajDesktop.CompanyService.GetCompanyLocationsResponse GetCompanyLocations(CarajDesktop.CompanyService.GetCompanyLocationsRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetCompanyLocations", ReplyAction="*")]
+        System.Threading.Tasks.Task<CarajDesktop.CompanyService.GetCompanyLocationsResponse> GetCompanyLocationsAsync(CarajDesktop.CompanyService.GetCompanyLocationsRequest request);
+        
         // CODEGEN: Generating message contract since element name GetRentDetailsResult from namespace http://tempuri.org is not marked nillable
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetRentDetails", ReplyAction="*")]
         CarajDesktop.CompanyService.GetRentDetailsResponse GetRentDetails(CarajDesktop.CompanyService.GetRentDetailsRequest request);
@@ -638,6 +652,74 @@ namespace CarajDesktop.CompanyService {
         
         public GetRentalRequestsResponseBody(CarajDesktop.CompanyService.RentalRequestResponseDTO[] GetRentalRequestsResult) {
             this.GetRentalRequestsResult = GetRentalRequestsResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetCompanyLocationsRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetCompanyLocations", Namespace="http://tempuri.org", Order=0)]
+        public CarajDesktop.CompanyService.GetCompanyLocationsRequestBody Body;
+        
+        public GetCompanyLocationsRequest() {
+        }
+        
+        public GetCompanyLocationsRequest(CarajDesktop.CompanyService.GetCompanyLocationsRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org")]
+    public partial class GetCompanyLocationsRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public int CompanyID;
+        
+        public GetCompanyLocationsRequestBody() {
+        }
+        
+        public GetCompanyLocationsRequestBody(int CompanyID) {
+            this.CompanyID = CompanyID;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetCompanyLocationsResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetCompanyLocationsResponse", Namespace="http://tempuri.org", Order=0)]
+        public CarajDesktop.CompanyService.GetCompanyLocationsResponseBody Body;
+        
+        public GetCompanyLocationsResponse() {
+        }
+        
+        public GetCompanyLocationsResponse(CarajDesktop.CompanyService.GetCompanyLocationsResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org")]
+    public partial class GetCompanyLocationsResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public CarajDesktop.CompanyService.ArrayOfString GetCompanyLocationsResult;
+        
+        public GetCompanyLocationsResponseBody() {
+        }
+        
+        public GetCompanyLocationsResponseBody(CarajDesktop.CompanyService.ArrayOfString GetCompanyLocationsResult) {
+            this.GetCompanyLocationsResult = GetCompanyLocationsResult;
         }
     }
     
@@ -888,6 +970,31 @@ namespace CarajDesktop.CompanyService {
             inValue.Body = new CarajDesktop.CompanyService.GetRentalRequestsRequestBody();
             inValue.Body.CompanyID = CompanyID;
             return ((CarajDesktop.CompanyService.CompanyServiceSoap)(this)).GetRentalRequestsAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        CarajDesktop.CompanyService.GetCompanyLocationsResponse CarajDesktop.CompanyService.CompanyServiceSoap.GetCompanyLocations(CarajDesktop.CompanyService.GetCompanyLocationsRequest request) {
+            return base.Channel.GetCompanyLocations(request);
+        }
+        
+        public CarajDesktop.CompanyService.ArrayOfString GetCompanyLocations(int CompanyID) {
+            CarajDesktop.CompanyService.GetCompanyLocationsRequest inValue = new CarajDesktop.CompanyService.GetCompanyLocationsRequest();
+            inValue.Body = new CarajDesktop.CompanyService.GetCompanyLocationsRequestBody();
+            inValue.Body.CompanyID = CompanyID;
+            CarajDesktop.CompanyService.GetCompanyLocationsResponse retVal = ((CarajDesktop.CompanyService.CompanyServiceSoap)(this)).GetCompanyLocations(inValue);
+            return retVal.Body.GetCompanyLocationsResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<CarajDesktop.CompanyService.GetCompanyLocationsResponse> CarajDesktop.CompanyService.CompanyServiceSoap.GetCompanyLocationsAsync(CarajDesktop.CompanyService.GetCompanyLocationsRequest request) {
+            return base.Channel.GetCompanyLocationsAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<CarajDesktop.CompanyService.GetCompanyLocationsResponse> GetCompanyLocationsAsync(int CompanyID) {
+            CarajDesktop.CompanyService.GetCompanyLocationsRequest inValue = new CarajDesktop.CompanyService.GetCompanyLocationsRequest();
+            inValue.Body = new CarajDesktop.CompanyService.GetCompanyLocationsRequestBody();
+            inValue.Body.CompanyID = CompanyID;
+            return ((CarajDesktop.CompanyService.CompanyServiceSoap)(this)).GetCompanyLocationsAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]

@@ -34,7 +34,6 @@
             this.LoginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.yöneticiİşlemleriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ReservationDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ReservationRequestsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.DoReservationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.CarOperationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ekleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -70,7 +69,6 @@
             // 
             this.yöneticiİşlemleriToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ReservationDetailsToolStripMenuItem,
-            this.ReservationRequestsToolStripMenuItem,
             this.DoReservationsToolStripMenuItem,
             this.CarOperationsToolStripMenuItem});
             this.yöneticiİşlemleriToolStripMenuItem.Name = "yöneticiİşlemleriToolStripMenuItem";
@@ -80,21 +78,14 @@
             // ReservationDetailsToolStripMenuItem
             // 
             this.ReservationDetailsToolStripMenuItem.Name = "ReservationDetailsToolStripMenuItem";
-            this.ReservationDetailsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.ReservationDetailsToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.ReservationDetailsToolStripMenuItem.Text = "Reservation Details";
             this.ReservationDetailsToolStripMenuItem.Click += new System.EventHandler(this.ReservationDetailsToolStripMenuItem_Click);
-            // 
-            // ReservationRequestsToolStripMenuItem
-            // 
-            this.ReservationRequestsToolStripMenuItem.Name = "ReservationRequestsToolStripMenuItem";
-            this.ReservationRequestsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.ReservationRequestsToolStripMenuItem.Text = "Reservation Requests";
-            this.ReservationRequestsToolStripMenuItem.Click += new System.EventHandler(this.ReservationRequestsToolStripMenuItem_Click);
             // 
             // DoReservationsToolStripMenuItem
             // 
             this.DoReservationsToolStripMenuItem.Name = "DoReservationsToolStripMenuItem";
-            this.DoReservationsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.DoReservationsToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.DoReservationsToolStripMenuItem.Text = "Do Reservation";
             this.DoReservationsToolStripMenuItem.Click += new System.EventHandler(this.DoReservationsToolStripMenuItem_Click);
             // 
@@ -105,27 +96,27 @@
             this.silToolStripMenuItem,
             this.güncelleToolStripMenuItem});
             this.CarOperationsToolStripMenuItem.Name = "CarOperationsToolStripMenuItem";
-            this.CarOperationsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.CarOperationsToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.CarOperationsToolStripMenuItem.Text = "Car Operations";
             // 
             // ekleToolStripMenuItem
             // 
             this.ekleToolStripMenuItem.Name = "ekleToolStripMenuItem";
-            this.ekleToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.ekleToolStripMenuItem.Size = new System.Drawing.Size(133, 26);
             this.ekleToolStripMenuItem.Text = "Add";
             this.ekleToolStripMenuItem.Click += new System.EventHandler(this.EkleToolStripMenuItem_Click);
             // 
             // silToolStripMenuItem
             // 
             this.silToolStripMenuItem.Name = "silToolStripMenuItem";
-            this.silToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.silToolStripMenuItem.Size = new System.Drawing.Size(133, 26);
             this.silToolStripMenuItem.Text = "Delete";
             this.silToolStripMenuItem.Click += new System.EventHandler(this.SilToolStripMenuItem_Click);
             // 
             // güncelleToolStripMenuItem
             // 
             this.güncelleToolStripMenuItem.Name = "güncelleToolStripMenuItem";
-            this.güncelleToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.güncelleToolStripMenuItem.Size = new System.Drawing.Size(133, 26);
             this.güncelleToolStripMenuItem.Text = "Update";
             this.güncelleToolStripMenuItem.Click += new System.EventHandler(this.GüncelleToolStripMenuItem_Click);
             // 
@@ -168,7 +159,6 @@
         private System.Windows.Forms.StatusStrip statusStrip;
         private System.Windows.Forms.ToolTip toolTip;
         private System.Windows.Forms.ToolStripMenuItem yöneticiİşlemleriToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ReservationRequestsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem DoReservationsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem CarOperationsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ekleToolStripMenuItem;

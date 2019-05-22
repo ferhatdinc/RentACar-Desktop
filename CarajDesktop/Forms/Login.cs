@@ -26,7 +26,7 @@ namespace CarajDesktop.Forms
                 {
                     CompanyLoginResponseDto response = AuthService.CompanyLogin(txtCompanyName.Text, txtPassword.Text);
                     frmMain.Company = response;
-                    MessageBox.Show("" + frmMain.Company.CompanyName);
+                    MessageBox.Show("Hoşgeldin " + frmMain.Company.CompanyName);
                     AuthService.Close();
                 }
                 catch (Exception)

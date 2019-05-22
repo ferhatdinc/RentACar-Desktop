@@ -34,8 +34,7 @@ namespace CarajDesktop.Forms
             txtCarId.Text = dgwCars.SelectedRows[0].Cells[0].Value.ToString();
             txtAirbagCount.Text = dgwCars.SelectedRows[0].Cells[10].Value.ToString();
             txtBrand.Text = dgwCars.SelectedRows[0].Cells[4].Value.ToString();
-            txtCarKm.Text= dgwCars.SelectedRows[0].Cells[9].Value.ToString();
-            txtCarId.Text = "2"; //buraya loginden alınan id gelecek
+            txtCarKm.Text= dgwCars.SelectedRows[0].Cells[9].Value.ToString(); 
             txtMaxKm.Text= dgwCars.SelectedRows[0].Cells[8].Value.ToString();
             txtMinCustomerAge.Text= dgwCars.SelectedRows[0].Cells[7].Value.ToString();
             txtMinLicenceAge.Text= dgwCars.SelectedRows[0].Cells[6].Value.ToString();
@@ -49,23 +48,23 @@ namespace CarajDesktop.Forms
         }
 
         private void BtnUpdateCar_Click(object sender, EventArgs e)
-        {
-            CarRequestDto UpdatedCar = new CarRequestDto
-            { 
-                CarBrand = txtBrand.Text,
-                CarKM = int.Parse(txtCarKm.Text),
-                AirBagCount = byte.Parse(txtAirbagCount.Text),
-                CarModel = txtModel.Text,
-                CarPhotoURL = txtPhotoUrl.Text,
-                CarPriceForRent = decimal.Parse(txtRentPrice.Text),
-                CarSeatCount = byte.Parse(txtSeatCount.Text),
-                MinCustomerAge = byte.Parse(txtMinCustomerAge.Text),
-                MinDrivingLicenseAge = byte.Parse(txtMinLicenceAge.Text),
-                MaxKmPerDay = int.Parse(txtMaxKm.Text),
-                CarTrunkVolume = short.Parse(txtTrunkVolume.Text)
-            };
+        { 
             using (var CarService = new CarServiceSoapClient())
             {
+                CarRequestDto UpdatedCar = new CarRequestDto
+                {
+                    CarBrand = txtBrand.Text,
+                    CarKM = int.Parse(txtCarKm.Text),
+                    AirBagCount = byte.Parse(txtAirbagCount.Text),
+                    CarModel = txtModel.Text,
+                    CarPhotoURL = txtPhotoUrl.Text,
+                    CarPriceForRent = decimal.Parse(txtRentPrice.Text),
+                    CarSeatCount = byte.Parse(txtSeatCount.Text),
+                    MinCustomerAge = byte.Parse(txtMinCustomerAge.Text),
+                    MinDrivingLicenseAge = byte.Parse(txtMinLicenceAge.Text),
+                    MaxKmPerDay = int.Parse(txtMaxKm.Text),
+                    CarTrunkVolume = short.Parse(txtTrunkVolume.Text)
+                };
                 CarService.UpdateCar(UpdatedCar,int.Parse(txtCarId.Text));
                 CarService.Close();
             }

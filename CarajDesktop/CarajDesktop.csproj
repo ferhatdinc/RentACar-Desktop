@@ -186,6 +186,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\CarService\carservice.wsdl" />
+    <None Include="Connected Services\CompanyService\CarajDesktop.CompanyService.ArrayOfString.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\CompanyService\CarajDesktop.CompanyService.CompanyResponseDto.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -193,6 +196,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\CompanyService\CarajDesktop.CompanyService.GetAllCompaniesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CompanyService\CarajDesktop.CompanyService.GetCompanyLocationsResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\CompanyService\CarajDesktop.CompanyService.GetRentalRequestsResponse.datasource">
@@ -208,6 +214,12 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\CompanyService\CompanyService.wsdl" />
+    <None Include="Connected Services\CustomerService\CarajDesktop.CustomerService.CustomerResponseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CustomerService\CarajDesktop.CustomerService.GetAllCustomerResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\CustomerService\customerservice.wsdl" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

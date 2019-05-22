@@ -33,6 +33,25 @@
           <s:element minOccurs="0" maxOccurs="1" name="CarModel" type="s:string" />
         </s:sequence>
       </s:complexType>
+      <s:element name="GetCompanyLocations">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CompanyID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCompanyLocationsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCompanyLocationsResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
       <s:element name="GetRentDetails">
         <s:complexType>
           <s:sequence>
@@ -120,6 +139,12 @@
   <wsdl:message name="GetRentalRequestsSoapOut">
     <wsdl:part name="parameters" element="tns:GetRentalRequestsResponse" />
   </wsdl:message>
+  <wsdl:message name="GetCompanyLocationsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCompanyLocations" />
+  </wsdl:message>
+  <wsdl:message name="GetCompanyLocationsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCompanyLocationsResponse" />
+  </wsdl:message>
   <wsdl:message name="GetRentDetailsSoapIn">
     <wsdl:part name="parameters" element="tns:GetRentDetails" />
   </wsdl:message>
@@ -143,6 +168,10 @@
       <wsdl:input message="tns:GetRentalRequestsSoapIn" />
       <wsdl:output message="tns:GetRentalRequestsSoapOut" />
     </wsdl:operation>
+    <wsdl:operation name="GetCompanyLocations">
+      <wsdl:input message="tns:GetCompanyLocationsSoapIn" />
+      <wsdl:output message="tns:GetCompanyLocationsSoapOut" />
+    </wsdl:operation>
     <wsdl:operation name="GetRentDetails">
       <wsdl:input message="tns:GetRentDetailsSoapIn" />
       <wsdl:output message="tns:GetRentDetailsSoapOut" />
@@ -160,6 +189,15 @@
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="GetRentalRequests">
       <soap:operation soapAction="http://tempuri.org/GetRentalRequests" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanyLocations">
+      <soap:operation soapAction="http://tempuri.org/GetCompanyLocations" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -199,6 +237,15 @@
     <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="GetRentalRequests">
       <soap12:operation soapAction="http://tempuri.org/GetRentalRequests" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanyLocations">
+      <soap12:operation soapAction="http://tempuri.org/GetCompanyLocations" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
