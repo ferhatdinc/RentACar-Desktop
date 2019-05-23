@@ -32,7 +32,6 @@
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.loginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.managementMenuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reservationDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.doReservationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -46,6 +45,7 @@
             this.btnLogin = new System.Windows.Forms.Button();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.txtCompanyName = new System.Windows.Forms.TextBox();
+            this.carBringToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.gbLogin.SuspendLayout();
             this.SuspendLayout();
@@ -64,19 +64,12 @@
             // 
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.loginToolStripMenuItem,
             this.managementMenuToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1151, 28);
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // loginToolStripMenuItem
-            // 
-            this.loginToolStripMenuItem.Name = "loginToolStripMenuItem";
-            this.loginToolStripMenuItem.Size = new System.Drawing.Size(58, 24);
-            this.loginToolStripMenuItem.Text = "Login";
             // 
             // managementMenuToolStripMenuItem
             // 
@@ -107,7 +100,8 @@
             // 
             this.carOperationsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.addCarToolStripMenuItem,
-            this.updateCarToolStripMenuItem});
+            this.updateCarToolStripMenuItem,
+            this.carBringToolStripMenuItem});
             this.carOperationsToolStripMenuItem.Name = "carOperationsToolStripMenuItem";
             this.carOperationsToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.carOperationsToolStripMenuItem.Text = "Car Operations";
@@ -131,6 +125,7 @@
             this.firmReportsToolStripMenuItem.Name = "firmReportsToolStripMenuItem";
             this.firmReportsToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.firmReportsToolStripMenuItem.Text = "Firm Reports";
+            this.firmReportsToolStripMenuItem.Click += new System.EventHandler(this.firmReportsToolStripMenuItem_Click);
             // 
             // gbLogin
             // 
@@ -144,7 +139,7 @@
             this.gbLogin.Size = new System.Drawing.Size(326, 177);
             this.gbLogin.TabIndex = 5;
             this.gbLogin.TabStop = false;
-            this.gbLogin.Text = "groupBox1";
+            this.gbLogin.Text = "Company Login";
             // 
             // label2
             // 
@@ -190,6 +185,13 @@
             this.txtCompanyName.Size = new System.Drawing.Size(152, 22);
             this.txtCompanyName.TabIndex = 5;
             // 
+            // carBringToolStripMenuItem
+            // 
+            this.carBringToolStripMenuItem.Name = "carBringToolStripMenuItem";
+            this.carBringToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.carBringToolStripMenuItem.Text = "Car Bring";
+            this.carBringToolStripMenuItem.Click += new System.EventHandler(this.carBringToolStripMenuItem_Click);
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -215,7 +217,6 @@
         private System.Windows.Forms.StatusStrip statusStrip;
         private System.Windows.Forms.ToolTip toolTip;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem loginToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem managementMenuToolStripMenuItem;
         private System.Windows.Forms.GroupBox gbLogin;
         private System.Windows.Forms.Label label2;
@@ -229,6 +230,7 @@
         private System.Windows.Forms.ToolStripMenuItem addCarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem updateCarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem firmReportsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem carBringToolStripMenuItem;
     }
 }
 

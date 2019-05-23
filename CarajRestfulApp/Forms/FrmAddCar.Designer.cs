@@ -51,7 +51,7 @@
             this.txtModel = new System.Windows.Forms.TextBox();
             this.txtBrand = new System.Windows.Forms.TextBox();
             this.BtnAddCar = new System.Windows.Forms.Button();
-            this.txtCompanyName = new System.Windows.Forms.Label();
+            this.lblCompanyName = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtMinLicenceAge
@@ -249,23 +249,23 @@
             this.BtnAddCar.UseVisualStyleBackColor = true;
             this.BtnAddCar.Click += new System.EventHandler(this.BtnAddCar_ClickAsync);
             // 
-            // txtCompanyName
+            // lblCompanyName
             // 
-            this.txtCompanyName.AutoSize = true;
-            this.txtCompanyName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtCompanyName.ForeColor = System.Drawing.Color.Maroon;
-            this.txtCompanyName.Location = new System.Drawing.Point(90, 36);
-            this.txtCompanyName.Name = "txtCompanyName";
-            this.txtCompanyName.Size = new System.Drawing.Size(157, 20);
-            this.txtCompanyName.TabIndex = 51;
-            this.txtCompanyName.Text = "COMPANY NAME";
+            this.lblCompanyName.AutoSize = true;
+            this.lblCompanyName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblCompanyName.ForeColor = System.Drawing.Color.Maroon;
+            this.lblCompanyName.Location = new System.Drawing.Point(12, 9);
+            this.lblCompanyName.Name = "lblCompanyName";
+            this.lblCompanyName.Size = new System.Drawing.Size(43, 20);
+            this.lblCompanyName.TabIndex = 51;
+            this.lblCompanyName.Text = "TXT";
             // 
             // FrmAddCar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(537, 276);
-            this.Controls.Add(this.txtCompanyName);
+            this.Controls.Add(this.lblCompanyName);
             this.Controls.Add(this.txtMinLicenceAge);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.txtPhotoUrl);
@@ -291,6 +291,7 @@
             this.Controls.Add(this.BtnAddCar);
             this.Name = "FrmAddCar";
             this.Text = "FrmAddCar";
+            this.Load += new System.EventHandler(this.FrmAddCar_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -321,6 +322,6 @@
         private System.Windows.Forms.TextBox txtModel;
         private System.Windows.Forms.TextBox txtBrand;
         private System.Windows.Forms.Button BtnAddCar;
-        private System.Windows.Forms.Label txtCompanyName;
+        private System.Windows.Forms.Label lblCompanyName;
     }
 }

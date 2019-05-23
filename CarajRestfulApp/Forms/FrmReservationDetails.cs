@@ -28,7 +28,7 @@ namespace CarajRestfulApp.Forms
             {
                 client.BaseAddress = new Uri("http://165.22.91.48/api/"); //Fix
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json")); //Fix
-                HttpResponseMessage response = client.GetAsync("company/GetRentalRequests?CompanyID="+ FrmMain.RCompany.CompanyID).Result;
+                HttpResponseMessage response = client.GetAsync("company/GetRentDetails?CompanyID=" + int.Parse(FrmMain.RCompany.CompanyID.ToString())).Result;
                 //End Point Name https://localhost:44300/car/getcars Query String Example bla bla car/getcars?blabla
                 if (response.IsSuccessStatusCode)
                 {
@@ -36,6 +36,11 @@ namespace CarajRestfulApp.Forms
                     dgwRezervtions.DataSource = model;
                 }
             }
+        }
+
+        private void FrmReservationDetails_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

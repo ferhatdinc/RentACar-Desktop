@@ -72,7 +72,7 @@ namespace CarajRestfulApp.Forms
                     var model = response.Content.ReadAsAsync<JObject>().Result;
                      
                     RCompany = JsonConvert.DeserializeObject<Company>(model.ToString());
-                    MessageBox.Show("Hoşgeldin "+RCompany.CompanyID);//company name olarak değişecek
+                    MessageBox.Show("Hoşgeldin "+RCompany.CompanyName.ToUpper());//company name olarak değişecek
                     this.gbLogin.Visible = false;
                 }
             }
@@ -102,6 +102,24 @@ namespace CarajRestfulApp.Forms
             if (RCompany != null)
             {
                 this.ShowForm<FrmUpdateCar>();
+            }
+            else MessageBox.Show("Please Login");
+        }
+
+        private void firmReportsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (RCompany != null)
+            {
+                this.ShowForm<FrmFirmReports>();
+            }
+            else MessageBox.Show("Please Login");
+        }
+
+        private void carBringToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (RCompany != null)
+            {
+                this.ShowForm<FrmCarBring>();
             }
             else MessageBox.Show("Please Login");
         }

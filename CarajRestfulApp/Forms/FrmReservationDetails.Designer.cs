@@ -63,6 +63,7 @@
             this.Controls.Add(this.btnReservationsList);
             this.Name = "FrmReservationDetails";
             this.Text = "FrmReservationDetails";
+            this.Load += new System.EventHandler(this.FrmReservationDetails_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgwRezervtions)).EndInit();
             this.ResumeLayout(false);
 

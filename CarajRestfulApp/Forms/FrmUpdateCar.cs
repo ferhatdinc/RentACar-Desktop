@@ -24,18 +24,27 @@ namespace CarajRestfulApp.Forms
 
         private void btnAracSec_Click(object sender, EventArgs e)
         {
-            txtCarId.Text = dgwCars.SelectedRows[0].Cells[0].Value.ToString();
-            txtAirbagCount.Text = dgwCars.SelectedRows[0].Cells[10].Value.ToString();
-            txtBrand.Text = dgwCars.SelectedRows[0].Cells[4].Value.ToString();
-            txtCarKm.Text = dgwCars.SelectedRows[0].Cells[9].Value.ToString();
-            txtMaxKm.Text = dgwCars.SelectedRows[0].Cells[8].Value.ToString();
-            txtMinCustomerAge.Text = dgwCars.SelectedRows[0].Cells[7].Value.ToString();
-            txtMinLicenceAge.Text = dgwCars.SelectedRows[0].Cells[6].Value.ToString();
-            txtModel.Text = dgwCars.SelectedRows[0].Cells[5].Value.ToString();
-            txtPhotoUrl.Text = dgwCars.SelectedRows[0].Cells[14].Value.ToString();
-            txtRentPrice.Text = dgwCars.SelectedRows[0].Cells[13].Value.ToString();
-            txtSeatCount.Text = dgwCars.SelectedRows[0].Cells[12].Value.ToString();
-            txtTrunkVolume.Text = dgwCars.SelectedRows[0].Cells[11].Value.ToString();
+            try
+            {
+                txtCarId.Text = dgwCars.SelectedRows[0].Cells[0].Value.ToString();
+                txtAirbagCount.Text = dgwCars.SelectedRows[0].Cells[10].Value.ToString();
+                txtBrand.Text = dgwCars.SelectedRows[0].Cells[4].Value.ToString();
+                txtCarKm.Text = dgwCars.SelectedRows[0].Cells[9].Value.ToString();
+                txtMaxKm.Text = dgwCars.SelectedRows[0].Cells[8].Value.ToString();
+                txtMinCustomerAge.Text = dgwCars.SelectedRows[0].Cells[7].Value.ToString();
+                txtMinLicenceAge.Text = dgwCars.SelectedRows[0].Cells[6].Value.ToString();
+                txtModel.Text = dgwCars.SelectedRows[0].Cells[5].Value.ToString();
+                txtPhotoUrl.Text = dgwCars.SelectedRows[0].Cells[14].Value.ToString();
+                txtRentPrice.Text = dgwCars.SelectedRows[0].Cells[13].Value.ToString();
+                txtSeatCount.Text = dgwCars.SelectedRows[0].Cells[12].Value.ToString();
+                txtTrunkVolume.Text = dgwCars.SelectedRows[0].Cells[11].Value.ToString();
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Pick A Car Please");
+            }
+            
         }
 
         private void txtMinLicenceAge_TextChanged(object sender, EventArgs e)
@@ -180,11 +189,11 @@ namespace CarajRestfulApp.Forms
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json")); //Fix
                 var serializedUpdateCar = JsonConvert.SerializeObject(UpdateCar);
                 var content = new StringContent(serializedUpdateCar, Encoding.UTF8, "application/json");
-                await client.PostAsync("Car/UpdateCar?CarID="+int.Parse(txtCarId.Text), content);
-              //  if (response.IsSuccessStatusCode)
-//{
-              //      MessageBox.Show("Successfull");
-               // }
+                var response = await client.PostAsync("Car/UpdateCar?CarID="+int.Parse(txtCarId.Text), content);
+                if (response.IsSuccessStatusCode)
+                {
+                    MessageBox.Show("Successfull");
+                }
             }
         }
 

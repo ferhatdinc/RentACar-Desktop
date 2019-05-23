@@ -51,5 +51,10 @@ namespace CarajRestfulApp.Forms
                 }
             }
         }
+
+        private void FrmAddCar_Load(object sender, EventArgs e)
+        {
+            lblCompanyName.Text =  FrmMain.RCompany.CompanyName.ToUpperInvariant();
+        }
     }
 }
