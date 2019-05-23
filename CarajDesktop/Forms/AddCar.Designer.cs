@@ -72,6 +72,7 @@
             this.txtCompanyID.Name = "txtCompanyID";
             this.txtCompanyID.Size = new System.Drawing.Size(100, 22);
             this.txtCompanyID.TabIndex = 1;
+            this.txtCompanyID.TextChanged += new System.EventHandler(this.txtCompanyID_TextChanged);
             // 
             // txtBrand
             // 
@@ -79,6 +80,7 @@
             this.txtBrand.Name = "txtBrand";
             this.txtBrand.Size = new System.Drawing.Size(100, 22);
             this.txtBrand.TabIndex = 2;
+            this.txtBrand.TextChanged += new System.EventHandler(this.txtBrand_TextChanged);
             // 
             // txtModel
             // 
@@ -86,6 +88,7 @@
             this.txtModel.Name = "txtModel";
             this.txtModel.Size = new System.Drawing.Size(100, 22);
             this.txtModel.TabIndex = 3;
+            this.txtModel.TextChanged += new System.EventHandler(this.txtModel_TextChanged);
             // 
             // label1
             // 
@@ -95,6 +98,7 @@
             this.label1.Size = new System.Drawing.Size(84, 17);
             this.label1.TabIndex = 4;
             this.label1.Text = "Company ID";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -104,6 +108,7 @@
             this.label2.Size = new System.Drawing.Size(46, 17);
             this.label2.TabIndex = 5;
             this.label2.Text = "Brand";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -113,6 +118,7 @@
             this.label3.Size = new System.Drawing.Size(46, 17);
             this.label3.TabIndex = 6;
             this.label3.Text = "Model";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
@@ -122,6 +128,7 @@
             this.label4.Size = new System.Drawing.Size(91, 17);
             this.label4.TabIndex = 7;
             this.label4.Text = "Min Cus. Age";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label5
             // 
@@ -131,6 +138,7 @@
             this.label5.Size = new System.Drawing.Size(116, 17);
             this.label5.TabIndex = 8;
             this.label5.Text = "MAX Km Per Day";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label6
             // 
@@ -140,6 +148,7 @@
             this.label6.Size = new System.Drawing.Size(54, 17);
             this.label6.TabIndex = 9;
             this.label6.Text = "Car KM";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label7
             // 
@@ -149,6 +158,7 @@
             this.label7.Size = new System.Drawing.Size(91, 17);
             this.label7.TabIndex = 10;
             this.label7.Text = "AirBag Count";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label8
             // 
@@ -158,6 +168,7 @@
             this.label8.Size = new System.Drawing.Size(96, 17);
             this.label8.TabIndex = 11;
             this.label8.Text = "Trunk Volume";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // label9
             // 
@@ -167,6 +178,7 @@
             this.label9.Size = new System.Drawing.Size(78, 17);
             this.label9.TabIndex = 12;
             this.label9.Text = "Seat Count";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // label10
             // 
@@ -176,6 +188,7 @@
             this.label10.Size = new System.Drawing.Size(74, 17);
             this.label10.TabIndex = 13;
             this.label10.Text = "Rent Price";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // label11
             // 
@@ -185,6 +198,7 @@
             this.label11.Size = new System.Drawing.Size(77, 17);
             this.label11.TabIndex = 14;
             this.label11.Text = "Photo URL";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // txtMinCustomerAge
             // 
@@ -192,6 +206,7 @@
             this.txtMinCustomerAge.Name = "txtMinCustomerAge";
             this.txtMinCustomerAge.Size = new System.Drawing.Size(100, 22);
             this.txtMinCustomerAge.TabIndex = 16;
+            this.txtMinCustomerAge.TextChanged += new System.EventHandler(this.txtMinCustomerAge_TextChanged);
             // 
             // txtMaxKm
             // 
@@ -199,6 +214,7 @@
             this.txtMaxKm.Name = "txtMaxKm";
             this.txtMaxKm.Size = new System.Drawing.Size(100, 22);
             this.txtMaxKm.TabIndex = 17;
+            this.txtMaxKm.TextChanged += new System.EventHandler(this.txtMaxKm_TextChanged);
             // 
             // txtCarKm
             // 
@@ -206,6 +222,7 @@
             this.txtCarKm.Name = "txtCarKm";
             this.txtCarKm.Size = new System.Drawing.Size(100, 22);
             this.txtCarKm.TabIndex = 18;
+            this.txtCarKm.TextChanged += new System.EventHandler(this.txtCarKm_TextChanged);
             // 
             // txtAirbagCount
             // 
@@ -213,6 +230,7 @@
             this.txtAirbagCount.Name = "txtAirbagCount";
             this.txtAirbagCount.Size = new System.Drawing.Size(100, 22);
             this.txtAirbagCount.TabIndex = 19;
+            this.txtAirbagCount.TextChanged += new System.EventHandler(this.txtAirbagCount_TextChanged);
             // 
             // txtTrunkVolume
             // 
@@ -220,6 +238,7 @@
             this.txtTrunkVolume.Name = "txtTrunkVolume";
             this.txtTrunkVolume.Size = new System.Drawing.Size(100, 22);
             this.txtTrunkVolume.TabIndex = 20;
+            this.txtTrunkVolume.TextChanged += new System.EventHandler(this.txtTrunkVolume_TextChanged);
             // 
             // txtSeatCount
             // 
@@ -227,6 +246,7 @@
             this.txtSeatCount.Name = "txtSeatCount";
             this.txtSeatCount.Size = new System.Drawing.Size(100, 22);
             this.txtSeatCount.TabIndex = 21;
+            this.txtSeatCount.TextChanged += new System.EventHandler(this.txtSeatCount_TextChanged);
             // 
             // txtRentPrice
             // 
@@ -234,6 +254,7 @@
             this.txtRentPrice.Name = "txtRentPrice";
             this.txtRentPrice.Size = new System.Drawing.Size(100, 22);
             this.txtRentPrice.TabIndex = 22;
+            this.txtRentPrice.TextChanged += new System.EventHandler(this.txtRentPrice_TextChanged);
             // 
             // txtPhotoUrl
             // 
@@ -241,6 +262,7 @@
             this.txtPhotoUrl.Name = "txtPhotoUrl";
             this.txtPhotoUrl.Size = new System.Drawing.Size(100, 22);
             this.txtPhotoUrl.TabIndex = 23;
+            this.txtPhotoUrl.TextChanged += new System.EventHandler(this.txtPhotoUrl_TextChanged);
             // 
             // label12
             // 
@@ -250,6 +272,7 @@
             this.label12.Size = new System.Drawing.Size(112, 17);
             this.label12.TabIndex = 24;
             this.label12.Text = "Min Licence Age";
+            this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
             // txtMinLicenceAge
             // 
@@ -257,6 +280,7 @@
             this.txtMinLicenceAge.Name = "txtMinLicenceAge";
             this.txtMinLicenceAge.Size = new System.Drawing.Size(100, 22);
             this.txtMinLicenceAge.TabIndex = 25;
+            this.txtMinLicenceAge.TextChanged += new System.EventHandler(this.txtMinLicenceAge_TextChanged);
             // 
             // AddCar
             // 

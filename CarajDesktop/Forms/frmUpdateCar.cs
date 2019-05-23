@@ -69,5 +69,130 @@ namespace CarajDesktop.Forms
                 CarService.Close();
             }
         }
+
+        private void txtMinLicenceAge_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPhotoUrl_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtRentPrice_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtSeatCount_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtTrunkVolume_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtAirbagCount_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCarKm_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtMaxKm_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtMinCustomerAge_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtModel_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtBrand_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCarId_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgwCars_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

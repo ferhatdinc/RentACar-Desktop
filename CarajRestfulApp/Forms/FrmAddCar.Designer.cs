@@ -1,6 +1,6 @@
-﻿namespace CarajDesktop.Forms
+﻿namespace CarajRestfulApp.Forms
 {
-    partial class frmUpdateCar
+    partial class FrmAddCar
     {
         /// <summary>
         /// Required designer variable.
@@ -28,9 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUpdateCar));
-            this.dgwCars = new System.Windows.Forms.DataGridView();
-            this.btnAracSec = new System.Windows.Forms.Button();
             this.txtMinLicenceAge = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.txtPhotoUrl = new System.Windows.Forms.TextBox();
@@ -51,266 +48,224 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.txtModel = new System.Windows.Forms.TextBox();
             this.txtBrand = new System.Windows.Forms.TextBox();
-            this.txtCarId = new System.Windows.Forms.TextBox();
-            this.btnUpdateCar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dgwCars)).BeginInit();
+            this.BtnAddCar = new System.Windows.Forms.Button();
+            this.txtCompanyName = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // dgwCars
-            // 
-            this.dgwCars.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgwCars.Location = new System.Drawing.Point(12, 12);
-            this.dgwCars.Name = "dgwCars";
-            this.dgwCars.RowTemplate.Height = 24;
-            this.dgwCars.Size = new System.Drawing.Size(455, 180);
-            this.dgwCars.TabIndex = 0;
-            this.dgwCars.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgwCars_CellContentClick);
-            // 
-            // btnAracSec
-            // 
-            this.btnAracSec.Location = new System.Drawing.Point(498, 12);
-            this.btnAracSec.Name = "btnAracSec";
-            this.btnAracSec.Size = new System.Drawing.Size(189, 180);
-            this.btnAracSec.TabIndex = 1;
-            this.btnAracSec.Text = "SELECT CAR";
-            this.btnAracSec.UseVisualStyleBackColor = true;
-            this.btnAracSec.Click += new System.EventHandler(this.BtnAracSec_Click);
             // 
             // txtMinLicenceAge
             // 
-            this.txtMinLicenceAge.Location = new System.Drawing.Point(147, 372);
+            this.txtMinLicenceAge.Location = new System.Drawing.Point(147, 176);
             this.txtMinLicenceAge.Name = "txtMinLicenceAge";
             this.txtMinLicenceAge.Size = new System.Drawing.Size(100, 22);
-            this.txtMinLicenceAge.TabIndex = 49;
-            this.txtMinLicenceAge.TextChanged += new System.EventHandler(this.txtMinLicenceAge_TextChanged);
+            this.txtMinLicenceAge.TabIndex = 50;
+            this.txtMinLicenceAge.Text = "3";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(29, 375);
+            this.label12.Location = new System.Drawing.Point(29, 179);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(112, 17);
-            this.label12.TabIndex = 48;
+            this.label12.TabIndex = 49;
             this.label12.Text = "Min Licence Age";
-            this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
             // txtPhotoUrl
             // 
-            this.txtPhotoUrl.Location = new System.Drawing.Point(367, 370);
+            this.txtPhotoUrl.Location = new System.Drawing.Point(367, 174);
             this.txtPhotoUrl.Name = "txtPhotoUrl";
             this.txtPhotoUrl.Size = new System.Drawing.Size(100, 22);
-            this.txtPhotoUrl.TabIndex = 47;
-            this.txtPhotoUrl.TextChanged += new System.EventHandler(this.txtPhotoUrl_TextChanged);
+            this.txtPhotoUrl.TabIndex = 48;
+            this.txtPhotoUrl.Text = "https://cdn.pixabay.com/photo/2016/04/01/09/11/car-1299198_960_720.png";
             // 
             // txtRentPrice
             // 
-            this.txtRentPrice.Location = new System.Drawing.Point(367, 342);
+            this.txtRentPrice.Location = new System.Drawing.Point(367, 146);
             this.txtRentPrice.Name = "txtRentPrice";
             this.txtRentPrice.Size = new System.Drawing.Size(100, 22);
-            this.txtRentPrice.TabIndex = 46;
-            this.txtRentPrice.TextChanged += new System.EventHandler(this.txtRentPrice_TextChanged);
+            this.txtRentPrice.TabIndex = 47;
+            this.txtRentPrice.Text = "200";
             // 
             // txtSeatCount
             // 
-            this.txtSeatCount.Location = new System.Drawing.Point(367, 314);
+            this.txtSeatCount.Location = new System.Drawing.Point(367, 118);
             this.txtSeatCount.Name = "txtSeatCount";
             this.txtSeatCount.Size = new System.Drawing.Size(100, 22);
-            this.txtSeatCount.TabIndex = 45;
-            this.txtSeatCount.TextChanged += new System.EventHandler(this.txtSeatCount_TextChanged);
+            this.txtSeatCount.TabIndex = 46;
+            this.txtSeatCount.Text = "4";
             // 
             // txtTrunkVolume
             // 
-            this.txtTrunkVolume.Location = new System.Drawing.Point(367, 286);
+            this.txtTrunkVolume.Location = new System.Drawing.Point(367, 90);
             this.txtTrunkVolume.Name = "txtTrunkVolume";
             this.txtTrunkVolume.Size = new System.Drawing.Size(100, 22);
-            this.txtTrunkVolume.TabIndex = 44;
-            this.txtTrunkVolume.TextChanged += new System.EventHandler(this.txtTrunkVolume_TextChanged);
+            this.txtTrunkVolume.TabIndex = 45;
+            this.txtTrunkVolume.Text = "400";
             // 
             // txtAirbagCount
             // 
-            this.txtAirbagCount.Location = new System.Drawing.Point(367, 258);
+            this.txtAirbagCount.Location = new System.Drawing.Point(367, 62);
             this.txtAirbagCount.Name = "txtAirbagCount";
             this.txtAirbagCount.Size = new System.Drawing.Size(100, 22);
-            this.txtAirbagCount.TabIndex = 43;
-            this.txtAirbagCount.TextChanged += new System.EventHandler(this.txtAirbagCount_TextChanged);
+            this.txtAirbagCount.TabIndex = 44;
+            this.txtAirbagCount.Text = "4";
             // 
             // txtCarKm
             // 
-            this.txtCarKm.Location = new System.Drawing.Point(367, 232);
+            this.txtCarKm.Location = new System.Drawing.Point(367, 36);
             this.txtCarKm.Name = "txtCarKm";
             this.txtCarKm.Size = new System.Drawing.Size(100, 22);
-            this.txtCarKm.TabIndex = 42;
-            this.txtCarKm.TextChanged += new System.EventHandler(this.txtCarKm_TextChanged);
+            this.txtCarKm.TabIndex = 43;
+            this.txtCarKm.Text = "0";
             // 
             // txtMaxKm
             // 
-            this.txtMaxKm.Location = new System.Drawing.Point(147, 344);
+            this.txtMaxKm.Location = new System.Drawing.Point(147, 148);
             this.txtMaxKm.Name = "txtMaxKm";
             this.txtMaxKm.Size = new System.Drawing.Size(100, 22);
-            this.txtMaxKm.TabIndex = 41;
-            this.txtMaxKm.TextChanged += new System.EventHandler(this.txtMaxKm_TextChanged);
+            this.txtMaxKm.TabIndex = 42;
+            this.txtMaxKm.Text = "300";
             // 
             // txtMinCustomerAge
             // 
-            this.txtMinCustomerAge.Location = new System.Drawing.Point(147, 316);
+            this.txtMinCustomerAge.Location = new System.Drawing.Point(147, 120);
             this.txtMinCustomerAge.Name = "txtMinCustomerAge";
             this.txtMinCustomerAge.Size = new System.Drawing.Size(100, 22);
-            this.txtMinCustomerAge.TabIndex = 40;
-            this.txtMinCustomerAge.TextChanged += new System.EventHandler(this.txtMinCustomerAge_TextChanged);
+            this.txtMinCustomerAge.TabIndex = 41;
+            this.txtMinCustomerAge.Text = "21";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(284, 373);
+            this.label11.Location = new System.Drawing.Point(284, 177);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(77, 17);
-            this.label11.TabIndex = 39;
+            this.label11.TabIndex = 40;
             this.label11.Text = "Photo URL";
-            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(284, 345);
+            this.label10.Location = new System.Drawing.Point(284, 149);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(74, 17);
-            this.label10.TabIndex = 38;
+            this.label10.TabIndex = 39;
             this.label10.Text = "Rent Price";
-            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(284, 317);
+            this.label9.Location = new System.Drawing.Point(284, 121);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(78, 17);
-            this.label9.TabIndex = 37;
+            this.label9.TabIndex = 38;
             this.label9.Text = "Seat Count";
-            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(265, 289);
+            this.label8.Location = new System.Drawing.Point(265, 93);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(96, 17);
-            this.label8.TabIndex = 36;
+            this.label8.TabIndex = 37;
             this.label8.Text = "Trunk Volume";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(271, 261);
+            this.label7.Location = new System.Drawing.Point(271, 65);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(91, 17);
-            this.label7.TabIndex = 35;
+            this.label7.TabIndex = 36;
             this.label7.Text = "AirBag Count";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(304, 235);
+            this.label6.Location = new System.Drawing.Point(304, 39);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(54, 17);
-            this.label6.TabIndex = 34;
+            this.label6.TabIndex = 35;
             this.label6.Text = "Car KM";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(25, 350);
+            this.label5.Location = new System.Drawing.Point(25, 154);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(116, 17);
-            this.label5.TabIndex = 33;
+            this.label5.TabIndex = 34;
             this.label5.Text = "MAX Km Per Day";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(50, 319);
+            this.label4.Location = new System.Drawing.Point(50, 123);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(91, 17);
-            this.label4.TabIndex = 32;
+            this.label4.TabIndex = 33;
             this.label4.Text = "Min Cus. Age";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(95, 288);
+            this.label3.Location = new System.Drawing.Point(95, 92);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(46, 17);
-            this.label3.TabIndex = 31;
+            this.label3.TabIndex = 32;
             this.label3.Text = "Model";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(95, 260);
+            this.label2.Location = new System.Drawing.Point(95, 64);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(46, 17);
-            this.label2.TabIndex = 30;
+            this.label2.TabIndex = 31;
             this.label2.Text = "Brand";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(95, 235);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 17);
-            this.label1.TabIndex = 29;
-            this.label1.Text = "Car ID";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // txtModel
             // 
-            this.txtModel.Location = new System.Drawing.Point(147, 288);
+            this.txtModel.Location = new System.Drawing.Point(147, 92);
             this.txtModel.Name = "txtModel";
             this.txtModel.Size = new System.Drawing.Size(100, 22);
-            this.txtModel.TabIndex = 28;
-            this.txtModel.TextChanged += new System.EventHandler(this.txtModel_TextChanged);
+            this.txtModel.TabIndex = 29;
             // 
             // txtBrand
             // 
-            this.txtBrand.Location = new System.Drawing.Point(147, 260);
+            this.txtBrand.Location = new System.Drawing.Point(147, 64);
             this.txtBrand.Name = "txtBrand";
             this.txtBrand.Size = new System.Drawing.Size(100, 22);
-            this.txtBrand.TabIndex = 27;
-            this.txtBrand.TextChanged += new System.EventHandler(this.txtBrand_TextChanged);
+            this.txtBrand.TabIndex = 28;
             // 
-            // txtCarId
+            // BtnAddCar
             // 
-            this.txtCarId.Location = new System.Drawing.Point(147, 232);
-            this.txtCarId.Name = "txtCarId";
-            this.txtCarId.Size = new System.Drawing.Size(100, 22);
-            this.txtCarId.TabIndex = 26;
-            this.txtCarId.TextChanged += new System.EventHandler(this.txtCarId_TextChanged);
+            this.BtnAddCar.Location = new System.Drawing.Point(201, 215);
+            this.BtnAddCar.Name = "BtnAddCar";
+            this.BtnAddCar.Size = new System.Drawing.Size(184, 28);
+            this.BtnAddCar.TabIndex = 26;
+            this.BtnAddCar.Text = "Add Car";
+            this.BtnAddCar.UseVisualStyleBackColor = true;
+            this.BtnAddCar.Click += new System.EventHandler(this.BtnAddCar_ClickAsync);
             // 
-            // btnUpdateCar
+            // txtCompanyName
             // 
-            this.btnUpdateCar.Location = new System.Drawing.Point(498, 214);
-            this.btnUpdateCar.Name = "btnUpdateCar";
-            this.btnUpdateCar.Size = new System.Drawing.Size(189, 180);
-            this.btnUpdateCar.TabIndex = 50;
-            this.btnUpdateCar.Text = "UPDATE CAR";
-            this.btnUpdateCar.UseVisualStyleBackColor = true;
-            this.btnUpdateCar.Click += new System.EventHandler(this.BtnUpdateCar_Click);
+            this.txtCompanyName.AutoSize = true;
+            this.txtCompanyName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtCompanyName.ForeColor = System.Drawing.Color.Maroon;
+            this.txtCompanyName.Location = new System.Drawing.Point(90, 36);
+            this.txtCompanyName.Name = "txtCompanyName";
+            this.txtCompanyName.Size = new System.Drawing.Size(157, 20);
+            this.txtCompanyName.TabIndex = 51;
+            this.txtCompanyName.Text = "COMPANY NAME";
             // 
-            // frmUpdateCar
+            // FrmAddCar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(707, 450);
-            this.Controls.Add(this.btnUpdateCar);
+            this.ClientSize = new System.Drawing.Size(537, 276);
+            this.Controls.Add(this.txtCompanyName);
             this.Controls.Add(this.txtMinLicenceAge);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.txtPhotoUrl);
@@ -331,17 +286,11 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.txtModel);
             this.Controls.Add(this.txtBrand);
-            this.Controls.Add(this.txtCarId);
-            this.Controls.Add(this.btnAracSec);
-            this.Controls.Add(this.dgwCars);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "frmUpdateCar";
-            this.Text = "Update Car";
-            this.Load += new System.EventHandler(this.FrmUpdateCar_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgwCars)).EndInit();
+            this.Controls.Add(this.BtnAddCar);
+            this.Name = "FrmAddCar";
+            this.Text = "FrmAddCar";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -349,8 +298,6 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dgwCars;
-        private System.Windows.Forms.Button btnAracSec;
         private System.Windows.Forms.TextBox txtMinLicenceAge;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txtPhotoUrl;
@@ -371,10 +318,9 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtModel;
         private System.Windows.Forms.TextBox txtBrand;
-        private System.Windows.Forms.TextBox txtCarId;
-        private System.Windows.Forms.Button btnUpdateCar;
+        private System.Windows.Forms.Button BtnAddCar;
+        private System.Windows.Forms.Label txtCompanyName;
     }
 }

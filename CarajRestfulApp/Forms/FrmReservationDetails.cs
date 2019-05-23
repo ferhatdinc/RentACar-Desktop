@@ -28,7 +28,7 @@ namespace CarajRestfulApp.Forms
             {
                 client.BaseAddress = new Uri("http://165.22.91.48/api/"); //Fix
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json")); //Fix
-                HttpResponseMessage response = client.GetAsync("car/getcars?id=8").Result;
+                HttpResponseMessage response = client.GetAsync("company/GetRentalRequests?CompanyID="+ FrmMain.RCompany.CompanyID).Result;
                 //End Point Name https://localhost:44300/car/getcars Query String Example bla bla car/getcars?blabla
                 if (response.IsSuccessStatusCode)
                 {

@@ -50,11 +50,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\FrmAddCar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmAddCar.Designer.cs">
+      <DependentUpon>FrmAddCar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FrmMain.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmNewReservation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmNewReservation.Designer.cs">
+      <DependentUpon>FrmNewReservation.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FrmReservationDetails.cs">
       <SubType>Form</SubType>
@@ -62,14 +74,32 @@
     <Compile Include="Forms\FrmReservationDetails.Designer.cs">
       <DependentUpon>FrmReservationDetails.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FrmUpdateCar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmUpdateCar.Designer.cs">
+      <DependentUpon>FrmUpdateCar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CarAddRequestDto.cs" />
+    <Compile Include="Models\CarRequestDto.cs" />
     <Compile Include="Models\Company.cs" />
+    <Compile Include="Models\RentDetailsRequestDto.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\FrmAddCar.resx">
+      <DependentUpon>FrmAddCar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmNewReservation.resx">
+      <DependentUpon>FrmNewReservation.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmReservationDetails.resx">
       <DependentUpon>FrmReservationDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmUpdateCar.resx">
+      <DependentUpon>FrmUpdateCar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

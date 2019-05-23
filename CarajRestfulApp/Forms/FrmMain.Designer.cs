@@ -101,6 +101,7 @@
             this.doReservationToolStripMenuItem.Name = "doReservationToolStripMenuItem";
             this.doReservationToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.doReservationToolStripMenuItem.Text = "Do Reservation";
+            this.doReservationToolStripMenuItem.Click += new System.EventHandler(this.doReservationToolStripMenuItem_Click);
             // 
             // carOperationsToolStripMenuItem
             // 
@@ -114,14 +115,16 @@
             // addCarToolStripMenuItem
             // 
             this.addCarToolStripMenuItem.Name = "addCarToolStripMenuItem";
-            this.addCarToolStripMenuItem.Size = new System.Drawing.Size(159, 26);
+            this.addCarToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.addCarToolStripMenuItem.Text = "Add Car";
+            this.addCarToolStripMenuItem.Click += new System.EventHandler(this.addCarToolStripMenuItem_Click);
             // 
             // updateCarToolStripMenuItem
             // 
             this.updateCarToolStripMenuItem.Name = "updateCarToolStripMenuItem";
-            this.updateCarToolStripMenuItem.Size = new System.Drawing.Size(159, 26);
+            this.updateCarToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.updateCarToolStripMenuItem.Text = "Update Car";
+            this.updateCarToolStripMenuItem.Click += new System.EventHandler(this.updateCarToolStripMenuItem_Click);
             // 
             // firmReportsToolStripMenuItem
             // 

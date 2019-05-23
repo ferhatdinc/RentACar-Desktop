@@ -1,4 +1,5 @@
 ﻿using CarajRestfulApp.Models;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
@@ -16,8 +17,8 @@ namespace CarajRestfulApp.Forms
     public partial class FrmMain : Form
     {
         private Dictionary<Type, Form> ActiveForms;
-        public static Boolean isLogin = false;
-        public static JObject company;//key value
+        public static Boolean isLogin = false; 
+        public static Company RCompany;
         public FrmMain()
         {
 
@@ -49,7 +50,12 @@ namespace CarajRestfulApp.Forms
         }
         private void ReservationDetailsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.ShowForm<FrmReservationDetails>();
+            if (RCompany != null)
+            {
+                this.ShowForm<FrmReservationDetails>();
+            }
+            else MessageBox.Show("Please Login");
+            
 
         }
         string link = "http://165.22.91.48/api/";
@@ -62,15 +68,42 @@ namespace CarajRestfulApp.Forms
                      new StringContent(txtCompanyName.Text, Encoding.UTF8, "application/json"));
 
                 if (response.StatusCode.GetHashCode()==200)
-                {
+                { 
                     var model = response.Content.ReadAsAsync<JObject>().Result;
-                    // company.CompanyID = model.Company;
-                    company = model;
-                    MessageBox.Show("Hoşgeldin "+company["companyID"]);//company name olarak değişecek
+                     
+                    RCompany = JsonConvert.DeserializeObject<Company>(model.ToString());
+                    MessageBox.Show("Hoşgeldin "+RCompany.CompanyID);//company name olarak değişecek
                     this.gbLogin.Visible = false;
                 }
             }
             
+        }
+
+        private void doReservationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (RCompany != null)
+            {
+                this.ShowForm<FrmNewReservation>();
+            }
+            else MessageBox.Show("Please Login");
+        }
+
+        private void addCarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (RCompany != null)
+            {
+                this.ShowForm<FrmAddCar>();
+            }
+            else MessageBox.Show("Please Login");
+        }
+
+        private void updateCarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (RCompany != null)
+            {
+                this.ShowForm<FrmUpdateCar>();
+            }
+            else MessageBox.Show("Please Login");
         }
     }
 }
