@@ -15,5 +15,6 @@ namespace CarajRestfulApp.Models
         public int StartingKilometer { get; set; }
         public int EndingKilometer { get; set; }
         public decimal Pricing { get; set; }
+        public int RentDetailID { get; set; }
     }
 }

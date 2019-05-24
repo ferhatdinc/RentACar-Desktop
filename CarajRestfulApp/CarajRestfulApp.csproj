@@ -93,9 +93,11 @@
     <Compile Include="Forms\FrmUpdateCar.Designer.cs">
       <DependentUpon>FrmUpdateCar.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Car.cs" />
     <Compile Include="Models\CarAddRequestDto.cs" />
     <Compile Include="Models\CarRequestDto.cs" />
     <Compile Include="Models\Company.cs" />
+    <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\RentDetailsRequestDto.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -128,6 +130,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -145,6 +148,9 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\slide-1.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

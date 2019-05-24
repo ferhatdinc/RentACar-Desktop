@@ -24,29 +24,66 @@ namespace CarajRestfulApp.Forms
         private static JArray Cars;
         private async void BtnDoReservations_ClickAsync(object sender, EventArgs e)
         {
-            
+            int customerAge=0,carMinAge=0;
+     
+            //Company / Getcustomerage ? customerID = 5
             using (HttpClient client = new HttpClient()) //Fix
             {
-                RentDetailsRequestDto NewRent = new RentDetailsRequestDto
-                {
-                    CustomerID = int.Parse(txtCustomerId.Text),
-                    CarID = int.Parse(txtCarId.Text),
-                    RentStartDate = tpDateFirst.Value,
-                    RentEndDate = tpDateLast.Value,
-                    StartingKilometer = int.Parse(txtFirsrKM.Text),
-                    EndingKilometer = int.Parse(txtLastKM.Text),
-                    Pricing = decimal.Parse(txtAmount.Text)
-                };
                 client.BaseAddress = new Uri("http://165.22.91.48/api/"); //Fix
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json")); //Fix
-                var serializedNewRent = JsonConvert.SerializeObject(NewRent);
-                var content = new StringContent(serializedNewRent, Encoding.UTF8, "application/json");
-                var response = await client.PostAsync("company/CreateRent", content ); 
+                HttpResponseMessage response = client.GetAsync("company/Getcustomerage?customerID=" + txtCustomerId.Text).Result;
+                //End Point Name https://localhost:44300/car/getcars Query String Example bla bla car/getcars?blabla
                 if (response.IsSuccessStatusCode)
                 {
-                    MessageBox.Show("Successfull");
+                    var model = response.Content.ReadAsAsync<JValue>().Result;
+                    customerAge = int.Parse(model.Value.ToString());
                 }
             }
+            using (HttpClient client = new HttpClient()) //Fix
+            {
+                client.BaseAddress = new Uri("http://165.22.91.48/api/"); //Fix
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json")); //Fix
+                HttpResponseMessage response = client.GetAsync("car/GetCar?id=" + txtCarId.Text).Result;
+                //End Point Name https://localhost:44300/car/getcars Query String Example bla bla car/getcars?blabla
+                if (response.IsSuccessStatusCode)
+                {
+                    Car c = new Car();
+                    var model = response.Content.ReadAsAsync<JObject>().Result;
+                    carMinAge = JsonConvert.DeserializeObject<Car>(model.ToString()).MinCustomerAge;
+              
+                }
+            }
+            if (customerAge>carMinAge)
+            {
+                using (HttpClient client = new HttpClient()) //Fix
+                {
+                    RentDetailsRequestDto NewRent = new RentDetailsRequestDto
+                    {
+                        CustomerID = int.Parse(txtCustomerId.Text),
+                        CarID = int.Parse(txtCarId.Text),
+                        RentStartDate = tpDateFirst.Value,
+                        RentEndDate = tpDateLast.Value,
+                        StartingKilometer = int.Parse(txtFirsrKM.Text),
+                        //EndingKilometer = int.Parse(txtLastKM.Text),
+                        Pricing = decimal.Parse(txtAmount.Text)
+                    };
+                    client.BaseAddress = new Uri("http://165.22.91.48/api/"); //Fix
+                    client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json")); //Fix
+                    var serializedNewRent = JsonConvert.SerializeObject(NewRent);
+                    var content = new StringContent(serializedNewRent, Encoding.UTF8, "application/json");
+                    var response = await client.PostAsync("company/CreateRent", content);
+                    if (response.IsSuccessStatusCode)
+                    {
+                        MessageBox.Show("Successfull");
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Your Age Is Not Valid");
+            }
+                    
+            
         }
 
         private void BtnReservationRequest_Click(object sender, EventArgs e)
@@ -93,8 +130,20 @@ namespace CarajRestfulApp.Forms
                 
                 if (response.IsSuccessStatusCode)
                 {
-                    var model = response.Content.ReadAsAsync<JArray>().Result;
-                    dgwCarList.DataSource = model;
+                    double deneme = double.Parse(dgwCarList.SelectedRows[0].Cells[13].Value.ToString());
+                    try
+                    {
+                        var model = response.Content.ReadAsAsync<JArray>().Result;
+                        dgwCarList.DataSource = model;
+                        TimeSpan kalangun = tpDateLast.Value - tpDateFirst.Value;
+                        double toplamGun = Math.Ceiling(kalangun.TotalDays);
+                        txtAmount.Text = (toplamGun * deneme).ToString();//(toplamGun * double.Parse(dgwCarList.SelectedRows[0].Cells[13].Value.ToString())).ToString();
+                    }
+                    catch (Exception)
+                    {
+                        MessageBox.Show("Price Could Not calculate Try Again");
+                    }
+                    
                 }
             }
         }
